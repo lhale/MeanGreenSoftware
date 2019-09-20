@@ -1,0 +1,11 @@
+This is crude documentation for installation of the Event Registration Module,
+
+Installation/Setup is the same as all other modules for PostNuke.
+
+To activate the Search feature,  copy the eventreg.php file from the search/ 
+folder to your (POSTNUKE ROOT)/includes/search folder
+
+General security levels for Registration Viewing:
+
+	** Note - This is module-wide, In the future if requested I might
+	   tie it to each event.

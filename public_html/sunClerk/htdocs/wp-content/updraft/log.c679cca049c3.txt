@@ -1,0 +1,164 @@
+0000.000 (0) Opened log file at time: Fri, 21 Aug 2015 16:08:04 +0000 on http://localhost:8888
+0000.013 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.11.4 WP: 4.2.4 PHP: 5.5.27 (Linux ip-172-31-43-177 3.13.0-61-generic #100-Ubuntu SMP Wed Jul 29 11:21:34 UTC 2015 x86_64) MySQL: 5.6.26 Server: Apache safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 2.5M | 2.8M) multisite: N mcrypt: Y LANG:  ZipArchive::addFile: Y
+0000.020 (0) Free space on disk containing Updraft's temporary directory: 7026.4 Mb
+0000.028 (0) Tasks: Backup files: 1 (schedule: unset) Backup DB: 1 (schedule: unset)
+0000.051 (0) Requesting semaphore lock (fd)
+0000.069 (0) Set semaphore last lock (fd) time to 2015-08-21 16:08:04
+0000.077 (0) Semaphore lock (fd) complete
+0000.090 (0) Backup run: resumption=0, nonce=c679cca049c3, begun at=1440173284 (0s ago), job type=backup
+0000.099 (0) Scheduling a resumption (1) after 300 seconds (1440173584) in case this run gets aborted
+0000.128 (0) Checking if we have a zip executable available
+0000.133 (0) Testing: /usr/bin/zip
+0000.146 (0) Output: zip warning: binziptest/test.zip not found or empty
+0000.154 (0) Output: adding: binziptest/subdir1/	(in=0) (out=0) (stored 0%)
+0000.161 (0) Output: adding: binziptest/subdir1/subdir2/	(in=0) (out=0) (stored 0%)
+0000.165 (0) Output: adding: binziptest/subdir1/subdir2/test.html	(in=128) (out=105) (deflated 18%)
+0000.169 (0) Output: total bytes=128, compressed=105 -> 18% savings
+0000.183 (0) Output: adding: binziptest/subdir1/subdir2/test2.html	(in=135) (out=111) (deflated 18%)
+0000.189 (0) Output: total bytes=263, compressed=216 -> 18% savings
+0000.194 (0) Working binary zip found: /usr/bin/zip
+0000.205 (0) Zip engine: found/will use a binary zip: /usr/bin/zip
+0000.206 (0) Creation of backups of directories: beginning
+0000.225 (0) Beginning creation of dump of plugins (split every: 500 Mb)
+0000.587 (0) Total entities for the zip file: 494 directories, 3016 files (0 skipped as non-modified), 55.5 Mb
+0000.604 (0) Zip: backup_2015-08-21-1608_user039s_Blog_c679cca049c3-plugins.zip.tmp: 100 files added (on-disk size: 0 Kb)
+0000.613 (0) Zip: backup_2015-08-21-1608_user039s_Blog_c679cca049c3-plugins.zip.tmp: 200 files added (on-disk size: 0 Kb)
+0000.620 (0) Zip: backup_2015-08-21-1608_user039s_Blog_c679cca049c3-plugins.zip.tmp: 300 files added (on-disk size: 0 Kb)
+0000.629 (0) Zip: backup_2015-08-21-1608_user039s_Blog_c679cca049c3-plugins.zip.tmp: 400 files added (on-disk size: 0 Kb)
+0000.636 (0) Zip: backup_2015-08-21-1608_user039s_Blog_c679cca049c3-plugins.zip.tmp: 500 files added (on-disk size: 0 Kb)
+0000.640 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (8.1 Mb, 3016 files batched, 501 (501) added so far); re-opening (prior size: 0 Kb)
+0001.848 (0) backup_2015-08-21-1608_user039s_Blog_c679cca049c3-plugins.zip.tmp: size is now: 3.20 Mb
+0001.861 (0) Zip: backup_2015-08-21-1608_user039s_Blog_c679cca049c3-plugins.zip.tmp: 600 files added (on-disk size: 3248 Kb)
+0001.868 (0) Zip: backup_2015-08-21-1608_user039s_Blog_c679cca049c3-plugins.zip.tmp: 700 files added (on-disk size: 3248 Kb)
+0001.877 (0) Zip: backup_2015-08-21-1608_user039s_Blog_c679cca049c3-plugins.zip.tmp: 800 files added (on-disk size: 3248 Kb)
+0001.884 (0) Zip: backup_2015-08-21-1608_user039s_Blog_c679cca049c3-plugins.zip.tmp: 900 files added (on-disk size: 3248 Kb)
+0001.892 (0) Zip: backup_2015-08-21-1608_user039s_Blog_c679cca049c3-plugins.zip.tmp: 1000 files added (on-disk size: 3248 Kb)
+0001.897 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (6.5 Mb, 3016 files batched, 501 (1002) added so far); re-opening (prior size: 3248 Kb)
+0002.946 (0) backup_2015-08-21-1608_user039s_Blog_c679cca049c3-plugins.zip.tmp: size is now: 6.60 Mb
+0002.961 (0) Zip: backup_2015-08-21-1608_user039s_Blog_c679cca049c3-plugins.zip.tmp: 1100 files added (on-disk size: 6743.3 Kb)
+0002.973 (0) Zip: backup_2015-08-21-1608_user039s_Blog_c679cca049c3-plugins.zip.tmp: 1200 files added (on-disk size: 6743.3 Kb)
+0002.985 (0) Zip: backup_2015-08-21-1608_user039s_Blog_c679cca049c3-plugins.zip.tmp: 1300 files added (on-disk size: 6743.3 Kb)
+0002.992 (0) Zip: backup_2015-08-21-1608_user039s_Blog_c679cca049c3-plugins.zip.tmp: 1400 files added (on-disk size: 6743.3 Kb)
+0003.000 (0) Zip: backup_2015-08-21-1608_user039s_Blog_c679cca049c3-plugins.zip.tmp: 1500 files added (on-disk size: 6743.3 Kb)
+0003.005 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (12.1 Mb, 3016 files batched, 501 (1503) added so far); re-opening (prior size: 6743.3 Kb)
+0004.640 (0) backup_2015-08-21-1608_user039s_Blog_c679cca049c3-plugins.zip.tmp: size is now: 10.20 Mb
+0004.663 (0) Zip: backup_2015-08-21-1608_user039s_Blog_c679cca049c3-plugins.zip.tmp: 1600 files added (on-disk size: 10411.6 Kb)
+0004.673 (0) Zip: backup_2015-08-21-1608_user039s_Blog_c679cca049c3-plugins.zip.tmp: 1700 files added (on-disk size: 10411.6 Kb)
+0004.682 (0) Zip: backup_2015-08-21-1608_user039s_Blog_c679cca049c3-plugins.zip.tmp: 1800 files added (on-disk size: 10411.6 Kb)
+0004.692 (0) Zip: backup_2015-08-21-1608_user039s_Blog_c679cca049c3-plugins.zip.tmp: 1900 files added (on-disk size: 10411.6 Kb)
+0004.700 (0) Zip: backup_2015-08-21-1608_user039s_Blog_c679cca049c3-plugins.zip.tmp: 2000 files added (on-disk size: 10411.6 Kb)
+0004.706 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (12.7 Mb, 3016 files batched, 501 (2004) added so far); re-opening (prior size: 10411.6 Kb)
+0006.474 (0) backup_2015-08-21-1608_user039s_Blog_c679cca049c3-plugins.zip.tmp: size is now: 14.50 Mb
+0006.492 (0) Zip: backup_2015-08-21-1608_user039s_Blog_c679cca049c3-plugins.zip.tmp: 2100 files added (on-disk size: 14809.9 Kb)
+0006.500 (0) Zip: backup_2015-08-21-1608_user039s_Blog_c679cca049c3-plugins.zip.tmp: 2200 files added (on-disk size: 14809.9 Kb)
+0006.508 (0) Zip: backup_2015-08-21-1608_user039s_Blog_c679cca049c3-plugins.zip.tmp: 2300 files added (on-disk size: 14809.9 Kb)
+0006.516 (0) Zip: backup_2015-08-21-1608_user039s_Blog_c679cca049c3-plugins.zip.tmp: 2400 files added (on-disk size: 14809.9 Kb)
+0006.524 (0) Zip: backup_2015-08-21-1608_user039s_Blog_c679cca049c3-plugins.zip.tmp: 2500 files added (on-disk size: 14809.9 Kb)
+0006.529 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (14.5 Mb, 3016 files batched, 501 (2505) added so far); re-opening (prior size: 14809.9 Kb)
+0008.640 (0) backup_2015-08-21-1608_user039s_Blog_c679cca049c3-plugins.zip.tmp: size is now: 18.90 Mb
+0008.658 (0) Zip: backup_2015-08-21-1608_user039s_Blog_c679cca049c3-plugins.zip.tmp: 2600 files added (on-disk size: 19388.2 Kb)
+0008.669 (0) Zip: backup_2015-08-21-1608_user039s_Blog_c679cca049c3-plugins.zip.tmp: 2700 files added (on-disk size: 19388.2 Kb)
+0008.676 (0) Zip: backup_2015-08-21-1608_user039s_Blog_c679cca049c3-plugins.zip.tmp: 2800 files added (on-disk size: 19388.2 Kb)
+0008.684 (0) Zip: backup_2015-08-21-1608_user039s_Blog_c679cca049c3-plugins.zip.tmp: 2900 files added (on-disk size: 19388.2 Kb)
+0008.692 (0) Zip: backup_2015-08-21-1608_user039s_Blog_c679cca049c3-plugins.zip.tmp: 3000 files added (on-disk size: 19388.2 Kb)
+0008.697 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1.5 Mb, 3016 files batched, 501 (3006) added so far); re-opening (prior size: 19388.2 Kb)
+0010.534 (0) Created plugins zip (0) - 19946.9 Kb in 10.3 s (1935.8 Kb/s) (SHA1 checksum: 98ebddffcef1755bcb639c36d8928c17df8f0d0f)
+0010.545 (0) Beginning creation of dump of themes (split every: 500 Mb)
+0010.570 (0) Total entities for the zip file: 25 directories, 167 files (0 skipped as non-modified), 2.3 Mb
+0010.579 (0) Zip: backup_2015-08-21-1608_user039s_Blog_c679cca049c3-themes.zip.tmp: 100 files added (on-disk size: 0 Kb)
+0010.819 (0) backup_2015-08-21-1608_user039s_Blog_c679cca049c3-themes.zip.tmp: size is now: 1.60 Mb
+0010.848 (0) Created themes zip (0) - 1641.2 Kb in 0.3 s (5487.9 Kb/s) (SHA1 checksum: edac49cda5a508c5e0c5613eb14b8ca90c113159)
+0010.861 (0) Exclusion option setting (uploads): backup*,*backups,backwpup*,wp-clone
+0010.865 (0) Looking for candidates to back up in: /opt/bitnami/apps/wordpress/htdocs/wp-content/uploads
+0010.867 (0) finding files: 2015: adding to list (1)
+0010.873 (0) Beginning creation of dump of uploads (split every: 500 Mb)
+0010.882 (0) Total entities for the zip file: 2 directories, 0 files (0 skipped as non-modified), 0 Mb
+0010.901 (0) backup_2015-08-21-1608_user039s_Blog_c679cca049c3-uploads.zip.tmp: size is now: 0.00 Mb
+0010.918 (0) Created uploads zip (0) - 0.3 Kb in 0 s (8.1 Kb/s) (SHA1 checksum: 00096aa2552384a5c944e957873311bd5ad88deb)
+0010.933 (0) Beginning backup of other directories found in the content directory (index: 0)
+0010.937 (0) Exclusion option setting (others): upgrade,cache,updraft,backup*,*backups
+0010.941 (0) Looking for candidates to back up in: /opt/bitnami/apps/wordpress/htdocs/wp-content
+0010.945 (0) finding files: uploads: skipping: this is the uploads directory
+0010.949 (0) finding files: index.php: adding to list (1)
+0010.957 (0) finding files: upgrade: skipping: excluded by options
+0010.961 (0) finding files: themes: skipping: this is the themes directory
+0010.965 (0) finding files: updraft: skipping: this is the updraft directory
+0010.969 (0) finding files: plugins: skipping: this is the plugins directory
+0010.973 (0) finding files: languages: adding to list (2)
+0010.986 (0) Total entities for the zip file: 2 directories, 119 files (0 skipped as non-modified), 11.4 Mb
+0010.996 (0) Zip: backup_2015-08-21-1608_user039s_Blog_c679cca049c3-others.zip.tmp: 100 files added (on-disk size: 0 Kb)
+0012.344 (0) backup_2015-08-21-1608_user039s_Blog_c679cca049c3-others.zip.tmp: size is now: 3.20 Mb
+0012.381 (0) Created others zip (0) - 3298.7 Kb in 1.4 s (2350.6 Kb/s) (SHA1 checksum: 823912a64fe1b377e7252092637240b694e08632)
+0012.398 (0) Saving backup status to database (elements: 8)
+0012.409 (0) Beginning creation of database dump (WordPress DB)
+0012.444 (0) Table wp_options: Total expected rows (approximate): 147
+0012.519 (0) Table wp_options: Total rows added: 150 in 0.07 seconds
+0012.527 (0) Table wp_options: finishing file (backup_2015-08-21-1608_user039s_Blog_c679cca049c3-db-table-wp_options.table.gz - 86.3 Kb)
+0012.546 (0) Table wp_users: Total expected rows (approximate): 0
+0012.556 (0) Table wp_users: Total rows added: 1 in 0.00 seconds
+0012.561 (0) Table wp_users: finishing file (backup_2015-08-21-1608_user039s_Blog_c679cca049c3-db-table-wp_users.table.gz - 0.5 Kb)
+0012.573 (0) Table wp_usermeta: Total expected rows (approximate): 15
+0012.580 (0) Table wp_usermeta: Total rows added: 15 in 0.00 seconds
+0012.586 (0) Table wp_usermeta: finishing file (backup_2015-08-21-1608_user039s_Blog_c679cca049c3-db-table-wp_usermeta.table.gz - 0.9 Kb)
+0012.625 (0) Table wp_commentmeta: Total expected rows (approximate): 0
+0012.631 (0) Table wp_commentmeta: Total rows added: 0 in 0.00 seconds
+0012.638 (0) Table wp_commentmeta: finishing file (backup_2015-08-21-1608_user039s_Blog_c679cca049c3-db-table-wp_commentmeta.table.gz - 0.4 Kb)
+0012.657 (0) Table wp_comments: Total expected rows (approximate): 0
+0012.664 (0) Table wp_comments: Total rows added: 1 in 0.00 seconds
+0012.669 (0) Table wp_comments: finishing file (backup_2015-08-21-1608_user039s_Blog_c679cca049c3-db-table-wp_comments.table.gz - 0.7 Kb)
+0012.683 (0) Table wp_links: Total expected rows (approximate): 0
+0012.691 (0) Table wp_links: Total rows added: 0 in 0.00 seconds
+0012.697 (0) Table wp_links: finishing file (backup_2015-08-21-1608_user039s_Blog_c679cca049c3-db-table-wp_links.table.gz - 0.4 Kb)
+0012.712 (0) Table wp_postmeta: Total expected rows (approximate): 7
+0012.719 (0) Table wp_postmeta: Total rows added: 7 in 0.00 seconds
+0012.726 (0) Table wp_postmeta: finishing file (backup_2015-08-21-1608_user039s_Blog_c679cca049c3-db-table-wp_postmeta.table.gz - 1.1 Kb)
+0012.746 (0) Table wp_posts: Total expected rows (approximate): 4
+0012.756 (0) Table wp_posts: Total rows added: 4 in 0.00 seconds
+0012.762 (0) Table wp_posts: finishing file (backup_2015-08-21-1608_user039s_Blog_c679cca049c3-db-table-wp_posts.table.gz - 1.8 Kb)
+0012.782 (0) Table wp_term_relationships: Total expected rows (approximate): 0
+0012.791 (0) Table wp_term_relationships: Total rows added: 1 in 0.00 seconds
+0012.797 (0) Table wp_term_relationships: finishing file (backup_2015-08-21-1608_user039s_Blog_c679cca049c3-db-table-wp_term_relationships.table.gz - 0.3 Kb)
+0012.824 (0) Table wp_term_taxonomy: Total expected rows (approximate): 0
+0012.831 (0) Table wp_term_taxonomy: Total rows added: 1 in 0.00 seconds
+0012.837 (0) Table wp_term_taxonomy: finishing file (backup_2015-08-21-1608_user039s_Blog_c679cca049c3-db-table-wp_term_taxonomy.table.gz - 0.4 Kb)
+0012.858 (0) Table wp_terms: Total expected rows (approximate): 0
+0012.864 (0) Table wp_terms: Total rows added: 1 in 0.00 seconds
+0012.869 (0) Table wp_terms: finishing file (backup_2015-08-21-1608_user039s_Blog_c679cca049c3-db-table-wp_terms.table.gz - 0.4 Kb)
+0012.887 (0) backup_2015-08-21-1608_user039s_Blog_c679cca049c3-db-table-wp_options.table.gz (1/11): adding to final database dump
+0012.959 (0) backup_2015-08-21-1608_user039s_Blog_c679cca049c3-db-table-wp_users.table.gz (2/11): adding to final database dump
+0012.987 (0) backup_2015-08-21-1608_user039s_Blog_c679cca049c3-db-table-wp_usermeta.table.gz (3/11): adding to final database dump
+0013.033 (0) backup_2015-08-21-1608_user039s_Blog_c679cca049c3-db-table-wp_commentmeta.table.gz (4/11): adding to final database dump
+0013.041 (0) backup_2015-08-21-1608_user039s_Blog_c679cca049c3-db-table-wp_comments.table.gz (5/11): adding to final database dump
+0013.045 (0) backup_2015-08-21-1608_user039s_Blog_c679cca049c3-db-table-wp_links.table.gz (6/11): adding to final database dump
+0013.047 (0) backup_2015-08-21-1608_user039s_Blog_c679cca049c3-db-table-wp_postmeta.table.gz (7/11): adding to final database dump
+0013.054 (0) backup_2015-08-21-1608_user039s_Blog_c679cca049c3-db-table-wp_posts.table.gz (8/11): adding to final database dump
+0013.061 (0) backup_2015-08-21-1608_user039s_Blog_c679cca049c3-db-table-wp_term_relationships.table.gz (9/11): adding to final database dump
+0013.065 (0) backup_2015-08-21-1608_user039s_Blog_c679cca049c3-db-table-wp_term_taxonomy.table.gz (10/11): adding to final database dump
+0013.068 (0) backup_2015-08-21-1608_user039s_Blog_c679cca049c3-db-table-wp_terms.table.gz (11/11): adding to final database dump
+0013.073 (0) backup_2015-08-21-1608_user039s_Blog_c679cca049c3-db.gz: finished writing out complete database file (80 Kb)
+0013.093 (0) Total database tables backed up: 11 (backup_2015-08-21-1608_user039s_Blog_c679cca049c3-db.gz, size: 92598, checksum (SHA1): cada4d6e2708e76a29d26a7ff133e8d3f88eb300)
+0013.100 (0) Saving backup history
+0013.113 (0) backup_2015-08-21-1608_user039s_Blog_c679cca049c3-plugins.zip: plugins: This file has not yet been successfully uploaded: will queue
+0013.117 (0) backup_2015-08-21-1608_user039s_Blog_c679cca049c3-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+0013.118 (0) backup_2015-08-21-1608_user039s_Blog_c679cca049c3-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+0013.124 (0) backup_2015-08-21-1608_user039s_Blog_c679cca049c3-others.zip: others: This file has not yet been successfully uploaded: will queue
+0013.129 (0) backup_2015-08-21-1608_user039s_Blog_c679cca049c3-db.gz: db: This file has not yet been successfully uploaded: will queue
+0013.138 (0) Requesting upload of the files that have not yet been successfully uploaded (5)
+0013.155 (0) Cloud backup selection (1/1): none (last)
+0013.164 (0) No remote despatch: user chose no remote backup service
+0013.220 (0) Recording as successfully uploaded: backup_2015-08-21-1608_user039s_Blog_c679cca049c3-plugins.zip (7499c8a3bf5f27d2e37bfe261917a168)
+0013.240 (0) Recording as successfully uploaded: backup_2015-08-21-1608_user039s_Blog_c679cca049c3-themes.zip (5a8baf7a4d3653fa6595fefa3568a458)
+0013.263 (0) Recording as successfully uploaded: backup_2015-08-21-1608_user039s_Blog_c679cca049c3-uploads.zip (1fc9e01b1c2ded8bfefea4f2f0d5b86b)
+0013.283 (0) Recording as successfully uploaded: backup_2015-08-21-1608_user039s_Blog_c679cca049c3-others.zip (40ca37adcc0d84affe3a2cf250c6ba7d)
+0013.325 (0) Recording as successfully uploaded: backup_2015-08-21-1608_user039s_Blog_c679cca049c3-db.gz (f103d840cdfc4d6d1c28e0c2e15f8d9d)
+0013.342 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=2, retain_db=2
+0013.346 (0) Number of backup sets in history: 1
+0013.353 (0) Examining backup set with datestamp: 1440173284 (Aug 21 2015 16:08:04)
+0013.357 (0) 1440173284: this backup set remains non-empty (1/1); will retain in history
+0013.361 (0) Retain: saving new backup history (sets now: 1) and finishing retain operation
+0013.370 (0) Resume backup (c679cca049c3, 0): finish run
+0013.388 (0) Decremented the semaphore (fd) by 1
+0013.398 (0) Semaphore (fd) unlocked
+0013.404 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+0013.416 (0) No email will/can be sent - the user has not configured an email address.
+0013.420 (0) The backup apparently succeeded and is now complete

@@ -1,0 +1,104 @@
+[-*Smarty*-]
+[-config_load file="default.conf"-]
+[-*Load the Language Definitions*-]
+[-config_load file="lang.$USER_LANG"-]
+
+[-* we want to include out stylesheet for this view*-]
+[-fetch file="$TPL_STYLE_PATH/day.css" assign="css"-]
+[-eval var=$css-]
+
+[-if $PRINT_VIEW != 1-]
+[-*Main Navigation*-]
+[-include file="$TPL_NAME/views/global/navigation.html"-]
+[-/if-]
+
+[-assign var="dayname" value=$DATE|date_format:"%w"-]
+[-assign var="day" value=$DATE|date_format:"%d"|string_format:"%1d"-]
+[-assign var="month" value=$DATE|date_format:"%m"|string_format:"%1d"-]
+[-assign var="year" value=$DATE|date_format:"%Y"|string_format:"%4d"-]
+<table width="100%" border="0" cellpadding="5" cellspacing="0" class="dayheader">
+    <tr>
+        <td nowrap width="100%" align="center" valign="middle" class="dayheader">
+			<a href="[-$PREV_DAY_URL-]">&lt;&lt;</a>
+        	[-if $USE_INT_DATES eq true-]
+				[-pc_date_format date=$DATE format=#_PC_DATE_FORMAT_INT#-]
+			[-else-]	
+				[-pc_date_format date=$DATE format=#_PC_DATE_FORMAT_STD#-]
+			[-/if-]
+			<a href="[-$NEXT_DAY_URL-]">&gt;&gt;</a>
+		</td>
+		[-if $PRINT_VIEW != 1-]
+		<td nowrap align="right" valign="top" class="dayheader">
+			[-pc_view_select label=#_PC_TPL_VIEW_LABEL# class=""-]
+		</td>
+		[-/if-]
+	</tr>
+</table>
+
+
+
+<table width="100%" border="0" cellpadding="0" cellspacing="1" class="calcontainer"><tr><td>
+	<table width="100%" border="0" cellpadding="0" cellspacing="1"><tr><td class="eventslist">
+	[-foreach name=dates item=events key=date from=$A_EVENTS-]
+
+    	[-assign var="dayname" value=$date|date_format:"%w"-]
+    	[-assign var="day" value=$date|date_format:"%d"|string_format:"%1d"-]
+    	[-assign var="month" value=$date|date_format:"%m"|string_format:"%1d"-]
+    	[-assign var="year" value=$date|date_format:"%Y"|string_format:"%4d"-]
+
+		[-pc_sort_events var="S_EVENTS" sort="category" order="asc" value=$A_EVENTS-]
+		[-assign var="oldCat" value=""-]
+		[-foreach name=events item=event from=$S_EVENTS.$date-]
+			[-assign var="cCat" value=$event.catname-]
+			[-if $oldCat != $cCat-]
+				[-if $smarty.foreach.events.first != true-]
+					</div>
+				[-/if-]
+				<div style="padding: 2px; background-color: [-$event.catcolor-];">
+					[-$event.catname-]
+				</div>
+				<div style="padding: 2px; border:solid 1px [-$event.catcolor-];">
+			[-/if-]
+			[-if $24HOUR_TIME-]
+				[-assign var="timestamp" value=$event.startTime|date_format:#_PC_TIME_FORMAT_24#-]
+			[-else-]
+				[-assign var="timestamp" value=$event.startTime|date_format:#_PC_TIME_FORMAT_12#-]
+			[-/if-]
+			[-if $event.alldayevent != true-]
+				[-$timestamp-]  
+			[-/if-]
+			<a href="[-pc_url action=detail eid=$event.eid date=$date-]" 
+			[-pc_popup delay="500" 
+	            	   bgcolor=$event.catcolor 
+			    	   caption=$event.title 
+			    	   text=$event.hometext-]>
+    		[-$event.title|strip_tags-]</a> 
+			[-if $event.alldayevent != true-]
+				[-if $event.duration_hours eq "00" && $event.duration_minutes eq "0"-] 
+				[-else-] 
+					([-$event.duration_hours-]:[-$event.duration_minutes-])
+				[-/if-] 				
+			[-/if-]
+			<br />
+			[-assign var="oldCat" value=$event.catname-]
+			[-if $smarty.foreach.events.last-]
+				[-* we need to close out the <div> tag *-]
+				</div>
+			[-/if-]
+		[-foreachelse-]
+			<center><b>[-#_PC_NO_EVENTS#-]</b></center>
+		[-/foreach-]
+	[-/foreach-]
+	</td></tr></table>
+</td></tr></table>
+[-if $PRINT_VIEW != 1-]
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+        <td align="right">
+            <a href="[-pc_url action="day" print="true"-]">[-#_PC_THEME_PRINT#-]</a>
+        </td>
+    </tr>
+</table>
+[-/if-]
+[-*footer*-]
+[-include file="$TPL_NAME/views/global/footer.html"-]

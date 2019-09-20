@@ -1,0 +1,128 @@
+@CHARSET "ISO-8859-1";
+	
+a:link { color: #03C; }
+
+.vimg120 {
+	width: 120px;
+	height: 90px;
+	}
+
+img { border: none; }
+	
+ p.MsoNormal
+{
+ 	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family: Arial, Helvetica, sans-serif;
+	margin-left: 0in;
+	margin-right: 0in;
+	margin-top: 0in;
+	text-align: center;
+	color: #800000;
+}
+.style1 {
+	text-align: center;
+}
+.style3 {
+	color: #800000;
+	border-left-color: #9D9DA1;
+	border-right-color: #C0C0C0;
+	border-top-color: #9D9DA1;
+	border-bottom-color: #C0C0C0;
+	padding: 1px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+}
+.style4 {
+	color: #800000;
+}
+.style5 {
+	border-width: 0px;
+}
+.style6 {
+	border-style: solid;
+	border-width: 0;
+}
+.style8 {
+	text-align: center;
+	border-width: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: medium;
+}
+.style10 {
+	text-align: center;
+	color: #993300;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: medium;
+	background-color: #FFCC66;
+}
+.style11 {
+	border-left: medium none #FF9933;
+	border-right: medium none #FF9933;
+	border-top: 1px solid #FF9933;
+	border-bottom: 1px solid #FF9933;
+	text-align: center;
+		background-color: #FFFF66;
+}
+.style12 {
+	color: #800000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: small;
+}
+.style13 {
+	font-family: Arial, Helvetica, sans-serif;
+}
+.style15 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: small;
+}
+.style16 {
+	font-size: small;
+}
+.style18 {
+	border-width: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: medium;
+}
+.style19 {
+	border-width: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: medium;
+	background-color: #FFFFCC;
+}
+.style20 {
+	border-width: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: medium;
+	text-align: center;
+	background-color: #FFFFCC;
+}
+.style21 {
+	border-left: medium none #FF9933;
+	border-right: medium none #FF9933;
+	border-top: medium none #FF9933;
+	border-bottom: 1px solid #FF9933;
+	text-align: center;
+	}
+.style22 {
+	border-left-width: 0px;
+	border-right-width: 0px;
+	border-top-width: 0px;
+}
+.style23 {
+	font-size: xx-small;
+}
+.style24 {
+	border: medium none #FF9933;
+	text-align: right;
+	font-size: small;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #0000FF;
+}
+.style25 {
+	border: medium none #FF9933;
+	text-align: right;
+	font-size: 5pt;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #0000FF;
+}

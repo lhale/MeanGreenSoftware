@@ -1,0 +1,696 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Health\n"
+"POT-Creation-Date: 2015-03-27 23:47+0200\n"
+"PO-Revision-Date: 2015-03-27 23:48+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.5\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: 404.php:15
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:19
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+
+#: 404.php:27
+msgid "Most Used Categories"
+msgstr ""
+
+#: 404.php:44
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr ""
+
+#: comments.php:28
+#, php-format
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:35 comments.php:56
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:38 comments.php:59
+msgid "Older Comments"
+msgstr ""
+
+#: comments.php:39 comments.php:60
+msgid "Newer Comments"
+msgstr ""
+
+#: comments.php:72
+msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:82
+msgid "Name"
+msgstr ""
+
+#: comments.php:83
+msgid "Email"
+msgstr ""
+
+#: comments.php:84
+msgid "Website"
+msgstr ""
+
+#: comments.php:91
+msgid "Cancel reply"
+msgstr ""
+
+#: content-none.php:13
+msgid "Nothing Found"
+msgstr ""
+
+#: content-none.php:19
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: content-none.php:23
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: content-none.php:28
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: content-page.php:20 inc/template-tags.php:33 inc/template-tags.php:201
+#: inc/template-tags.php:214
+msgid "Edit"
+msgstr ""
+
+#: content-page.php:28 content-single.php:26 content.php:35
+msgid "Pages:"
+msgstr ""
+
+#: content.php:28
+#, php-format
+msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: footer.php:15
+#, php-format
+msgid "Proudly powered by %s"
+msgstr ""
+
+#: footer.php:17
+#, php-format
+msgid "%1$s by %2$s."
+msgstr ""
+
+#: functions.php:53
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:93
+msgid "Sidebar"
+msgstr ""
+
+#: header.php:22
+msgid "Skip to content"
+msgstr ""
+
+#: header.php:65
+msgid "Menu"
+msgstr ""
+
+#: inc/extras.php:52
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: inc/includes/class-options-framework-admin.php:91
+#: inc/includes/class-options-framework-admin.php:92
+msgid "Theme Options"
+msgstr ""
+
+#: inc/includes/class-options-framework-admin.php:203
+msgid "Save Options"
+msgstr ""
+
+#: inc/includes/class-options-framework-admin.php:204
+msgid "Restore Defaults"
+msgstr ""
+
+#: inc/includes/class-options-framework-admin.php:204
+msgid "Click OK to reset. Any theme settings will be lost!"
+msgstr ""
+
+#: inc/includes/class-options-framework-admin.php:235
+msgid "Default options restored."
+msgstr ""
+
+#: inc/includes/class-options-framework-admin.php:289
+msgid "Options saved."
+msgstr ""
+
+#: inc/includes/class-options-media-uploader.php:62
+msgid "No file chosen"
+msgstr ""
+
+#: inc/includes/class-options-media-uploader.php:65
+#: inc/includes/class-options-media-uploader.php:118
+msgid "Upload"
+msgstr ""
+
+#: inc/includes/class-options-media-uploader.php:67
+#: inc/includes/class-options-media-uploader.php:119
+msgid "Remove"
+msgstr ""
+
+#: inc/includes/class-options-media-uploader.php:70
+msgid "Upgrade your version of WordPress for full media support."
+msgstr ""
+
+#: inc/includes/class-options-media-uploader.php:94
+msgid "View File"
+msgstr ""
+
+#: inc/includes/class-options-sanitization.php:316
+msgid "No Repeat"
+msgstr ""
+
+#: inc/includes/class-options-sanitization.php:317
+msgid "Repeat Horizontally"
+msgstr ""
+
+#: inc/includes/class-options-sanitization.php:318
+msgid "Repeat Vertically"
+msgstr ""
+
+#: inc/includes/class-options-sanitization.php:319
+msgid "Repeat All"
+msgstr ""
+
+#: inc/includes/class-options-sanitization.php:331
+msgid "Top Left"
+msgstr ""
+
+#: inc/includes/class-options-sanitization.php:332
+msgid "Top Center"
+msgstr ""
+
+#: inc/includes/class-options-sanitization.php:333
+msgid "Top Right"
+msgstr ""
+
+#: inc/includes/class-options-sanitization.php:334
+msgid "Middle Left"
+msgstr ""
+
+#: inc/includes/class-options-sanitization.php:335
+msgid "Middle Center"
+msgstr ""
+
+#: inc/includes/class-options-sanitization.php:336
+msgid "Middle Right"
+msgstr ""
+
+#: inc/includes/class-options-sanitization.php:337
+msgid "Bottom Left"
+msgstr ""
+
+#: inc/includes/class-options-sanitization.php:338
+msgid "Bottom Center"
+msgstr ""
+
+#: inc/includes/class-options-sanitization.php:339
+msgid "Bottom Right"
+msgstr ""
+
+#: inc/includes/class-options-sanitization.php:351
+msgid "Scroll Normally"
+msgstr ""
+
+#: inc/includes/class-options-sanitization.php:352
+msgid "Fixed in Place"
+msgstr ""
+
+#: inc/includes/class-options-sanitization.php:424
+msgid "Normal"
+msgstr ""
+
+#: inc/includes/class-options-sanitization.php:425
+msgid "Italic"
+msgstr ""
+
+#: inc/includes/class-options-sanitization.php:426
+msgid "Bold"
+msgstr ""
+
+#: inc/includes/class-options-sanitization.php:427
+msgid "Bold Italic"
+msgstr ""
+
+#: inc/template-tags.php:37
+msgid "Leave a comment"
+msgstr ""
+
+#: inc/template-tags.php:37
+msgid "1 Comment"
+msgstr ""
+
+#: inc/template-tags.php:37
+msgid "% Comments"
+msgstr ""
+
+#: inc/template-tags.php:48
+msgid "Featured"
+msgstr ""
+
+#: inc/template-tags.php:56 inc/template-tags.php:62
+msgid ", "
+msgstr ""
+
+#: inc/template-tags.php:77
+#, php-format
+msgid "Category: %s"
+msgstr ""
+
+#: inc/template-tags.php:79
+#, php-format
+msgid "Tag: %s"
+msgstr ""
+
+#: inc/template-tags.php:81
+#, php-format
+msgid "Author: %s"
+msgstr ""
+
+#: inc/template-tags.php:83
+#, php-format
+msgid "Year: %s"
+msgstr ""
+
+#: inc/template-tags.php:83
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: inc/template-tags.php:85
+#, php-format
+msgid "Month: %s"
+msgstr ""
+
+#: inc/template-tags.php:85
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: inc/template-tags.php:87
+#, php-format
+msgid "Day: %s"
+msgstr ""
+
+#: inc/template-tags.php:87
+msgctxt "daily archives date format"
+msgid "F j, Y"
+msgstr ""
+
+#: inc/template-tags.php:90
+msgctxt "post format archive title"
+msgid "Asides"
+msgstr ""
+
+#: inc/template-tags.php:92
+msgctxt "post format archive title"
+msgid "Galleries"
+msgstr ""
+
+#: inc/template-tags.php:94
+msgctxt "post format archive title"
+msgid "Images"
+msgstr ""
+
+#: inc/template-tags.php:96
+msgctxt "post format archive title"
+msgid "Videos"
+msgstr ""
+
+#: inc/template-tags.php:98
+msgctxt "post format archive title"
+msgid "Quotes"
+msgstr ""
+
+#: inc/template-tags.php:100
+msgctxt "post format archive title"
+msgid "Links"
+msgstr ""
+
+#: inc/template-tags.php:102
+msgctxt "post format archive title"
+msgid "Statuses"
+msgstr ""
+
+#: inc/template-tags.php:104
+msgctxt "post format archive title"
+msgid "Audio"
+msgstr ""
+
+#: inc/template-tags.php:106
+msgctxt "post format archive title"
+msgid "Chats"
+msgstr ""
+
+#: inc/template-tags.php:109
+#, php-format
+msgid "Archives: %s"
+msgstr ""
+
+#: inc/template-tags.php:113
+#, php-format
+msgid "%1$s: %2$s"
+msgstr ""
+
+#: inc/template-tags.php:115
+msgid "Archives"
+msgstr ""
+
+#: inc/template-tags.php:201
+msgid "Pingback:"
+msgstr ""
+
+#: inc/template-tags.php:213
+#, php-format
+msgctxt "1: date, 2: time"
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: inc/template-tags.php:217
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: inc/template-tags.php:239
+msgid "Page"
+msgstr ""
+
+#: inc/template-tags.php:245
+msgid "Older posts"
+msgstr ""
+
+#: inc/template-tags.php:249
+msgid "Newer posts"
+msgstr ""
+
+#: options.php:23
+msgid "One"
+msgstr ""
+
+#: options.php:24
+msgid "Two"
+msgstr ""
+
+#: options.php:25
+msgid "Three"
+msgstr ""
+
+#: options.php:26
+msgid "Four"
+msgstr ""
+
+#: options.php:27
+msgid "Five"
+msgstr ""
+
+#: options.php:32
+msgid "French Toast"
+msgstr ""
+
+#: options.php:33
+msgid "Pancake"
+msgstr ""
+
+#: options.php:34
+msgid "Omelette"
+msgstr ""
+
+#: options.php:35
+msgid "Crepe"
+msgstr ""
+
+#: options.php:36
+msgid "Waffle"
+msgstr ""
+
+#: options.php:97
+msgid "Header"
+msgstr ""
+
+#: options.php:103
+msgid "Header Logo"
+msgstr ""
+
+#: options.php:104
+msgid "Upload logo for your header."
+msgstr ""
+
+#: options.php:111
+msgid "Header Logo Only"
+msgstr ""
+
+#: options.php:112
+msgid "Header Text Only"
+msgstr ""
+
+#: options.php:113
+msgid "Show Both"
+msgstr ""
+
+#: options.php:114
+msgid "Disable"
+msgstr ""
+
+#: options.php:117
+msgid "Show"
+msgstr ""
+
+#: options.php:118
+msgid "Choose the option that you want."
+msgstr ""
+
+#: options.php:125
+msgid "Header Icon and Size"
+msgstr ""
+
+#: options.php:126
+msgid ""
+"Example:\"<strong>fa-3x fa-h-square</strong>\". All icons list http://"
+"fortawesome.github.io/Font-Awesome/icons/#search"
+msgstr ""
+
+#: options.php:132
+msgid "Adress"
+msgstr ""
+
+#: options.php:138
+msgid "Mail"
+msgstr ""
+
+#: options.php:139
+msgid "Link or mail"
+msgstr ""
+
+#: options.php:145
+msgid "Phone"
+msgstr ""
+
+#: options.php:154
+msgid "Design"
+msgstr ""
+
+#: options.php:159
+msgid "Primary color option"
+msgstr ""
+
+#: options.php:160
+msgid ""
+"This will reflect in links, buttons and many others. Choose a color to match "
+"your site."
+msgstr ""
+
+#: options.php:169
+msgid "Additional"
+msgstr ""
+
+#: options.php:175
+msgid "Activate favicon"
+msgstr ""
+
+#: options.php:176
+msgid "Check to activate favicon. Upload fav icon from below option"
+msgstr ""
+
+#: options.php:184
+msgid "Upload favicon"
+msgstr ""
+
+#: options.php:185
+msgid "Upload favicon for your site."
+msgstr ""
+
+#: options.php:194
+msgid "Slider"
+msgstr ""
+
+#: options.php:200
+msgid "Activate slider"
+msgstr ""
+
+#: options.php:201
+msgid "Check to activate slider."
+msgstr ""
+
+#: options.php:210
+#, php-format
+msgid "Image Upload #%1$s"
+msgstr ""
+
+#: options.php:211
+msgid "Upload slider image."
+msgstr ""
+
+#: options.php:216
+msgid "Enter title for your slider."
+msgstr ""
+
+#: options.php:222
+msgid "Enter your slider description."
+msgstr ""
+
+#: options.php:228
+msgid "Enter link to redirect slider when clicked"
+msgstr ""
+
+#: options.php:238
+msgid "Services"
+msgstr ""
+
+#: options.php:244
+msgid "Activate services"
+msgstr ""
+
+#: options.php:245
+msgid "Check to activate services."
+msgstr ""
+
+#: options.php:251
+msgid "Main Service"
+msgstr ""
+
+#: options.php:252 options.php:294
+msgid "Service Title"
+msgstr ""
+
+#: options.php:258 options.php:300
+msgid "Service Description"
+msgstr ""
+
+#: options.php:270
+msgid "Number of services"
+msgstr ""
+
+#: options.php:271
+msgid "How many services is the homepage. (Set and click SAVE)"
+msgstr ""
+
+#: options.php:285
+#, php-format
+msgid "Service #%1$s"
+msgstr ""
+
+#: options.php:286
+msgid ""
+"Service Icon<br />\n"
+"\t\t\tService Icon (Using Font Awesome icons name) like: fa-medkit. <a href="
+"\"http://fortawesome.github.io/Font-Awesome/icons/\">Get your fontawesome "
+"icons.</a>"
+msgstr ""
+
+#: options.php:306
+msgid "Enter link to redirect service when clicked"
+msgstr ""
+
+#: options.php:315
+msgid "Projects"
+msgstr ""
+
+#: options.php:321
+msgid "Activate projects"
+msgstr ""
+
+#: options.php:322
+msgid "Check to activate projects."
+msgstr ""
+
+#: options.php:328
+msgid "Main Project"
+msgstr ""
+
+#: options.php:329 options.php:369
+msgid "Title"
+msgstr ""
+
+#: options.php:335 options.php:375
+msgid "Description"
+msgstr ""
+
+#: options.php:347
+msgid "Number of projects"
+msgstr ""
+
+#: options.php:348
+msgid "How many projects is the homepage. (Set and click SAVE)"
+msgstr ""
+
+#: options.php:361
+msgid "Service"
+msgstr ""
+
+#: options.php:362
+msgid "Image "
+msgstr ""
+
+#: options.php:381
+msgid "Enter link to redirect project when clicked"
+msgstr ""
+
+#: search.php:16
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: searchform.php:8
+msgctxt "placeholder"
+msgid "Search&hellip;"
+msgstr ""
+
+#: searchform.php:8
+msgctxt "label"
+msgid "Search for:"
+msgstr ""

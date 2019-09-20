@@ -1,0 +1,51 @@
+<!--[* $Id: pnmenu_list.html,v 1.2 2004/04/07 18:26:40 tsmiatek Exp $ *]-->
+<!--[*  ---------------------------------------------------------------------- *]-->
+<!--[*  pnRender                                                               *]-->
+<!--[*  PostNuke wrapper class for Smarty                                      *]-->
+<!--[*  ---------------------------------------------------------------------- *]-->
+<!--[*  Author: Frank Schummertz, frank.schummertz@landseer.stuttgart.de       *]-->
+<!--[*  ---------------------------------------------------------------------- *]-->
+<!--[*  LICENSE                                                                *]-->
+<!--[*  This program is free software; you can redistribute it and/or          *]-->
+<!--[*  modify it under the terms of the GNU General Public License (GPL)      *]-->
+<!--[*  as published by the Free Software Foundation; either version 2         *]-->
+<!--[*  of the License, or (at your option) any later version.                 *]-->
+<!--[*  This program is distributed in the hope that it will be useful,        *]-->
+<!--[*  but WITHOUT ANY WARRANTY; without even the implied warranty of         *]-->
+<!--[*  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          *]-->
+<!--[*  GNU General Public License for more details.                           *]-->
+<!--[*  To read the license please visit http://www.gnu.org/copyleft/gpl.html  *]-->
+<!--[*  ---------------------------------------------------------------------- *]-->
+<!--[*  Purpose of this template:                                              *]-->
+<!--[*  pnmenu list menu                                                       *]-->
+<!--[*  ---------------------------------------------------------------------- *]-->
+
+<!--[ if $displaymodules == true ]-->
+<!--[ include file=pnmenu_displaymodules.html ]-->
+<br>
+<!--[ /if ]-->
+<!--[ if $displaywaiting == true ]-->
+<!--[ include file=pnmenu_displaywaiting.html ]-->
+<br>
+<!--[ /if ]-->
+<table cellpadding="0" cellspacing="0" style="padding-top: 3px; padding-bottom: 3px;">
+
+<!--[ foreach item=link from=$linklist ]-->
+    <tr>
+        <!--[ if $link.url == "" ]-->
+        <td colspan="2">
+            <br>
+        </td>
+        <!--[ else ]-->
+        <td style="padding-right: 5px;">
+            <!--[ pnimg src=link.gif border=0]-->
+        </td>
+        <td class="pn-normal">
+            <a href="<!--[ $link.url ]-->" title="<!--[ $link.desc ]-->"><!--[ $link.name ]--></a>
+        </td>
+        <!--[ /if ]-->
+    </tr>
+<!--[ /foreach ]-->
+</table>
+<!--[ pnmeditblock blockid=$blockid style="color:blue;" ]-->
+<!-- end pnmenu_list -->

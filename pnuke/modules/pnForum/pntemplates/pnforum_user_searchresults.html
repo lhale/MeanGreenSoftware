@@ -1,0 +1,31 @@
+<!--[*  $Id: pnforum_user_searchresults.html,v 1.6 2005/09/08 15:19:20 landseer Exp $  *]-->
+
+<!--[ include file='pnforum_user_header.html' ]-->
+
+<div style="padding: 3px; text-align: center; background: <!--[ $bgcolor2 ]-->;">
+<h2><!--[ pnml name='_PNFORUM_SEARCHRESULTSFOR' ]-->&nbsp;'<!--[ if $searchfor neq '' ]--><!--[ $searchfor ]--><!--[ else ]--><!--[ $searchauthor ]--><!--[ /if ]-->'&nbsp;(<!--[ $total_hits ]-->&nbsp;<!--[ pnml name='_PNFORUM_SEARCHINCLUDE_HITS' ]-->) </h2>
+</div>
+<br />
+
+<ul class="searchresultlist">
+<!--[ foreach key=num item=searchresult from=$searchresults ]-->
+    <li class="searchresult">
+        <strong>#<!--[ $searchstart+$num+1 ]--></strong><br />
+        <strong><!--[ pnml name='_PNFORUM_SUBJECT' ]--></strong> : <a href="<!--[ pnmodurl modname=pnForum type=user func=viewtopic topic=$searchresult.topic_id highlight=$searchfor ]-->" title="<!--[ pnml name='_PNFORUM_GOTO_TOPIC' ]--> '<!--[ $searchresult.topic_title ]-->'"><!--[ $searchresult.topic_title ]--></a><br />
+        <strong><!--[ pnml name='_PNFORUM_TOPIC' ]--></strong> : <a class="header" href="<!--[ pnmodurl modname=pnForum type=user func=viewforum forum=$searchresult.forum_id ]-->" title="<!--[ pnml name='_PNFORUM_GOTO_FORUM' ]--> '<!--[ $searchresult.forum_name ]-->'"><!--[ $searchresult.cat_title ]--> :: <!--[ $searchresult.forum_name ]--></a><br />
+        <strong><!--[ pnml name='_PNFORUM_SEARCHINCLUDE_AUTHOR' ]--></strong> : <!--[ $searchresult.poster_name|profilelink ]--><br />
+        <strong><!--[ pnml name='_PNFORUM_SEARCHINCLUDE_DATE' ]--></strong> : <!--[ $searchresult.posted_time ]--><br />
+        <strong><!--[ pnml name='_PNFORUM_SEARCHINCLUDE_REPLIES' ]--></strong> : <!--[ $searchresult.topic_replies ]--><br />
+        <strong><!--[ pnml name='_PNFORUM_PREVIEW' ]--></strong> :<br />
+        <br />
+        <!--[ $searchresult.post_text|truncate:128 ]--><br />
+        <br />
+    </li>
+<!--[ foreachelse ]-->
+    <li><!--[ pnml name='_PNFORUM_SEARCHINCLUDE_NOENTRIES' ]--></li>
+<!--[ /foreach ]-->
+</ul>
+<br />
+<!--[ pager rowcount=$total_hits limit=$searchlimit separator=" " posvar=searchstart txt_prev="<<" txt_next=">>" ]-->
+<br />
+<!--[ include file='pnforum_user_footer.html' ]-->

@@ -1,0 +1,267 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: BlueGray\n"
+"POT-Creation-Date: 2014-03-06 19:24+0100\n"
+"PO-Revision-Date: 2014-03-06 19:26+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: 404.php:9
+#: search.php:36
+#@ bluegray
+msgid "Nothing Found"
+msgstr ""
+
+#: 404.php:10
+#: archive.php:47
+#: index.php:39
+#: search.php:37
+#@ bluegray
+msgid "Sorry, no posts matched your criteria."
+msgstr ""
+
+#: archive.php:12
+#@ bluegray
+msgid "Archive"
+msgstr ""
+
+#: archive.php:14
+#@ bluegray
+msgid "Daily Archives"
+msgstr ""
+
+#: archive.php:16
+#@ bluegray
+msgid "Monthly Archives"
+msgstr ""
+
+#: archive.php:18
+#@ bluegray
+msgid "Yearly Archives"
+msgstr ""
+
+#: archive.php:20
+#@ bluegray
+msgid "Author Archives"
+msgstr ""
+
+#: archive.php:22
+#@ bluegray
+msgid "Tag Archives"
+msgstr ""
+
+#: archive.php:27
+#: index.php:19
+#: search.php:15
+#@ bluegray
+msgid "Permalink to %s"
+msgstr ""
+
+#: archive.php:31
+#: index.php:23
+#: search.php:19
+#: single.php:17
+#, php-format
+#@ bluegray
+msgid "Posted on %s"
+msgstr ""
+
+#: archive.php:32
+#: index.php:24
+#: search.php:20
+#: single.php:18
+#, php-format
+#@ bluegray
+msgid "By %s"
+msgstr ""
+
+#: archive.php:34
+#: index.php:26
+#: search.php:22
+#: single.php:20
+#@ bluegray
+msgid "Leave a response"
+msgstr ""
+
+#: archive.php:34
+#: index.php:26
+#: search.php:22
+#: single.php:20
+#@ bluegray
+msgid "1 response"
+msgstr ""
+
+#: archive.php:34
+#: index.php:26
+#: search.php:22
+#: single.php:20
+#@ bluegray
+msgid "% responses"
+msgstr ""
+
+#: archive.php:43
+#: index.php:35
+#: search.php:31
+#@ bluegray
+msgid "Read More &raquo;"
+msgstr ""
+
+#: archive.php:51
+#: index.php:43
+#: search.php:43
+#@ bluegray
+msgid "&laquo; Older posts"
+msgstr ""
+
+#: archive.php:52
+#: index.php:44
+#: search.php:44
+#@ bluegray
+msgid "Newer posts &raquo;"
+msgstr ""
+
+#: comments.php:18
+#, php-format
+#@ bluegray
+msgid "1 response on %2$s"
+msgid_plural "%1$s responses on %2$s"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:38
+#@ bluegray
+msgid "&laquo; Older Comments"
+msgstr ""
+
+#: comments.php:39
+#@ bluegray
+msgid "Newer Comments &raquo;"
+msgstr ""
+
+#: comments.php:44
+#@ bluegray
+msgid "Comments are closed"
+msgstr ""
+
+#: footer.php:47
+#@ bluegray
+msgid "Copyright"
+msgstr ""
+
+#: footer.php:48
+#@ bluegray
+msgid "WordPress Blog Platform"
+msgstr ""
+
+#: footer.php:48
+#@ bluegray
+msgid "Proudly powered by WordPress"
+msgstr ""
+
+#: functions.php:19
+#@ bluegray
+msgid "Primary Navigation"
+msgstr ""
+
+#: functions.php:40
+#@ bluegray
+msgid "Boats"
+msgstr ""
+
+#: functions.php:104
+#@ bluegray
+msgid "Primary Sidebar"
+msgstr ""
+
+#: functions.php:106
+#: functions.php:116
+#: functions.php:126
+#: functions.php:137
+#: functions.php:147
+#: functions.php:157
+#: functions.php:167
+#@ bluegray
+msgid "Select widgets from the right-hand side."
+msgstr ""
+
+#: functions.php:114
+#@ bluegray
+msgid "Homepage Sidebar Right"
+msgstr ""
+
+#: functions.php:124
+#@ bluegray
+msgid "Homepage Sidebar Middle"
+msgstr ""
+
+#: functions.php:135
+#@ bluegray
+msgid "Homepage Sidebar Left"
+msgstr ""
+
+#: functions.php:145
+#@ bluegray
+msgid "Footer Sidebar Right"
+msgstr ""
+
+#: functions.php:155
+#@ bluegray
+msgid "Footer Sidebar Middle"
+msgstr ""
+
+#: functions.php:165
+#@ bluegray
+msgid "Footer Sidebar Left"
+msgstr ""
+
+#: functions.php:189
+#: functions.php:195
+#@ bluegray
+msgid "Logo"
+msgstr ""
+
+#: functions.php:191
+#@ bluegray
+msgid "Upload a logo to replace blogname and description in header"
+msgstr ""
+
+#: index.php:14
+#@ bluegray
+msgid "Featured post"
+msgstr ""
+
+#: page-full.php:20
+#: page.php:19
+#: single.php:38
+#@ bluegray
+msgid "Edit"
+msgstr ""
+
+#: search.php:11
+#, php-format
+#@ bluegray
+msgid "Search Results for: %s"
+msgstr ""
+
+#: single.php:27
+#, php-format
+#@ bluegray
+msgid "Posted in %s"
+msgstr ""
+
+#: single.php:27
+#: single.php:28
+#@ bluegray
+msgid ", "
+msgstr ""
+
+#: single.php:28
+#, php-format
+#@ bluegray
+msgid "Tags: %s"
+msgstr ""
+
+

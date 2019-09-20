@@ -1,0 +1,700 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="robots" content="noindex,nofollow">
+<title></title>
+
+<link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
+
+<body leftmargin="5" topmargin="0" class="" alink="#838ea9" bgcolor="#ffffff" text="#000000" vlink="#838ea9" link="#838ea9" marginheight="0" marginwidth="5">
+<!-- begin mobile html -->
+
+<div class="bodywidth">
+  <div id="plain_text_section">	
+	<form name="banner_text_form" action="/m/b.htm" method="post">
+		<!--  Hidden fields are for reset & JSP injection -->
+		<input name="banner_bkgrn_color" value="yellow" type="hidden">
+		<input name="banner_info" value="Your banner text here" type="hidden">
+		<input name="banner_text_color" value="black" type="hidden">
+		<input name="banner_text_font" value="sans-serif" type="hidden">
+		<input name="banner_text_font_size" value="12px" type="hidden">
+		<input name="banner_text_padding" value="15px" type="hidden">
+		<input name="forwarding_url_image" value="../images/Click_video.jpg" type="hidden">
+		<input name="forwarding_url" value="http://m.google.com" type="hidden">
+		<!-- div as a hyperlink from @ http://www.webmasterworld.com/forum83/5857.htm -->
+	  <div id="top_block_colored" class="top_block_colored">
+		<div id="banner_text" class="banner_text">
+			<a id="banner_link" title="" >Your banner text here</a>
+		</div>
+		<div id="click_area2" class="click_area2">
+			<div id="rollover2" class="rollover2">
+				<a id="plain_forward_url"  title="" href="http://whatever.com">&nbsp;</a>
+			</div>
+		</div>
+	  </div>
+			
+		<input id="banner_info" type="text" value="Your banner text here" size="36"/>  
+	<br />		
+	bkgrnd color:&nbsp;|text color:&nbsp;|type:
+	<br />		
+	  	
+		<select onchange="javascript:ChangeBannerColor(this, 'top_block_colored')" id="BannerColorChange" class="FilterSelect">
+	        <option  value="white">
+	            white
+			</option>
+			<option value="red">
+	            red
+			</option>
+	        <option value="orange">
+				orange
+			</option>
+	        <option selected value="yellow">
+				yellow
+			</option>
+	        <option value="lime">
+				lime
+			</option>
+	        <option value="green">
+				green
+			</option>
+	        <option value="blue">	
+	        	blue
+			</option>
+	        <option value="violet">	
+	        	violet
+			</option>
+	        <option value="gold">	
+				gold
+			</option>
+	        <option value="pink">
+				pink
+			</option>
+	        <option value="sienna">
+				sienna
+			</option>
+	        <option value="brown">
+				brown
+			</option>
+	        <option  value="black">
+				black
+			</option>
+	     </select>		
+	     
+		<select onchange="javascript:ChangeBannerTextColor(this, 'banner_link')" id="BannerTextColorChange" class="FilterSelect">
+	        <option selected value="black">
+	            black
+			</option>
+			<option value="red">
+	            red
+			</option>
+	        <option value="orange">
+				orange
+			</option>
+	        <option value="yellow">
+				yellow
+			</option>
+	        <option value="lime">
+				lime
+			</option>
+	        <option value="green">
+				green
+			</option>
+	        <option value="blue">	
+	        	blue
+			</option>
+	        <option value="violet">	
+	        	violet
+			</option>
+	        <option value="gold">	
+				gold
+			</option>
+	        <option value="pink">
+				orbitz
+			</option>
+	        <option value="sienna">
+				sienna
+			</option>
+	        <option value="brown">
+				brown
+			</option>
+	        <option value="white">
+				white
+			</option>
+	     </select>		
+   	
+		<select onchange="javascript:ChangeClickableIcon(this, 'plain_forward_url', 'banner_text', 'banner_link', 'click_area2')" name="ChangeClickIcon" class="FilterSelect">
+	        <option  value="video.jpg">
+	            Video
+			</option>
+	        <option selected value="call.jpg">	<!-- Assuming all images are in the ./images directory -->
+				Call
+			</option>
+	        <option value="app.jpg">
+				Application
+			</option>
+	        <option  value="generic_v.jpg">
+				Generic	video	<!-- Full clickable banner area -->
+			</option>
+	        <option  value="generic_c.jpg">
+				Generic call
+			</option>
+	        <option  value="generic_a.jpg">
+				Generic	application
+			</option>
+	     </select>
+	<br />		
+		<input id="bkgrnd_color_code" type="text" value="#xxxxxx" size="7"/>
+		<input id="text_color_code" type="text" value="#xxxxxx" size="7"/>
+	<-- customize
+	<br />	  
+	font:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font size:
+	<br />		
+		<select onchange="javascript:ChangeBannerFont(this, 'banner_text')" id="BannerFontChange" class="FilterSelect">
+	        <option selected value="Arial" style="font-family: Arial">
+	            Arial
+			</option>
+			<option value="Helvetica" style="font-family: Helvetica;">
+	            Helvetica
+			</option>
+	        <option value="Sans-serif" style="font-family: sans-serif">
+				sans-serif
+			</option>
+	        <option value="Tahoma" style="font-family: Tahoma">
+				Tahoma
+			</option>
+	        <option value="Times" style="font-family: Times">
+				Times Roman
+			</option>
+	        <option value="Trebuchet ms" style="font-family: trebuchet ms">
+				trebuchet ms
+			</option>
+	        <option value="Verdana" style="font-family: Verdana">
+				Verdana
+			</option>
+	     </select>		
+	     
+		<select onchange="javascript:ChangeBannerFontSize(this, 'banner_text')" id="BannerFontSizeChange" class="FilterSelect">
+	        <option  value="8px" style="font-size: 8px">
+	            8 pixels
+			</option>
+			<option value="9px" style="font-size: 8px">
+	            9 pixels
+			</option>
+	        <option value="10px" style="font-size: 9px">
+				10 pixels
+			</option>
+	        <option value="11px" style="font-size: 10px">
+				11 pixels
+			</option>
+	        <option selected value="12px" style="font-size: 12px">
+				12 pixels
+			</option>
+	        <option value="13px" style="font-size: 13px">
+				13 pixels
+			</option>
+	        <option value="14px" style="font-size: 14px">	
+	        	14 pixels
+			</option>
+	        <option value="15px" style="font-size: 15px">	
+	        	15 pixels
+			</option>
+	        <option value="16px" style="font-size: 16px">	
+				16 pixels
+			</option>
+	        <option value="17px" style="font-size: 17px">	
+	        	17 pixels
+			</option>
+	        <option value="18px" style="font-size: 18px">	
+				18 pixels
+			</option>
+	        <option value="19px" style="font-size: 19px">	
+	        	19 pixels
+			</option>
+	        <option value="20px" style="font-size: 20px">	
+				20 pixels
+			</option>
+	     </select>		
+
+	<br />		
+		<input id="font" type="text" value="font_name" size="14"/>
+		<input id="font_size" type="text" value="XXpx" size="8"/>
+	<-- customize
+	<br />		
+	url:
+		<input id="fwd_url_text" type="text" value="http://whatever.com" size="23"/>	
+	<br />		
+		<input value="change all" type="button" onClick="javascript:ChangeBannerProperties('top_block_colored', 'banner_text', 'banner_link', 'banner_icon','banner_info', 'BannerColorChange', 'BannerTextColorChange', 'bkgrnd_color_code', 'text_color_code', 'BannerFontChange', 'BannerFontSizeChange', 'font', 'font_size', 'plain_forward_url', 'fwd_url_text')" />
+	  	<input value="Reset values" type="submit">
+	  
+	</form>
+  </div>
+</div>
+
+<!-- end mobile html -->
+<br>
+<script type="text/javascript">
+// Not used
+function ChangeBanner(select)
+{
+	var length = select.options.length
+//    alert("len=" + length);
+    for (var i = 0; i < length; i++)
+    {
+         if (select.options[i].selected == true )
+         {
+    		// document...backgroundImage = select.options[i].value;
+    		var rules = document.styleSheets.item(0);
+			rules = rules.cssRules || rules.rules;
+			for (var x = 0; x < rules.length; x++) {
+				if (rules.item(x).selectorText == '.banner') // Corresponds with the div id
+				{
+    alert("change banner to " + select.options[i].value);
+					rules.item(x).style.backgroundImage = select.options[i].value;
+					break;
+				}
+			}
+    	}
+    }
+}
+
+function ChangeBanner(select, div_id)
+{
+	var style = accessCSS(div_id);
+	if ( style != null && style != "" )
+	{
+	
+		var length = select.options.length
+	    for (var i = 0; i < length; i++)
+	    {
+	         if (select.options[i].selected == true )
+			{
+//				alert("width=" + style.width);  //  (these two don't 'get' anything, but can be set - ???)
+//				alert("Orig banner= " + style.backgroundImage);
+//				style.width = '280px';
+//    alert("change banner to " + select.options[i].value);
+				style.backgroundImage = 'url(images/' + select.options[i].value + ')';
+				break;
+			}
+		}
+	}
+	else
+		alert("ERROR: No such banner div id: " + div_id);
+}		
+
+// Change the clickable icon (type of campaign). icon_id must be an anchor link
+// NOTE: All images prefixed with a "Click_". Hover image assumed to be a "_neon" suffixed image
+// NOTE2: All generic images are a full banner without image signal
+function ChangeClickableIcon(select, icon_id, banner_text, banner_link, click_area2)
+{
+	var style;
+	var icon_image;
+	var icon_neon_image;
+	var length = select.options.length;
+	var generic = false;	// toggle for all-banner hyperlink
+	var clickable_type = "";
+	var tool_tip = "Click to ";
+		
+    for (var i = 0; i < length; i++)
+    {
+        if (select.options[i].selected == true )
+		{
+			if ( select.options[i].value.indexOf("generic") == 0)
+			{
+				generic = true;
+				// Next, scrape off the _X suffix on the fake image to ascertain the type
+				clickable_type = select.options[i].value.substring(select.options[i].value.indexOf('_') + 1, select.options[i].value.indexOf('_') + 2);
+				break;
+			}
+			clickable_type = select.options[i].value.substring(0, 1);	
+			var image_name = "Click_" + select.options[i].value ;	// Include file type suffix
+			icon_image = "url('images/" + image_name + "')";
+			icon_neon_image = icon_image.substring(0, icon_image.length - (icon_image.length - icon_image.indexOf('.')));
+			icon_neon_image = icon_neon_image + "_neon" + icon_image.substring(icon_image.indexOf('.'), icon_image.length) ;
+//	alert("neon_image=" + icon_neon_image);
+			break;
+		}
+	}
+
+	if ( generic == true)
+	{
+		// Hide the clickable icon area
+		style = accessCSS(click_area2);
+		style.display = 'none';
+		// Widen the clickable banner area
+		style = accessCSS(banner_text);
+		style.width = '295px';
+		// If needed, restore the anchor link
+		elementId = accessElemId(banner_link);
+		if ( elementId.getAttribute("href") == null)
+			elementId.setAttribute("href", document.banner_text_form.forwarding_url.value);
+
+		// Set the appropriate tool tip for this type
+		if ( clickable_type == "v" )
+			tool_tip += "watch video";
+		if ( clickable_type == "c" )
+			tool_tip += "call";
+		if ( clickable_type == "a" )
+			tool_tip += "run application";
+		elementId.title = tool_tip;
+
+		return;
+	}
+	else
+	{
+		// Make visible (if not) the clickable icon area
+		style = accessCSS(click_area2);
+		style.display = 'block';
+		// Restore the banner text area to original settings
+		// TODO: Reference the hiden fields
+		style = accessCSS(banner_text);
+		style.width = '240px';			// same as is found on #banner_text
+		style.lineHeight = '45px';	// same as is found on #banner_text a
+		// and make the banner hyperlink 'disappear'
+		elementId = accessElemId(banner_link);
+/* innerHTML destroys banner_link div
+		if ( elementId.text != null)	// innerHTML previously changed here 
+		{
+			var link_text = elementId.text;
+			elementId = accessElemId(banner_text);
+			elementId.innerHTML = link_text;
+		}
+*/
+		if ( elementId.getAttribute("href") != null)
+			elementId.removeAttribute("href");
+		elementId.title = "";	// Only show the  tool tip on the icon
+	}
+	
+	elementId = accessElemId(icon_id);
+	style = accessCSS(icon_id);
+
+	if ( style != null && style != "" )
+	{
+		// The following two change the div property, and not the inline hyperlink property
+		// (The result is that the link image does not change from what is originally set)
+		/*
+		style.backgroundImage = 'url(images/' + "Click_call.jpg" + ')';
+		document.getElementById("rollover").onmouseover = function() {
+    		this.style.backgroundImage = 'url(images/' + "Click_call_neon.jpg" + ')';
+    	}
+    	*/
+		// So, try to directly access the hyperlink properties 
+		/* WORKS
+		document.getElementById("img_forward_url").style.backgroundImage = 'url(images/' + "Click_call.jpg" + ')';
+		document.getElementById("img_forward_url").onmouseover = function() {
+    		this.style.backgroundImage = 'url(images/' + "Click_call_neon.jpg" + ')';
+    	}
+		document.getElementById("img_forward_url").onmouseout = function() {
+    		this.style.backgroundImage = 'url(images/' + "Click_call.jpg" + ')';
+    	}
+    	*/
+    	// Set the regular and hover imagery
+    	style.backgroundImage = icon_image;
+    	elementId.onmouseover = function() {
+    		this.style.backgroundImage = icon_neon_image;
+    	}
+		elementId.onmouseout = function() {
+    		this.style.backgroundImage = icon_image;
+    	}
+	}
+	else
+		alert("ERROR: No such icon div id: " + icon_id);
+	
+	// Set the appropriate tool tip for this type
+	if ( clickable_type == "v" )
+		tool_tip += "watch video";
+	if ( clickable_type == "c" )
+		tool_tip += "call";
+	if ( clickable_type == "a" )
+		tool_tip += "run application";
+	elementId.title = tool_tip;
+		
+}
+
+function ChangeUrl(url_id, new_url_text)
+{
+	var anchor_link = accessElemId(url_id);
+	
+	var change_to_url = accessElemId(new_url_text).value;
+		
+	anchor_link.href = change_to_url;
+}
+
+function accessElemId(div_id){      //access a div property
+      if(document.getElementById){
+            return document.getElementById(div_id);
+      }else if(document.all){
+            return document.all[div_id];
+      }else if(document.layers){
+            return document.layers[div_id];
+            }
+}
+
+function accessCSS(layerID){      //access a CSS property
+      if(document.getElementById){
+            return document.getElementById(layerID) == null ? null : document.getElementById(layerID).style;
+      }else if(document.all){
+            return document.all[layerID].style;
+      }else if(document.layers){
+            return document.layers[layerID];
+      }
+      return null;
+}
+
+// getStyleById: given an element ID and style property
+// return the current setting for that property, or null.
+// args:
+//  i - element id
+//  p - property
+function getStyleById(i, p) {
+/*
+	var n = document.getElementById(i);
+	var s = eval("n.style." + p);
+*/
+	var allStyleRules = null;    // LDH - don't use allStyleRules[] below; let it match the old way
+/*	
+	// try inline
+	if((s != "") && (s != null)) {
+		return s;
+	}
+
+	// try currentStyle
+	if(n.currentStyle) {
+		var s = eval("n.currentStyle." + p);
+		if((s != "") && (s != null)) {
+			return s;
+		}
+	}
+*/	
+	// try styleSheets
+	var sheets = document.styleSheets;
+	if(sheets.length > 0) {
+		// loop over each sheet
+		for(var x = 0; x < sheets.length; x++) {
+			// grab stylesheet rules
+			var rules = sheets[x].cssRules;
+			if(rules.length > 0) {
+				// check each rule
+				for(var y = 0; y < rules.length; y++) {
+					var z = rules[y].style;
+					// selectorText broken in NS 6/Mozilla: see
+					// http://bugzilla.mozilla.org/show_bug.cgi?id=51944
+					// ugly_selectorText_workaround();   LDH - used only on older browsers
+					if(allStyleRules) {
+						if(allStyleRules[y] == i) {
+							return z[p];
+						}			
+					} else {
+						// use the native selectorText and style stuff
+//			if ( y == 0 )
+//			alert("style=" + z + ", cssText=" + z.cssText);
+						if(((z[p] != "") && (z[p] != null)) ||
+						   (rules[y].selectorText == i)) {
+							return z[p];
+						}
+					}
+				}
+			}
+		}
+	}
+	return null;
+}
+
+function ChangeBannerProperties(top_block_colored, banner_text, banner_link, banner_icon, 
+				banner_info, BannerColorChange, BannerTextColorChange, bkgrnd_color_code, 
+				text_color_code, BannerFontChange, BannerFontSizeChange, font, 
+				font_size, url_div, new_url_text)
+{
+   var style;
+/*
+   var top_block_colored;	// top div block
+   var banner_text;		// text div
+   var banner_icon;	// If no banner icon, then assume full clickable banner width
+   var BannerBackgroundColor;	// drop down
+   var BannerTextColor;			// drop down
+   var bkgrnd_color_code;		// input text
+   var text_color_code;			// input text
+   var BannerFont;				// drop down
+   var BannerFontSize;			// drop down
+   var font;					// input texc
+   var font_size;				// input text
+   var forwarding_url;			// input text
+*/
+   // top block stuff
+	style = accessCSS(top_block_colored);
+	if ( accessElemId(bkgrnd_color_code) &&  accessElemId(bkgrnd_color_code).value.indexOf("#xxxxxx") != 0)
+			style.backgroundColor = accessElemId(bkgrnd_color_code).value;
+		
+	// Banner text changes
+	var text = accessElemId(banner_info);	// Text input field
+	style = accessCSS(banner_link);
+	// Change the text properties within the banner_text div
+	accessElemId(banner_link).innerHTML = text.value;
+	if ( accessElemId(text_color_code) &&  accessElemId(text_color_code).value.indexOf("#xxxxxx") == -1)
+			style.color = accessElemId(text_color_code).value;
+			
+	var font = accessElemId(font);	// Text font input field
+	style = accessCSS(banner_text);
+	if ( font &&  font.value.indexOf("font_name") == -1)
+			style.fontFamily = font.value;
+			
+	var font_size = accessElemId(font_size);	// Text font size input field
+	style = accessCSS(banner_text);
+	if ( font_size &&  font_size.value.indexOf("XXpx") == -1)
+			style.fontSize = font_size.value;
+
+	// Possible URL change
+	var new_url = accessElemId(new_url_text);
+
+	if ( new_url.value.indexOf("whatever") == -1)   // Change (later) to compare the 'forwarding_url' hidden field
+	{
+		ChangeUrl(url_div, new_url_text);
+		
+		var elementId = accessElemId(banner_link);
+		if ( elementId.getAttribute("href") != null)
+			ChangeUrl(banner_link, new_url_text);
+	}
+}
+
+function changeText(txt){
+var textContent = document.getElementById('nav')
+textContent.firstChild.data=txt
+}
+
+// Color formats: "color", "#XXXXXX", "#XXX"
+function ChangeBannerColor(select, div_id)
+{
+	var style = accessCSS(div_id);
+	
+	if ( style != null && style != "" )
+	{
+	
+		var length = select.options.length
+	    for (var i = 0; i < length; i++)
+	    {
+	         if (select.options[i].selected == true )
+			{
+				style.backgroundColor = select.options[i].value;
+				break;
+			}
+		}
+	}
+	else
+		alert("ERROR: No such banner div id: " + div_id);
+}		
+
+// Color formats: "color", "#XXXXXX", "#XXX"
+function ChangeBannerTextColor(select, div_id)
+{
+	var style = accessCSS(div_id);
+	
+	if ( style != null && style != "" )
+	{
+	
+		var length = select.options.length
+	    for (var i = 0; i < length; i++)
+	    {
+	         if (select.options[i].selected == true )
+			{
+//    alert("change color to " + select.options[i].value);
+				style.color = select.options[i].value;
+				break;
+			}
+		}
+	}
+	else
+		alert("ERROR: No such banner div id: " + div_id);
+}	
+
+
+// Change the link image icon <img>...</img>(type of campaign)
+// NOTE: All images prefixed with a "Click_". Hover image assumed to be a "_neon" suffixed image
+//		(hover not supported yet (requires rm'g the img & changing the anchor link properties)
+// NO LONGER USED
+function ChangeLinkIcons(select, icon_id)
+{
+	var icon_image;
+	var icon_neon_image;
+	var length = select.options.length
+    for (var i = 0; i < length; i++)
+    {
+         if (select.options[i].selected == true )
+		{	
+			var image_name = "Click_" + select.options[i].value ;	// Include file type suffix
+			icon_image = "url('images/" + image_name + "')";
+			icon_neon_image = icon_image.substring(0, icon_image.length - (icon_image.length - icon_image.indexOf('.')));
+			icon_neon_image = icon_neon_image + "_neon" + icon_image.substring(icon_image.indexOf('.'), icon_image.length) ;
+
+//				alert("neon_image=" + icon_neon_image);
+			break;
+		}
+	}
+
+	elementId = accessElemId(icon_id);
+	style = accessCSS(icon_id);
+
+	if ( style != null && style != "" )
+	{
+	/* (later)
+    	// Set the regular and hover imagery
+    	style.backgroundImage = icon_image;
+    	elementId.onmouseover = function() {
+    		this.style.backgroundImage = icon_neon_image;
+    	}
+		elementId.onmouseout = function() {
+    		this.style.backgroundImage = icon_image;
+    	}
+    */
+    	elementId.src = "images/" + image_name;
+	}
+	else
+		alert("ERROR: No such icon div id: " + icon_id);
+}
+
+// Use the text div wrapper (banner_text)
+function ChangeBannerFont (select, div_id)
+{
+	var style = accessCSS(div_id);
+	
+	if ( style != null && style != "" )
+	{
+	
+		var length = select.options.length
+	    for (var i = 0; i < length; i++)
+	    {
+	         if (select.options[i].selected == true )
+			{
+				style.fontFamily = select.options[i].value;
+				break;
+			}
+		}
+	}
+	else
+		alert("ERROR: No such banner div id: " + div_id);
+}		
+
+function ChangeBannerFontSize (select, div_id)
+{
+	var style = accessCSS(div_id);
+	
+	if ( style != null && style != "" )
+	{
+	
+		var length = select.options.length
+	    for (var i = 0; i < length; i++)
+	    {
+	         if (select.options[i].selected == true )
+			{
+				style.fontSize = select.options[i].value;
+				break;
+			}
+		}
+	}
+	else
+		alert("ERROR: No such banner div id: " + div_id);
+}		
+
+
+</script>
+</body>
+</html>

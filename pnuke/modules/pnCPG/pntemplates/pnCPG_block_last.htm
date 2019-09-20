@@ -1,0 +1,11 @@
+<!--[*  $Id: example_block_first.htm,v 1.4 2004/02/05 23:43:19 markwest Exp $  *]-->
+<div style="text-align:left;">
+<!--[section name="items" loop=$items]-->
+<!--[if $items[items].url neq '']-->
+<a href="<!--[$items[items].url]-->"><!--[$items[items].title]--></a>
+<!--[else]-->
+<!--[$items[items].title]-->
+<!--[/if]-->
+<br />
+<!--[/section]-->
+</div>

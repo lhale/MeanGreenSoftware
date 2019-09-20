@@ -1,0 +1,17 @@
+<!--[*  $Id: pnCPG_block_spec.htm,v 1.4 2004/02/05 23:43:19 markwest Exp $  *]-->
+<div style="text-align:center;">
+<!--[section name="items" loop=$items]-->
+<A HREF="<!--[$items[items].url]-->"><IMG SRC="<!--[$items[items].picture]-->" border=0 title="<!--[$items[items].title]-->"></A>
+<br />
+<a href="<!--[$items[items].url]-->"><!--[$items[items].title]--></a>
+<br>
+<label for="owner"><!--[pnml name="_PNCPG_OWNER"]--></label>
+:
+<!--[$items[items].owner]-->
+<br>
+<label for="hits"><!--[pnml name="_PNCPG_HITS"]--></label>
+:
+<!--[$items[items].hits]-->
+<!--[/section]-->
+</div>
+

@@ -1,0 +1,8 @@
+<p><!--[pnml name=_HTMLPAGES]-->: <!--[$total|pnvarprepfordisplay]-->  <!--[pnml name=_SEARCHRESULTS]--></p>
+<ul>
+<!--[foreach from=$items item=item]-->
+    <li><a href="<!--[pnmodurl modname=htmlpages func=display pid=$item.pid]-->"><!--[$item.title]--></a></li>
+<!--[/foreach]-->
+</ul>
+<!--[$pager]-->
+<div style="margin-bottom:10px;"></div>

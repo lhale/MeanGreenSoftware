@@ -1,0 +1,116 @@
+What's new in version 4.01
+==========================
+1. Added 3 search options  for Postnuke
+
+What's new in version 4.0
+=========================
+1. Enabled usage of Postnuke passwords in combination with pnSSI
+2. Removed refresh when logging in into Coppermine
+
+What's new in version 3.4
+=========================
+1. Fixed iframe support for Firefox (thanks to EOLICA)
+2. Fixed issue with AutoTheme
+
+What's new in version 3.3
+=========================
+1. Re-added support for remote databases
+2. Minor fixes
+3. Added Danish languages (thanks to LnQ)
+
+What's new in version 3.2
+=========================
+1. Finalized compatibility with PN 0.76x
+	Blocks fully templated
+2. Option to send password by email
+3. Option to use this module in combination with an encrypted password within Coppermine
+
+What's new in version 3.1
+=========================
+First pass on being 0.76x compatible
+
+What's new in version 2.7
+=========================
+1. Annoying bugs (user creation) fixed
+2. New Block
+3. Name can be freely defined of initial album
+4. Remove 'continue' whhen logging on
+
+What's new in version 2.6
+=========================
+1. Annoying bugs (guest access) fixed
+2. Created albums are set private
+3. Name can be freely defined of initial album
+4. Remove 'continue' whhen logging on
+
+What's new in version 2.5
+=========================
+1. Different approach to avoid extra scroll bars
+2. Added the WIDTH setting for the scrolling block
+3. Support for the next version of Coppermine (1.4)
+4. Revised the logic for adding Albums / Guest user access
+5. Full support for PN-0.750/0.760
+
+What's new in version 2.4
+=========================
+0. Tried to improve the documentation
+1. Activated the default guest account from Coppermine
+2. Added scripts to avoid double scroll bars
+3. Adjusted the blocks to Open in New window if selected within admin
+4. Option to have automatically album created for new users
+5. Option to preset the theme
+Just call the module as :
+	{pnCPG:main&category=2}
+or	{pnCPG:main&category=3&lang=italian}
+or	{pnCPG:main&category=3&lang=italian&theme=hardwired}
+
+Language & Theme will also work with the sideblocks with the settings within Admin of pnCPG
+Full screen option will also work from the side-blocks
+
+What's new in version 2.3
+=========================
+Ability to link to category (only from the menu)
+Just call the module as :
+	{pnCPG:main&category=2}
+or	{pnCPG:main&category=3&lang=italian}
+
+What's new in version 2.2
+=========================
+Option to set default language in administration
+Option to override default language when calling the module (not valid for side-blocks)
+Just call the module as :
+	{pnCPG:main&lang=italian}
+or	{pnCPG:main&task=users&lang=italian}
+
+
+Corrections for the random sideblock.
+
+What's new in version 2.1
+=========================
+Support for the final release of Coppermine 1.3
+Additional feature for sideblock
+
+What's new in version 2.0
+=========================
+Support for the latest version of Coppermine 1.3
+Support for external database.
+Blocks now adhere to authorization settings from Coppermine ( I hope).
+German language files (thanks to Bernard Zaunseder)
+
+
+What's new in version 1.6
+=========================
+Support for the latest version of Coppermine 1.2.1
+Have added a scrolling side block for Postnuke.
+
+What's new in version 1.5
+=========================
+Re-introduced the Guest account, now as option.
+Have added a multi-purpose side block for Postnuke.
+Random photo; Last Changed Album; last changed photo
+Option to set menu-item directly into usermenu.
+
+What's new in version 1.4
+=========================
+The integration hack has been fully revised. No longer using cookies, no  longer using standard Coppermine code.
+The whole access is taken care of in a separate script.

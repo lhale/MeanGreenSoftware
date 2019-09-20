@@ -1,0 +1,247 @@
+// ----------------------------------------------------------------------
+// Changelog
+//
+//
+// 5.30 - removed email check for registered users in index.php
+//		- for unsubscribed users names was wrong in list.
+//			subscribers.php
+//		- wrote new functions_mail.php to run better. It now saves an
+//			archive of the text email also. This requires an upgrade.
+//			edit also pninit.php, pntables.php
+//		- since we are archiving the text mailers, we might as well make
+//			them viewable. edit archives.php, functions.php
+//			I decided not to make this an option for users
+//		- added option to send all mailers out to each user one at a time
+//			rather than in bulk. added global.php lang _READYTOSENDSINGLES,
+//			_OUTOF, _EMAILSSENT, _CONTITOSENDHTML, _CONTITOSENDTEXT
+//		- Daniel Luttermann updated deu lang files
+//		- placed english definitions in other global lang files.
+//
+// 5.31 - pnlang/eng/subscribe_pop.php had bad link
+//		- need strict php code for some versions of php. edit
+//			email_test.php, email_validation.php, smtp.php.
+//			thanks to dbrucas for locating this
+//		- now you can update your plugins with one click. very exciting.
+//			edit modules.php
+//		- new feature for all plugins. set initial values with
+//			modversion[mod_data]. This is really for future plugins so
+//			the only change right now was to functions.php
+//		- cron.php updated and tested thanks to ikke. cron must be run
+//			through postnuke interface. this may cause errors on some
+//			servers. use with caution.
+//		- edit functions_mail.php to get rid of duplicate To: part of
+//			email for alternate mailing method (hope no bugs from this)
+//		- a ton of new plugins from Craig Ozancin included since they
+//			work with core postnuke modules. they are: enhcommentssince,
+//			enhdownloads, enhnewssince, enhsurvey, enhtext, headlinessince
+//
+// 5.32 - pnlang/eng/subscribe_pop.php needed paths to be linked from root
+//		- error in coming_events.php plugin. updated to version 1.2
+//		- threw together a newsletter archives sideblock.
+//			pnblocks/pnTresMailer_Archives.php
+//			pnlang/eng/pnTresMailer_Archives.php
+//
+// 5.33 - pnblocks/pnTresMailer_Archives.php, fixed duplicate function.
+//		- newssince.php was not grabbing correct news for text version
+//		- updated smtp.php, DNS.php, getmxrr.php
+//		- added privacy statement to users page. index.php, global.php
+//		- new SETTING to allow new subscribers to receive a copy of the
+//			lastest newsletter when they signup. This required a database
+//			change and means you have to upgrade the module. pninit.php,
+//			pntables.php, vars.php, functions.php, global.php, index.php
+//		- unregistered subscribers can now retrieve their username by
+//			entering their email address. index.php, global.php
+//		- new plugin - forward newsletter to a friend. this required that
+//			the file forward.php be added to the root of the module dir.
+//			also added the 2 usual plugin files fw_newsletter.php
+//		- added a tracking system, but the catch is that you have to send
+//			out the emails using the second option, sending individually.
+//			This is the only way to track each user. subscriber.php, 
+//			tracker.php, functions.mail.php, pninit.php, pntables.php
+//
+// 5.34 - Display confirmation that new subscriber received copy of archived
+//			mailer. subscriber.php, global.php, index.php, forward.php
+//		- added new sideblock that hides if already subscribed called
+//			pnblocks/pnTresMailer_hide.php
+//
+// 5.35 - edit index.php for sorting the archived letters
+//		- put the smtp sending mail version throughout when that is the
+//			selected method by the admin
+//
+// 5.36 - updated news_in_cat.php plugin. had bad text lang file.
+//		- mailer_import.php was importing anonymous user
+//		- rewrote functions_mail.php some users were having odd errors
+//
+// 5.37 - parse error in mailer_import.php fixed.
+//		- alt mail system was corrupt in 5.36. fixed functions_mail.php
+//
+// 5.38 - text subscribers could see other email addresses. functions_mail.php
+//
+// 5.40 - edit subscribers.php, lang/eng/global.php (notes at top of file),
+//			functions.php.
+//		- ability to sort by and see subscribers email address and edit the
+//			subscribers information. also compare and edit it with the postnuke
+//			registration for that same user if they are registered.
+//		- ability to allow HTML only subscriptions. Option in SETTINGS.
+//		- edit pninit.php, pntables.php, vars.php, index.php
+//
+// 5.41 - error in pninit.php fixed
+//
+// 5.50 - fix for servers running php 4.2.3 where template cannot be read.
+//			edit pninit.php, pntables.php, functions_mail.php, vars.php,
+//			functions.php, lang/eng/global.php
+//
+// 5.51 - did it again. argh. pninit.php
+//		- vars.php duplicate settings was removed
+//
+// 5.52 - auto-detect php version. update vars.php, functions_mail.php,
+//			functions.php, pntables.php, pninit.php
+//
+// 5.60 - combined html and text mailer into one email using alternate
+//			mime types. changed function_mail.php, pntables.php, pninit.php
+//			vars.php
+//		- probably made a few other minor changes but I regretfully forgot
+//			to update this changelog when I made them. I don't think any
+//			other files have been altered.
+//
+// 5.70 - you must now generate the newsletter before sending it. This way
+//			you can see it before it goes out. Also, you can generate
+//			letters without having to email them. The main reason for doing
+//			this is to speed up the send times for mailing. I think generating
+//			the letter was making the email appear to take much longer.
+//			also, nothing wrong with more control :). changed functions_mail.php,
+//			eng language file
+//		- remove the "*(r) indicates mailer read by subscriber" as it was
+//			creating false readings that just makes things confusing. changed
+//			subscribers.php
+//		- added Loop Count to Settings. this is the number of emails to send
+//			out before refreshing the page. changed vars.php, pninit.php,
+//			pntables.php, functions.php, admin.php
+//
+// 5.71 - added user functions to the package. upload the contents of the NS-User
+//			module folder and users will have a link in their account area to
+//			access the pnTresMailer user page.
+//
+// 5.80 - added option to personalize individually sent emails with a subscribers
+//			username. Turn it on in SETTINGS and add <!-- [USERNAME] -->
+//			to have the system automatically insert the user's name.
+//		- changed pninit.php, pntables.php, vars.php, functions.php,
+//			functions_mail.php, archives.php and added to the end language file
+//		- removed all upgrade support for versions prior to 5.34
+//			you have to upgrade to that version before this version
+//		- IMPORTANT!! changed the template inserts. what used to be inserted
+//			with [ISSUE] is now <!-- [ISSUE] -->. This was done for those
+//			using the peronalized options. this way these tags aren't
+//			seen by the user if they don't get replaced.
+//		- updated the install.txt file
+//		- found and fixed an error in sending single email to one subscriber
+//
+// 5.81 - missing pntresmialer.gif graphic in NS-user module
+//		- again with the bad pninit.php file - fixed
+//
+// 5.82 - replace preview of [USERNAME] with [FRIEND] to stop confusion
+//			as to if it is properly working.
+//		- replace USERNAME tag with _FRIENDREPLACE when bulk mailing
+//		- changed functions_mail.php, eng lang global.php
+//
+// 5.90 - add unsubscribe table to db to record all unsub requests
+//			edit pninit.php, pntables.php, index.php, functions.php
+//		- add author info to plugins. edit modules.php
+//		- unsubscriber admin. edit subscriber.php, functions.php
+//
+// 5.91 - Counter not incrementing correctly when sending single emails
+//			edit functions_mail.php
+//		- Edit TO mail header for single-sent emails
+//		- add a fix link to archives in case mailing fails half-way
+//			through the process. edit functions_mail.php, archives.php,
+//			eng lang global.php
+//
+// 5.92 - Add edit feature to last compiled archive so you can edit the
+//			text and html of the archive before mailing it out. edit
+//			archives.php, functions.php, global.php eng lang file
+//		- fit the above option in to the list of things you do when you
+//			click GENEREATE AND SEND. edit functions_mail.php
+//
+// 5.93 - turned tracker back on. edit functions_mail.php, subscribers.php
+//			there is a settings at the top of subscribers.php (line 3)
+//			that turns it on or off and will display a red (r) when
+//			a subscribers opens the last newsletter sent. must be sent
+//			individually or single and not bulk.
+//		- to use the tracker, turn it on and add the tag: <!-- [TRACKER -->
+//			Add the tag somewhre in the header, footer, or any other
+//			part of the body of the newsletter.
+//		- found error in functions_mail where sending single emails
+//			was sending bad data.
+//
+// 5.94 - edited functions_mail.php. counting the emails wrong when
+//			sending individually.
+//		- strange results when sending out individual mailers so I made
+//			some important changes to function_mail.php
+//
+// 5.95 - eng lang global.php edit.
+//		- option added to allow removed subscribers to be re-added. changed
+//			function.php, vars.php, pntables.php, pninit.php, index.php
+//		- this version requires a module upgrade through postnuke admin
+//		- closing form tag missing from fw_newsletter.php module
+//		- closing form tag missing from archives.php edit archive function
+//
+// 5.96 - updated coming_events.php plugin module so it only excludes
+//			private events and includes all others. Also, will include
+//			an ending date if there is one
+//		- add option to "list once" in coming_events.php
+//		- made some adjustments to functions_mail.php to remove duplicate
+//			email subject in alt method mails
+//		- rebuilt the cron.php
+//		- created rss feed module plugin
+//
+// 5.97 - updated plugins newssince and enhnessince to include category
+//			and topic selection
+//		- couldn't update loop count in SETTINGS. fixed functions.php
+//		- problem sending using alt system and bulk. fixed functions_mail.php
+//
+// 5.98 - Spam-protecting SMTP hosts now require a valid hostname when
+//			connecting to them to ask about email addresses.
+//			updated email_test.php
+//		- lang/eng/global.php addition for User Account Link
+//		- moved User Account Link to pnTresMailer module
+//			you should delete the old stuff from NS-User/user/*/pnTresMailer.php
+//		- updated email_validation.php
+//		- updated plugins newssince, enhnewssince - added option to
+//			display news that is not on homepage.
+//			updated both modules and lang/eng files
+//
+// 5.99 - adjusted stripslashes method in send-single in functions_mail.php
+//		- trying new localhost address in email_test.php
+//		- mailer_import.php update to check for duplicate emails as well as
+//			duplicate uid
+//		- IMPORTANT!! I changed the default template and removed all things
+// 6.00 - updated index.php and added options IN top of page to turn off
+//			certain page redirects and the email tester. all ON by default
+//		- updated subscribers.php and moved add subscriber to separate
+//			page for LARGE lists of pn_users - thanks to TheBrain
+//		- updated functions_mail.php, it was possible to send more than
+//			one email to each subscriber
+//
+// 6.01 - added description of unsubscribers list at top of page. added this
+//			definition to global.php lang file
+//		- renamed all references to "modules" to "plugins"
+//		- update to index.php where user's can preview the archives. replaces
+//			the <!-- [USERNAME] --> tag with [FRIEND]
+//		- fixed plugin for enhnewssince.php
+//		- updated german lang files thanks to oda
+//		- add 2 new subscribe buttons in the images folder as alternates
+//			thanks to somynona
+//
+// ----------------------------------------------------------------------
+// 6.02 - development taken over by tal@pacific.net.au, hosted by http://canvas.anubix.net         
+//      - added foyleman's fix to stop multiple subscription to a single email address
+//      - subsequent fixes will be from foyleman's forum
+//      - numbering scheme 6.xx will be preserved until fixes are stable,
+//        stable version will be 6.66, then 7.xx for new ideas.
+//
+// ----------------------------------------------------------------------
+// 6.03a - Error Listing - alpha version
+//              	= screen only (planned: email Admin, save File)
+//               	= No ESMTP (slightly slower without pipelining)
+//			= Alt Mail System will not provide Error Lists
+// ----------------------------------------------------------------------

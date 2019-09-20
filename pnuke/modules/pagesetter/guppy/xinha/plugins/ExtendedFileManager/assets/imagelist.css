@@ -1,0 +1,14 @@
+body { margin: 0px; padding: 0px;}
+.block { border: 1px solid threedface; text-align: center; behavior: url(hover.htc ); vertical-align:middle;}
+.block a img { border: 0 none; }
+.block:hover, .block.hover{ background-color: #f8f8f8; }
+.lsviewheader {background-color: ButtonFace; border: 1px solid threedface; border-color: ButtonHighlight ButtonShadow ButtonShadow ButtonHighlight; padding-top:2px; padding-bottom:2px; padding-left: 5px; padding-right: 5px; font-size: 9pt; font-family: "MS Sans Serif", Geneva, sans-serif;}
+.lsviewpanel{padding-top:2px; padding-left: 3px; font-size: 9pt; font-family: "MS Sans Serif", Geneva, sans-serif;}
+.lsviewpanel a, .lsviewpanel a:visited { text-decoration: none; color: #000; border:0px; padding:2px; padding-left:5px; padding-right:10px;}
+.lsviewpanel a:hover { background-color:#0B256B; color:#fff;}
+.edit { font-size: 9pt; font-family: "MS Sans Serif", Geneva, sans-serif; padding-top:2px; padding-bottom: 2px; }
+.edit a { border: 1px solid white; padding-bottom: 1px; }
+.edit a:hover { background-color: #e4e0d8; border-color: ButtonHighlight ButtonShadow ButtonShadow ButtonHighlight;}
+.edit a img { border: 0 none; vertical-align: bottom; }
+.noResult { font-size:large; font-weight:bold; color:#ccc; font-family: Helvetica, sans-serif;  text-align: center;  padding-top: 60px;   }
+.error { color:#c00; font-weight:bold; font-size: medium; font-family: Helvetica, sans-serif; text-align: center;  padding-top: 65px;}

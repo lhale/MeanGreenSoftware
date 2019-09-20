@@ -1,0 +1,32 @@
+<!--[*  $Id: pnforum_user_footer.html,v 1.7 2005/11/05 12:57:26 landseer Exp $  *]-->
+
+<!--[ pnforumonline assign=online ]-->
+
+<!--[ pnconfiggetvar name='anonymoussessions' assign=anonsessions ]-->
+<!--[ pnconfiggetvar name='secinactivemins' assign=mins ]-->
+
+<div style="margin-top: 1em; clear: both; width: 100%; font-size: 1.0em; border: 1px solid black;">
+    <div style="background: <!--[ $bgcolor3 ]-->; line-height: 1.4em; padding: 0.2em 0 0.2em 2px;">
+        <strong><!--[ pnml name='_PNFORUM_USERSONLINE' ]-->:</strong><br />
+    </div>
+    <div style="margin: 2px; font-size: 0.8em;">
+        <!--[ foreach key=num item=user from=$online.unames ]-->
+            <!--[ if $user.admin == '1' ]-->
+                <!--[ $user.uname|profilelink:"pnfadminuser"]-->
+            <!--[ else ]-->
+                <!--[ $user.uname|profilelink:"pnfnoadminuser"]-->
+            <!--[ /if ]-->
+            <!--[ if $online.numusers > 1 && $num <> $online.numusers-1 ]-->-<!--[ /if ]-->
+        <!--[ /foreach ]-->
+        <!--[ if $anonsessions == 1 ]-->
+        <!--[ pnml name='_PNFORUM_AND' ]--> <!--[ if $online.numguests == 1 ]-->0 <!--[ pnml name='_GUEST' ]--><!--[ else ]--><!--[ $online.numguests ]--> <!--[ pnml name='_GUESTS' ]--><!--[ /if ]-->
+        <!--[ /if ]-->
+        <br />
+        <br />
+        <!--[ pnml name='_PNFORUM_BASEDONLASTXMINUTES' m=$mins ]-->
+    </div>
+</div>
+<br /><br />
+<div style="width: 100%; font-size: 0.8em; text-align: center;">
+    <!--[ pnml name='_PNFORUM_POWEREDBY' html=1 ]-->&nbsp;<!--[pnmodgetinfo modname=pnForum info=version ]-->
+</div>

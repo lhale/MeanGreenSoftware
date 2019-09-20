@@ -1,0 +1,69 @@
+TABLE {
+	FONT-SIZE: 14px; BACKGROUND: #ffffff; COLOR: #214d6b; FONT-FAMILY: arial
+}
+BODY {
+	FONT-SIZE: 14px; BACKGROUND: #ffffff; COLOR: #214d6b; FONT-FAMILY: arial
+}
+H1 {
+	FONT-SIZE: 13px; MARGIN-BOTTOM: 2px; MARGIN-LEFT: 10px
+}
+TEXTAREA {
+	BORDER-RIGHT: #8cb7d0 1px solid; BORDER-TOP: #8cb7d0 1px solid; FONT-SIZE: 12px; BACKGROUND: #eaf5f9; BORDER-LEFT: #8cb7d0 1px solid; COLOR: #5a6986; BORDER-BOTTOM: #8cb7d0 1px solid; FONT-FAMILY: arial
+}
+.greydiv {
+	BORDER-RIGHT: #bababa 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #bababa 1px solid; PADDING-LEFT: 5px; FONT-SIZE: 12px; BACKGROUND: #f5f5f5; PADDING-BOTTOM: 5px; BORDER-LEFT: #bababa 1px solid; WIDTH: 500px; PADDING-TOP: 5px; BORDER-BOTTOM: #bababa 1px solid; FONT-FAMILY: verdana
+}
+SELECT {
+	FONT-SIZE: 11px; BACKGROUND: #eaf5f9; COLOR: #5a6986
+}
+INPUT.submit {
+	BORDER-RIGHT: #8cb7d0 1px solid; BORDER-TOP: #8cb7d0 1px solid; FONT-WEIGHT: bold; FONT-SIZE: 11px; BACKGROUND: #eaf5f9; BORDER-LEFT: #8cb7d0 1px solid; WIDTH: 60px; COLOR: #5a6986; BORDER-BOTTOM: #8cb7d0 1px solid; FONT-FAMILY: arial
+}
+INPUT.checkbox {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; BACKGROUND: none transparent scroll repeat 0% 0%; BORDER-LEFT: medium none; WIDTH: 12px; BORDER-BOTTOM: medium none
+}
+INPUT.text {
+	BORDER-RIGHT: #8cb7d0 1px solid; BORDER-TOP: #8cb7d0 1px solid; FONT-SIZE: 11px; BACKGROUND: #eaf5f9; BORDER-LEFT: #8cb7d0 1px solid; WIDTH: 100px; COLOR: #5a6986; BORDER-BOTTOM: #8cb7d0 1px solid; FONT-FAMILY: arial
+}
+.admintopbar {
+	BORDER-TOP: #8cb6d6 1px solid; BACKGROUND: #eff7ff; BORDER-BOTTOM: #8cb6d6 1px solid
+}
+A.blank {
+	COLOR: transparent; TEXT-DECORATION: none
+}
+A.blank:hover {
+	COLOR: transparent; TEXT-DECORATION: none
+}
+A {
+	COLOR: #8cb6d6; TEXT-DECORATION: underline
+}
+A:hover {
+	COLOR: #8cb6d6; TEXT-DECORATION: underline
+}
+.menuDropDown {
+	BORDER-RIGHT: #8cb7d0 1px solid; BORDER-TOP: #8cb7d0 1px solid; BACKGROUND: #eaf5f9; VISIBILITY: hidden; BORDER-LEFT: #8cb7d0 1px solid; WIDTH: 130px; BORDER-BOTTOM: #8cb7d0 1px solid; POSITION: absolute
+}
+.rootmenu {
+	BORDER-RIGHT: #8cb6d6 1px solid; BORDER-TOP: #8cb6d6 1px solid; FONT-WEIGHT: bold; FONT-SIZE: 13px; BACKGROUND: #bdd7e7; BORDER-LEFT: #8cb6d6 1px solid; CURSOR: pointer; BORDER-BOTTOM: #8cb6d6 1px solid; FONT-FAMILY: arial
+}
+.tableheadcell {
+	BORDER-TOP: #8cb6d6 1px solid; BACKGROUND: #bdd7e7; BORDER-BOTTOM: #8cb6d6 1px solid
+}
+.rootmenuitem {
+	BACKGROUND: #bdd7e7; COLOR: #214d6b; BORDER-COLLAPSE: collapse; HEIGHT: 100%
+}
+.rootmenuitemtext {
+	FONT-WEIGHT: bold; FONT-SIZE: 13px; COLOR: #214d6b; FONT-FAMILY: arial; TEXT-DECORATION: none
+}
+.menulink {
+	BORDER-RIGHT: medium none; PADDING-RIGHT: 5px; BORDER-TOP: medium none; PADDING-LEFT: 5px; FONT-SIZE: 12px; PADDING-BOTTOM: 5px; BORDER-LEFT: medium none; WIDTH: 100%; CURSOR: pointer; COLOR: #5a6986; PADDING-TOP: 5px; BORDER-BOTTOM: medium none
+}
+.menulinkover {
+	BORDER-RIGHT: medium none; PADDING-RIGHT: 5px; BORDER-TOP: medium none; PADDING-LEFT: 5px; FONT-SIZE: 12px; BACKGROUND: #bdd7e7; PADDING-BOTTOM: 5px; BORDER-LEFT: medium none; CURSOR: hand; COLOR: #ffffff; PADDING-TOP: 5px; BORDER-BOTTOM: medium none
+}
+.topdivdemo1 {
+	BORDER-RIGHT: #ccffff 1px solid; PADDING-RIGHT: 10px; BORDER-TOP: #ccffff 1px solid; PADDING-LEFT: 10px; FONT-WEIGHT: bold; BACKGROUND: #99cccc; PADDING-BOTTOM: 10px; BORDER-LEFT: #ccffff 1px solid; COLOR: #ffffff; PADDING-TOP: 10px; BORDER-BOTTOM: #ccffff 1px solid
+}
+.botdivdemo1 {
+	BORDER-RIGHT: #ccffff 1px solid; PADDING-RIGHT: 10px; BORDER-TOP: #ccffff 1px solid; PADDING-LEFT: 10px; BACKGROUND: #3399cc; PADDING-BOTTOM: 10px; BORDER-LEFT: #ccffff 1px solid; COLOR: #ffffff; PADDING-TOP: 10px; BORDER-BOTTOM: #ccffff 1px solid
+}

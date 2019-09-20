@@ -1,0 +1,10 @@
+<!--[if $printlink]-->
+<div class="htmlpages-printerlink">
+<a href="<!--[pnmodurl modname=htmlpages type=user func=display pid=$pid theme=Printer]-->"><!--[pnml name=_PRINTFRIENDLY]--></a>
+<a href="<!--[pnmodurl modname=htmlpages type=user func=display pid=$pid theme=Printer]-->"> <!--[pnimg src=print.gif alt=_PRINTFRIENDLY]--></a>
+</div>
+<!--[/if]-->
+<h1><!--[$title|pnmodcallhooks|pnvarprephtmldisplay]--></h1>
+<!--[$content|pnmodcallhooks]-->
+<!--[pnmodurl modname=htmlpages func=display pid=$pid assign=returnurl]-->
+<!--[pnmodcallhooks hookobject=item hookaction=display hookid=$pid module=htmlpages returnurl=$returnurl]-->

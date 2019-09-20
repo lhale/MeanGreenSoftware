@@ -1,0 +1,18 @@
+<h1><!--[$core.title]--></h1>
+Title: <!--[$title]--><br/>
+Name: <!--[$name]--><br/>
+Email Address: <!--[$email.title]--><br/>
+Select any of the checkboxes below: <!--[$select_here]--><br/>
+Select from the following (use CTRL key for multiples): <!--[$what]--><br/>
+Other - explain: <!--[$other]--><br/>
+
+<br/><br/>
+
+<!--[$core.printThis]--> | <!--[$core.sendThis]--> | Hits: <!--[nocache]--><!--[$core.hitCount]--><!--[/nocache]--> | <!--[nocache]--><!--[$core.editThis]--><!--[/nocache]-->
+
+
+<!--[if $core.useDisplayHooks]-->
+<!--[pnmodurl modname=pagesetter func=viewpub tid=$core.tid pid=$core.pid assign=viewUrl]-->
+<!--[pnmodcallhooks hookobject=item hookaction=display hookid=$core.uniqueId module=pagesetter returnurl=$viewUrl]-->
+<!--[/if]-->
+

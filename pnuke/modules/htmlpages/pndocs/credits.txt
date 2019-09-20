@@ -1,0 +1,13 @@
+/********************************************************
+			Credits
+********************************************************/
+		Module htmlpages
+
+Versions up to v1.11 Written by Andrea Moro andrea.m@bufera.org
+Code based on the template module by Jim McDonald
+Search capabilities added by kmccann (kevin mccann)
+
+v2.0 created by Mark West based on the example module (which is 
+based on the template module)
+
+For license see license.txt

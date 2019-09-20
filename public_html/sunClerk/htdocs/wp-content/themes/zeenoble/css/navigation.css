@@ -1,0 +1,79 @@
+/*
+ * Navigation.css
+ * 
+ * Contains the CSS for the black dropdown navigation option
+ *
+ */
+ 
+ /* DARK Navigation Menu
+-------------------------------------------------------------- */
+#mainnav-menu a:link, #mainnav-menu a:visited{
+	color: #222;
+}
+#mainnav-menu a:hover {
+	background: #333;
+	color: #fff;
+}
+#mainnav-menu ul {
+	background: #333;
+}
+#mainnav-menu ul a {
+	border-bottom: 1px solid #555;
+	color: #eee;
+}
+#mainnav-menu ul a:link, #mainnav-menu ul a:visited{
+	color: #eee;
+}
+#mainnav-menu ul a:hover {
+	color: #ccc;
+	border-bottom: 1px solid #888;
+}
+#mainnav-menu li.current_page_item ul li a, #mainnav-menu li.current-menu-item ul li a{
+	color: #ccc;
+	background-color: #333;
+}
+#mainnav-menu ul li.current_page_item a, #mainnav-menu ul li.current-menu-item a {
+	color: #ccc;
+	border-bottom: 1px solid #888;
+	background-color: #333;
+}
+
+/* Dark Navigation mobile */
+@media only screen and (max-width: 60em) {
+	#mainnav-menu a {
+		background: #333;
+		border-bottom: 1px solid #555;
+	}
+	#mainnav-menu a:link, #mainnav-menu a:visited{
+		color: #fff;
+	}
+	#mainnav-menu a:hover{
+		background: #404040;
+	}
+	#mainnav-menu ul a {
+		border-bottom: 1px solid #555;
+	}
+	#mainnav-menu ul a:hover {
+		background: #404040;
+		border-bottom: 1px solid #555;
+	}
+	#mainnav-menu li.current_page_item a, #mainnav-menu li.current-menu-item a {
+		color: #fff;
+		background-color: #404040 !important;
+	}
+	#mainnav-menu li.current_page_item ul li a, #mainnav-menu li.current-menu-item ul li a{
+		color: #fff;
+		background-color: #333 !important;
+	}
+	#mainnav-menu ul li.current_page_item a, #mainnav-menu ul li.current-menu-item a {
+		color: #fff;
+		border-bottom: 1px solid #555;
+		background-color: #404040;
+	}
+}
+@media only screen and (min-width: 60em) {
+	#mainnav-menu li.menu-item:hover a {
+		background: #333;
+		color: #fff;
+	}
+}

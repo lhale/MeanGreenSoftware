@@ -1,0 +1,41 @@
+<!--[*  $Id: htmlpages_admin_modify.htm 26 2007-02-05 20:59:07Z markwest $  *]-->
+<!--[include file="htmlpages_admin_menu.htm"]-->
+<div class="pn-admincontainer">
+<h2><!--[pnml name="_EDITHTMLPAGES"]--></h2>
+<form class="pn-adminform" action="<!--[pnmodurl modname="htmlpages" type="admin" func="update"]-->" method="post" enctype="application/x-www-form-urlencoded">
+<div>
+	<input type="hidden" name="authid" value="<!--[pnsecgenauthkey module="htmlpages"]-->" />
+	<input type="hidden" name="uid" value="<!--[$uid]-->" />
+	<input type="hidden" name="printlink" value="0" />
+	<input type="hidden" name="pid" value="<!--[$pid]-->" />
+	<div class="pn-adminformrow">
+		<label for="htmlpages_title"><!--[pnml name="_HTMLPAGESTITLE"]--></label>
+		<input id="htmlpages_title" name="title" type="text" size="32" maxlength="128" value="<!--[$title|pnvarprepfordisplay]-->"/>
+	</div>
+	<div class="pn-adminformrow">
+		<label for="htmlpages_userid"><!--[pnml name="_HTMLPAGESUSER"]--></label>
+		<!--[if $adminaccess]-->
+			<input id="htmlpages_userid" type="text" name="uid" width="5" maxlength="5" value="<!--[$uid]-->" />
+		<!--[else]-->
+			<span id="htmlpages_userid"><!--[pnusergetvar name=uname uid=$uname]--></span>
+		<!--[/if]-->
+	</div>
+	<div class="pn-adminformrow">
+		<label for="htmlpages_printlink"><!--[pnml name="_HTMLPRINTLINK"]--></label>
+		<!--[if $printlink]-->
+		  <input id="htmlpages_printlink" name="printlink" type="checkbox" value="1" checked="checked" />
+		<!--[else]-->
+		  <input id="htmlpages_printlink" name="printlink" type="checkbox" value="1" />
+		<!--[/if]-->		
+	</div>
+	<div class="pn-adminformrow">
+		<label for="htmlpages_content"><!--[pnml name="_HTMLPAGESCONTENT"]--></label>
+		<textarea id="htmlpages_content" name="content" rows="30" cols="60"><!--[$content|pnvarprepfordisplay]--></textarea>
+	</div>
+	<!--[pnmodcallhooks hookobject=item hookaction=modify hookid=$pid module=htmlpages]-->
+	<div class="pn-adminformrow">
+		<input name="submit" type="submit" value="<!--[pnml name="_HTMLPAGESUPDATE"]-->" />
+	</div>
+</div>
+</form>
+</div>

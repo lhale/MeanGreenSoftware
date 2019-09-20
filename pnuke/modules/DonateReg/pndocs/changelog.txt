@@ -1,0 +1,82 @@
+//-----------------------------------------------------------------------
+//  PostNuke Event Registration Module ChangeLog
+//-----------------------------------------------------------------------
+Release .57
+	*  Added check to see if PCal exists b4 displaying PCal options
+	*  Updated the time fields to use new format.
+	*  Added international time/date format options.
+	*  Fixed Admin Pager functionality
+	*  Added Advanced Search Functionality
+	*  Fixed HTML Display in subtitles
+	*  Added Pager functionality for User Category List
+	*  Added remaining seats display as well as "Registration Full"
+	  	Messages.
+	*  Fixed bug with "My Registrations" and older versions of MySQL
+	*  A few internal changes.
+	*  Added check to prevent users from registering more than once
+		for a given event.
+	*  Updated German Language Pack
+Release .56
+        *  Removed registration phone number display from non-admins
+        *  Added "My Registrations", available in module and in "My Account"
+        *  Added capability to let users delete there registrations
+        *  Added capability for admins to delete any registration
+        *  Fixed bug with MD-PRO that wouldn't allow event creation
+        *  Added location to be searched as well, copy updated file to enable
+        *  Added Comments to registration view for admins
+        *  Updated language defs for ENG/ITA (Thanks AlterEgo)
+        *  Added SPA lang defs. (Thanks, sorry unable to find name)
+        *  Added DAN language defs.  (Thanks Jens Thomsen)
+        *  Added button to add any event to postcalendar (Thanks the_lorax)
+Release .55
+	*  Fixed Registration count bug for user registration
+	<Added by Brian Meredyk Thanks!>
+	*  Initial PostCalendar support
+	*  Initial E-Mail support
+Release .54
+	*  Fixed table close bug
+	*  Added AM/PM selection to the time
+	*  Added ability to change visibility of registered users.
+	   (Allow standard users to see list of registered members)
+	*  Added some missing definitions in language files, as well as deleted some redundant ones.
+	<Added to code by Luca Salvadori THANKS!>
+	*  Number of registrations for event now increased. It used to be 0 forever thus maximum number of regs
+	   would never been reached and feature was useless.
+	*  Bug Impossible to Delete Category fixed. Trivial typo in code.
+	*  Currency for cost of event added.
+	*  HTML code displayed in event descriptions field. It is allowed to use HTML while filling fields, thus
+	   it seemed obvious to have it displayed when needed.
+	*  Mapping improved to allow for extra-US locations. This needed to update database tables and some guessing
+	   in code. In case something goes wrong with mapping, user would follow mapping service instructions to get
+	   results.
+	*  Support for Maporama mapping service added.
+	*  Several typos here and there fixed.
+	*  Italian language translation added.
+	*  Documentation improved.
+	*  Minor formatting changes for better display.
+
+EventReg Release .53
+	*  Added Mapping support(MapQuest,Yahoo & MultiMap) And address format is identical to that used in PostCalendar.
+	*  Fixed bug in Admin Category List.  Changed Details link to
+	   point to the Event list for that category.
+	*  Some bug-fixes related to PostNuke .750
+	*  Bug-fix  Admin Create Event & User Display event were missing
+	   there close-table functions.  Which caused the footer to end up
+	   inside the module.
+	*  Bug-fix Corrected the name used inside the modules to reflect
+	   the correct case
+	*  Options in the Admin Config are working.
+
+EventReg Release .52
+	*  Bug-fix Registration actually takes MAX_EVENT into account now.
+	*  Added search Funtionality(copy file from search/ folder to
+	   <PostNuke Root>/includes/search folder.
+	*  Corrected Event Display to only show users future/current events
+	*  Unknown Updates
+
+EventReg Release .51
+	*  Included 'Next Event' block in archive
+	*  Unknown other updates
+
+EventReg Release .50
+	*  Initial Release

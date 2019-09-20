@@ -1,0 +1,26 @@
+Todo:
+
+* Remove user name from "My Registrations" view
+* Add ability for users to create events
+* Incorporate event printing routine
+* Incorporate Event Signup Sheet printout
+* Pre-Defined Locations(lists)
+* Pre-Defined Prices(lists)
+* Add international date/time routines
+* Sub-title after Event Name
+* Add Logo option
+* Limit registrations(1 per person per event)
+* Remove registration count from main tables
+* Add toggle for user viewing of registration phone #'s
+* pnRender or Smarty ???
+* Modify Mail routines to us pn's mailer.
+* Dateless events (Mail admin when reached capacity)
+* Mambo Port
+* Revise DB Structures
+
+* Revise Nextblock
+*       Show open spots for registrations
+
+
+* (DONE)Restrict registrations to the start/end dates  Thanks Brian!
+

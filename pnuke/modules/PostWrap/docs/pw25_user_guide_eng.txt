@@ -1,0 +1,189 @@
+PostWrap 2.5
+User Guide
+Installation, Administration and Usage
+
+Shawn McKenzie (a.k.a. AbraCadaver)
+http://spidean.mckenzies.net
+
+Introduction
+PostWrap is a PostNuke module that enables virtually any web content such as HTML or 
+scripts (galleries, shopping carts, PHP, Perl, ASP, etc.) to be easily incorporated into your 
+PostNuke site.  Just call the PostWrap module with any URL and it will display it in your 
+PostNuke main area/window. I call it a content wrapper (takes any existing content anywhere 
+and wraps your PostNuke site around it). PostWrap uses an IFRAME which must be 
+supported by the browser and JavaScript to resize the IFRAME (optional).
+
+PostWrap now comes with a block that can be added to display links for all URLs that have 
+been added to PostWrap.
+
+Installation
+*	Unzip to your modules/ directory to create the PostWrap/ subdirectory
+*	Go to Administration, Modules, and Regenerate
+*	Initialize and then Activate PostWrap
+
+Upgrading from 1.x
+*	Delete existing PostWrap directory from modules/
+*	Unzip to your modules/ directory to create the PostWrap/ subdirectory
+*	Go to Administration, Modules, and Regenerate
+*	Initialize and then Activate PostWrap
+
+Upgrading from 2.x
+*	Unzip into the modules/ directory (replace files)
+*	Go to Administration, Modules, and Regenerate
+*	Update and then Activate PostWrap
+
+Administration
+The following options can be set from the PostWrap Administration menu.
+
+General
+The General settings page defines overall settings for the PostWrap module.
+
+*	Display off-site pages, controls whether pages not on your local domain or server can 
+be displayed.
+*	Allow input from browser address bar, determines whether the user can enter the 
+URL in the browser address bar.
+*	Compare URL against URL Security, activates URL checking from the URL Security 
+page. Otherwise, any page can be displayed if it is not restricted by the other settings.
+*	Add link for Open in new window, adds a link to open a new window above and 
+below the page.  If one of these links is clicked, the content is opened in a new 
+browser window.
+*	Use fixed title, displays a fixed title above and below the page.
+*	Auto-resize window, uses JavaScript to resize the content window.
+*	Length of viewing window in pixels, is the length of the window that will contain the 
+page.  This value will only be used if Auto resize window = No.
+*	Width of viewing window in pixels or percent, is the width of the window that will 
+contain the page. Default is 100%  
+
+URL Security
+If Compare URL against URL Security = Yes in the General settings, then any URL must be 
+entered here in order to be displayed.
+
+*	Add, adds a new URL and alias (either can be used to display the page)
+*	Edit, edits an existing URL entry
+*	Delete, deletes an existing URL entry
+
+The following are the same as the General section but override the General setting for the 
+specific URL.
+
+*	Add link for Open in new window
+*	Use fixed title
+*	Auto-resize window
+*	Length of viewing window in pixels
+*	Width of viewing window in pixels or percent
+
+Miscellaneous
+You can modify error and user messages in the language files in your language directory (i.e. 
+eng/) under modules/PostWrap/pnlang/
+
+*	user.php, user text, messages and errors
+*	admin.php, admin text and messages
+*	adminapi.php, admin error and status messages
+*	init.php, module initialization errors and messages
+
+Usage
+Just call PostWrap in module fashion with the page variable set to the URL or location that 
+you want to display in PostNuke. If Compare URL against URL Security = Yes, then you 
+may use either the URL or the alias that you defined.  The following examples assume that 
+the URL and an Alias have been configured in URL Security.
+
+HTML Anchors
+You can use PostWrap URLs in HTML anchor tags to create hyperlinks in HTML 
+documents or anywhere that HTML is supported.
+
+Using a relative URL:
+<a href="index.php?module=PostWrap&page=index.php">My Site</a>
+
+Using an Alias:
+<a href="index.php?module=PostWrap&page=mysite">My Site</a>
+
+Using an absolute URL:
+<a href="index.php?module=PostWrap&page=http://www.postnuke.org/">PostNuke Site</a>
+
+Using an Alias:
+<a href="index.php?module=PostWrap&page=postnuke">PostNuke Site</a>
+	
+Menu Block
+You can use PostWrap URLs in a PostNuke Generic Menu block created from 
+Administration, Blocks.
+
+Using a relative URL:
+index.php?module=PostWrap&page=index.php
+
+Using an Alias:
+index.php?module=PostWrap&page=mysite
+
+Using an absolute URL:
+index.php?module=PostWrap&page=http://www.postnuke.org/
+
+Using an Alias:
+index.php?module=PostWrap&page=postnuke
+
+URL Options
+There are several variables that can be included in the URL that will override the settings in 
+PostWrap Administration:
+
+*	The height (vertical size) of the IFRAME in pixels can be set using &height=
+*	The width (horizontal size) of the IFRAME in pixels or percent can be set using 
+&width=
+*	Auto resize of the page can be set with &resize=1 (this will override the height value 
+if set)
+*	The page title can be set using &title=
+
+Examples:
+index.php?module=PostWrap&page=http://www.postnuke.org/&height=1000&width=90%
+
+index.php?module=PostWrap&page=http://www.postnuke.org/&resize=1
+
+index.php?module=PostWrap&page=http://www.postnuke.org/&title=make it your choice
+
+If you are using a legacy PostNuke theme, you can use the PostNuke index variable you may 
+be able to show the center and right blocks by including index=1.
+
+Example:
+index.php?module=PostWrap&page=http://www.postnuke.org/&index=1
+
+PostWrap Block
+PostWrap includes a block that will automatically display a list of links for all URLs that you 
+have added in the URL Security section of PostWrap administration.
+
+*	Go to Administration, Blocks
+*	Click New Block
+*	Enter a Title
+*	Select PostWrap/PostWrap URLs as Block
+*	Select a block Position and Language
+*	Click Commit changes
+
+Differences from Older Versions
+PostWrap is now pnAPI compliant and is invoked using a different URL from those of 
+previous versions.  For backward compatibility, the previous method is still supported.
+
+The old URL was of this form:
+modules.php?op=modload&name=PostWrap&file=index&page=http://spidean.mckenzies.net/
+
+The new URL is of this form:
+index.php?module=PostWrap&page= http://spidean.mckenzies.net/
+
+Known Issues
+When using special characters (i.e. ? & % @ :) in the page variable in the address bar, you 
+must translate the characters to their ASCII hex value preceded by a %.  The ? is %3F and & 
+is %26.
+
+Example:
+page=http://somedomain.com/page.php?somevar=50&othervar=login
+
+Becomes:
+page=http://somedomain.com/page.php%3Fsomevar=50%26othervar=login
+
+Copyright
+Copyright © 2004 Shawn McKenzie. All rights reserved.
+
+No part of this document may be reproduced, stored in a retrieval system, or transmitted, in 
+any form or by any means, electronic, mechanical, recording, or otherwise, without the prior 
+written permission of Shawn McKenzie.
+
+The content of this document is furnished for informational use only, is subject to change 
+without notice, and should not be construed as a commitment by the authors or copyright 
+holder. The authors and copyright holder assume no responsibility or liability for any errors 
+or inaccuracies that may appear in the informational content contained in this document.
+
+All names and trademarks are property of their respective companies.

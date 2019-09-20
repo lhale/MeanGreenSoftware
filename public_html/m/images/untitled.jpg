@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+
+<head>
+<meta name="robots" content="noindex,nofollow">
+<link rel="stylesheet" type="text/css" href="/sqmail/themes/css/steelgrey.css">
+<title></title><script language="JavaScript" type="text/javascript">
+<!--
+function checkForm() {
+   var f = document.forms.length;
+   var i = 0;
+   var pos = -1;
+   while( pos == -1 && i < f ) {
+       var e = document.forms[i].elements.length;
+       var j = 0;
+       while( pos == -1 && j < e ) {
+           if ( document.forms[i].elements[j].type == 'text'            || document.forms[i].elements[j].type == 'password' ) {
+               pos = j;
+           }
+           j++;
+       }
+   i++;
+   }
+   if( pos >= 0 ) {
+       document.forms[i-1].elements[pos].focus();
+   }
+   
+}
+// -->
+</script>
+
+<!--[if IE 6]>
+<style type="text/css">
+/* avoid stupid IE6 bug with frames and scrollbars */
+body {
+    width: expression(document.documentElement.clientWidth - 30);
+}
+</style>
+<![endif]-->
+<!--[if lte IE 6]>
+<link rel="stylesheet" type="text/css" href="/sqmail/themes/css/steelgrey_ie.css" />
+<![endif]-->
+<!--[if gte IE 7]>
+<link rel="stylesheet" type="text/css" href="/sqmail/themes/css/steelgrey_ie7.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="/sqmail/themes/css/print.css" media="print" />
+<script type="text/javascript" src="../functions/jquery.js"></script>
+<script src="../functions/jquery.cookie.js" type="text/javascript"></script>
+<script src="../functions/nutsToggle.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    $(document).ready(function(){
+		$("#folders_top > p > a").nutsToggle("#folders","folders");
+		$("#cal_top > p > a").nutsToggle("#cal","calendar");
+		$("#todo_top > p > a").nutsToggle("#todo","todo");
+		$("#extra_top > p > a").nutsToggle("#extra","options");
+    });
+ </script>
+</head>
+
+<body text="#000000" bgcolor="#ffffff" link="#838ea9" vlink="#838ea9" alink="#838ea9" onload="checkForm();"  leftmargin="5" topmargin="0" marginheight="0" marginwidth="5" class="">
+
+<a name="pagetop"></a>
+<h2 id='org_name'></h2>
+<div id='header_icons'>
+<div id='header_icons_wrap'>
+<a href="/sqmail/src/right_main.php?PG_SHOWALL=0&amp;sort=0&amp;startMessage=1&amp;mailbox=INBOX" class="inbox-button"><span class="button-wrap"><span id='inbox_button'><span class='button_text'>INBOX</span></span></span></a>
+<a href="/sqmail/src/compose.php?mailbox=None&amp;startMessage=0" class="compose-button"><span class="button-wrap"><span id='compose_button'><span class='button_text'>Compose</span></span></span></a>
+<a href="/sqmail/src/addressbook.php" class="contacts-button"><span class="button-wrap"><span id='addresses_button'><span class='button_text'>Addresses</span></span></span></a>
+<a href="/sqmail/src/folders.php" class="folders-button"><span class="button-wrap"><span id='folders_button'><span class='button_text'>Folders</span></span></span></a>
+<a href="/sqmail/src/options.php" class="options-button"><span class="button-wrap"><span id='options_button'><span class='button_text'>Options</span></span></span></a>
+</div>
+</div>
+<div id='current_folder'>
+<div class='inbox_left_bar_handle'><img src='/sqmail/images/divider.gif'></div>
+Current Folder: <b>None&nbsp;</b>
+</div>
+<div id='mini_icons'>
+<a href="/sqmail/src/signout.php" target="_top" class=""><span id='exit_button' title='Sign Out'><span>Sign Out</span></span>
+</a>
+<a href="/sqmail/src/search.php?mailbox=None" class=""><span id='search_button' title='Search'><span>Search</span></span>
+</a>
+<a href="/sqmail/src/help.php" class=""><span id='help_button' title='Help'><span>Help</span></span>
+</a>
+</div>
+<div id='welcome'>
+</div>
+<div id='menuline_hook'>
+<a href="/sqmail/plugins/gpg/modules/keyring_main.php" class="">Keyring</a>
+&nbsp;&nbsp;
+<a href="/sqmail/plugins/calendar/list_calendars.php" class="">Calendar</a>
+&nbsp;&nbsp
+</div>
+<br /><table width="100%" border="0" cellspacing="0" cellpadding="2" align="center"><tr><td bgcolor="#d9dce6">
+<b><center>
+Viewing a text attachment - <a href="read_body.php?startMessage=1&amp;passed_id=219&amp;mailbox=INBOX&amp;passed_ent_id=2&amp;override_type0=message&amp;override_type1=rfc822&amp;ent_id=0">View message</a></b></td><tr><tr><td><center>
+<a href="../src/download.php?startMessage=1&amp;passed_id=219&amp;mailbox=INBOX&amp;passed_ent_id=2&amp;override_type0=message&amp;override_type1=rfc822&amp;ent_id=2.1.1&amp;absolute_dl=true">Download this as a file</a></center><br />
+</center></b>
+</td></tr></table>
+<table width="98%" border="0" cellspacing="0" cellpadding="2" align="center"><tr><td bgcolor="#d9dce6">
+<tr><td bgcolor="#ffffff"><tt>
+<pre>Review the attachment.
+
+<a href="http://adserver.admaxim.com/adserver/getAds?numads=5&amp;aType=6&amp;siteId=mojiva&amp;keywords=iphone&amp;fmt=html" target="_blank">http://adserver.admaxim.com/adserver/getAds?numads=5&amp;aType=6&amp;siteId=mojiva&amp;keywords=iphone&amp;fmt=html</a>
+<a href="http://adserver.admaxim.com/adserver/getAds?numads=5&amp;aType=6&amp;siteId=mojiva&amp;keywords=carro&amp;fmt=html" target="_blank">http://adserver.admaxim.com/adserver/getAds?numads=5&amp;aType=6&amp;siteId=mojiva&amp;keywords=carro&amp;fmt=html</a>
+
+You will see a banner on the top which you can resize to 300x50 or less.
+<a href="http://dictionary.reference.com/browse/cars" target="_blank">http://dictionary.reference.com/browse/cars</a>
+
+
+Shishu
+</pre></tt></td></tr></table>
+</body></html>

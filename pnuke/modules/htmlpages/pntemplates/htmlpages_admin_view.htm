@@ -1,0 +1,56 @@
+<!--[*  $Id: htmlpages_admin_view.htm 28 2007-08-07 09:49:38Z markwest $  *]-->
+<!--[if $type eq 'admin']-->
+<!--[include file="htmlpages_admin_menu.htm"]-->
+<div class="pn-admincontainer">
+<!--[/if]-->
+<h2><!--[pnml name="_VIEWPAGES"]--> - <!--[pnml name="_SORTEDBY"]--> <!--[$sortedby]--></h2>
+<div>&nbsp;<a href="<!--[pnmodurl modname=htmlpages type=$type func=view]-->">*</a>&nbsp;|&nbsp;<!--[pagerabc posvar="letter" separator="&nbsp;|&nbsp;" names="A;B;C;D;E;F;G;H;I;J;K;L;M;N;O;P;Q;R;S;T;U;V;W;X;Y;Z" forwardvars="module,type,func,order,orderby"]--></div>
+<table class="pn-admintable">
+  <thead>
+  <tr>
+      <!--[if $type eq 'admin']-->
+      <th><a href="<!--[pnmodurl modname=htmlpages type=admin func=view orderby=pid order=$order]-->"><!--[pnml name="_HTMLPAGESPID"]--></a></th>
+      <th><a href="<!--[pnmodurl modname=htmlpages type=admin func=view orderby=uid order=$order]-->"><!--[pnml name="_HTMLPAGESUSER"]--></a></th>
+      <!--[/if]-->
+      <!--[if $type eq 'admin']-->
+      <th><a href="<!--[pnmodurl modname=htmlpages type=admin func=view orderby=title order=$order]-->"><!--[pnml name="_HTMLPAGESTITLE"]--></a></th>
+      <th><a href="<!--[pnmodurl modname=htmlpages type=admin func=view orderby=timest order=$order]-->"><!--[pnml name="_HTMLPAGESTIME"]--></a></th>
+      <!--[else]-->
+      <th><a href="<!--[pnmodurl modname=htmlpages func=view orderby=title order=$order]-->"><!--[pnml name="_HTMLPAGESTITLE"]--></a></th>
+      <th><a href="<!--[pnmodurl modname=htmlpages func=view orderby=timest order=$order]-->"><!--[pnml name="_HTMLPAGESTIME"]--></a></th>
+      <!--[/if]-->
+      <!--[if $type eq 'admin']-->
+      <th><a href="<!--[pnmodurl modname=htmlpages type=admin func=view orderby=printlink order=$order]-->"><!--[pnml name="_ADD"]--> <!--[pnimg src=print.gif alt="_PRFRVIEW"]--> <!--[pnml name="_LINK"]--></a></th>
+      <!--[/if]-->
+      <th><!--[pnml name="_HTMLPAGESACTIONS"]--></th>
+  </tr>
+  </thead>
+  <tbody>
+  <!--[section name="pages" loop=$pages]-->
+    <tr class="<!--[cycle values=pn-odd,pn-even]-->">
+      <!--[if $type eq 'admin']-->
+      <td><!--[$pages[pages].pid|pnvarprephtmldisplay]--></td>
+      <td><!--[pnusergetvar name=uname uid=$pages[pages].uid]--></td>
+      <!--[/if]-->
+      <td><!--[$pages[pages].title|pnvarprephtmldisplay]--></td>
+      <td><!--[$pages[pages].timest|pnvarprephtmldisplay]--></td>
+      <!--[if $type eq 'admin']-->
+      <td><!--[if $pages[pages].printlink]--><!--[pnml name="_YES"]--><!--[else]--><!--[pnml name="_NO"]--><!--[/if]--></td>
+      <!--[/if]-->
+	  <td>
+	    <!--[assign var="options" value=$pages[pages].options]-->
+		<!--[strip]-->
+        [<!--[section name=options loop=$options]-->
+	    <a href="<!--[$options[options].url|pnvarprepfordisplay]-->"><!--[pnml name=$options[options].title]--></a>
+		<!--[if !$smarty.section.options.last]--> | <!--[/if]-->
+        <!--[/section]-->]
+		<!--[/strip]-->
+      </td>
+    </tr>
+  <!--[/section]-->
+  </tbody>
+</table>
+<!--[pager show="page" rowcount=$pager.numitems limit=$pager.itemsperpage posvar=startnum shift=1]-->
+<!--[if $type eq 'admin']-->
+</div>
+<!--[/if]-->

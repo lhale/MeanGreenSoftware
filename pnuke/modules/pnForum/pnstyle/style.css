@@ -1,0 +1,380 @@
+/*  $Id: style.css,v 1.9 2005/11/09 08:39:54 landseer Exp $  */
+
+.pnForum-title {
+    font-size: 12px;
+}
+
+.pnForum-border {
+    border-collapse: collapse;
+
+}
+
+a.pnForum_links {
+    background: red;
+    border: 1px solid blue;
+    color: yellow;
+}
+
+div.pnfadminrow98 {
+    clear: both;
+    width: 98%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+div.pnfadmincol66,  div.pnfadmincol49,  div.pnfadmincol33,  div.pnfadmincol24,  div.pnfadmincol22,  div.pnfadmincol16,  div.pnfadmincol12,
+div.pnfadmincol66c, div.pnfadmincol49c, div.pnfadmincol33c, div.pnfadmincol24c, div.pnfadmincol22c, div.pnfadmincol16c, div.pnfadmincol12c {
+    float: left;
+}
+
+div.pnfadmincol66, div.pnfadmincol49, div.pnfadmincol33, div.pnfadmincol24, div.pnfadmincol22, div.pnfadmincol16, div.pnfadmincol12 {
+    text-align: left;
+}
+
+div.pnfadmincol66c, div.pnfadmincol49c, div.pnfadmincol33c, div.pnfadmincol24c, div.pnfadmincol22c, div.pnfadmincol16c, div.pnfadmincol12c {
+    text-align: center;
+ }
+
+div.pnfadmincol66, div.pnfadmincol66c {
+    width: 66%;
+}
+
+div.pnfadmincol49, div.pnfadmincol49c {
+    width: 49%;
+}
+
+div.pnfadmincol33, div.pnfadmincol33c {
+    width: 33%;
+}
+
+div.pnfadmincol24, div.pnfadmincol24c {
+    width: 24%;
+}
+
+div.pnfadmincol22, div.pnfadmincol22c {
+    width: 22%;
+}
+
+div.pnfadmincol16, div.pnfadmincol16c {
+    width: 16%;
+}
+
+div.pnfadmincol12, div.pnfadmincol12c {
+    width: 12%;
+}
+
+div.pnfadminclear {
+    clear: both;
+}
+
+dt.pnfadmin {
+    clear: both;
+    width: 40%;
+    float: left;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+dd.pnfadmin {
+    width: 40%;
+    float: left;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.pnfuserrow98 {
+    clear: both;
+    width: 98%;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.pnfusercol25 {
+    width: 25%;
+    float: left;
+}
+
+.pnfusercol49 {
+    width: 49%;
+    float: left;
+}
+
+.pnfusercol66 {
+    width: 66%;
+    float: left;
+}
+
+.pnfusercol33 {
+    width: 33%;
+    float: left;
+}
+
+.pnfusercol60 {
+    width: 60%;
+    float: left;
+}
+
+.pnfusercol30 {
+    width: 30%;
+    float: left;
+}
+
+.pnfusercol75 {
+    width: 75%;
+    float: left;
+}
+
+.pnfusercol37 {
+    width: 37%;
+    float: left;
+}
+
+fieldset {
+    font-size: 1em;
+    padding: 3px;
+    margin: 3px;
+}
+
+legend {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.displayhook {
+    clear: both;
+    padding: 5px;
+    text-align: center;
+}
+
+.post-header-row, .post-bottom-row {
+    /* clear: both; */
+    width: 98%;
+    border: 1px solid red;
+}
+.post-header-left {
+    /* clear: both; */
+    width: 24%;
+    float: left;
+    height: 2em;
+    text-align: left;
+    margin-left: 3px;
+    margin-top: 0.5em;
+}
+
+.post-header-right {
+    width: 74%;
+    float: left;
+    height: 2em;
+    text-align: right;
+    margin-right: 5px;
+    margin-top: 0.5em;
+}
+
+.post-title-row {
+    width: 98%;
+}
+
+.post-title-left {
+    width: 24%;
+    float: left;
+    text-align: left;
+    margin-left: 3px;
+}
+
+.post-title-right {
+    width: 74%;
+    float: left;
+    text-align: left;
+    margin-left: 3px;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.post-content-row {
+    /* clear: both; */
+    width: 98%;
+}
+
+.post-userinfo {
+    /* clear: both; */
+    width: 24%;
+    float: left;
+    margin: 3px;
+    text-align: left;
+    overflow: visible;
+}
+
+.post-text {
+    width: 74%;
+    float: left;
+    text-align: left;
+    margin: 3px;
+    overflow: visible;
+}
+
+.post-bottom-left {
+    /* clear: both; */
+    width: 24%;
+    float: left;
+    text-align: left;
+    margin-left: 3px;
+}
+
+.post-bottom-right {
+    width: 74%;
+    float: left;
+    text-align: left;
+    margin-left: 3px;
+}
+
+.post-bottom2 {
+    /* clear: both; */
+    width: 98%;
+    float: left;
+    text-align: right;
+    margin-right: 3px;
+}
+
+.post-bottom-userinfo {
+    width: 49%;
+    text-align: left;
+    float: left;
+    margin-left: 5px;
+}
+
+.post-bottom-useroptions {
+    width: 49%;
+    text-align: right;
+    float: right;
+    margin-right: 5px;
+}
+
+.quickreply-options, .quickreply-options-header {
+    /* clear: both; */
+    width: 30%;
+    float: left;
+    text-align: left;
+}
+
+.quickreply-text, .quickreply-text-header {
+    width: 66%;
+    float: left;
+}
+
+.searchresultlist {
+    list-style-type: none;
+}
+
+.searchresult {
+
+    border: 1px solid black;
+    margin: 5px;
+    padding: 3px;
+    background: #E5E7E8;
+}
+
+ul.pnf_maincategorylist {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+ul.pnf_maincategorylist li {
+    padding: 0;
+    margin: 0.5em 0 0.5em 0;
+    padding-left: 3em;
+    background-repeat: no-repeat;
+    background-position: 0 1em;
+}
+ul.pnf_maincategorylist li.newposts {
+    background-image: url(../pnimages/red_folder.gif);
+}
+
+ul.pnf_maincategorylist li.nonewposts {
+    background-image: url(../pnimages/folder.gif);
+}
+
+ul.pnf_mainforumlist {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+ul.pnf_mainforumlist li {
+    margin: 0.5em 0 0.5em 0;
+    padding-left: 3em;
+    background-repeat: no-repeat;
+    background-position: 0 1em;
+}
+ul.pnf_mainforumlist li.newposts {
+    background-image: url(../pnimages/red_folder.gif);
+}
+
+ul.pnf_mainforumlist li.nonewposts {
+    background-image: url(../pnimages/folder.gif);
+}
+
+ul.pnf_forumlist {
+    padding: 0 0 0 0.8em;
+    margin: 0 0 0 0.8em;
+    list-style-position: outside;
+    list-style-image: url('../pnimages/arrow.gif');
+}
+
+ul.pnf_forumlist li {
+    padding: 0;
+    margin: 0;
+}
+
+.pnf_postlist {
+    padding: 0 0 0 0.8em;
+    margin: 0 0 0 0.8em;
+    list-style-position: outside;
+    list-style-image: url('../pnimages/arrow.gif');
+}
+
+ul.pnf_postlist li {
+    padding: 0;
+    margin: 0;
+}
+
+.pnf_posterlist {
+    padding: 0 0 0 0.8em;
+    margin: 0 0 0 0.8em;
+    list-style-position: outside;
+    list-style-image: url('../pnimages/arrow.gif');
+}
+
+ul.pnf_posterlist li {
+    padding: 0;
+    margin: 0;
+}
+
+.pnf_statslist {
+    padding: 0 0 0 0.8em;
+    margin: 0 0 0 0.8em;
+    list-style-position: outside;
+    list-style-image: url('../pnimages/arrow.gif');
+}
+
+ul.pnf_statslist li {
+    padding: 0;
+    margin: 0;
+}
+
+div.pnf_statusmsg {
+    margin: 5px 0 5px 0;
+    padding: 5px 0 5px 0;
+    text-align:center;
+    width:99%;
+    border: 1px solid red;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.pnfadminuser {
+    color: red;
+}
+.pnfnoadminuser {
+    color: green;
+}

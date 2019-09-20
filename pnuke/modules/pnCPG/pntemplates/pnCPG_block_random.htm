@@ -1,0 +1,100 @@
+<!--[*  $Id: pnCPG_random_block.htm,v 1.4 2004/02/05 23:43:19 markwest Exp $  *]-->
+<!--[if $loadjava eq 'y']-->
+<script type="text/javascript" src="modules/<!--[$modname]-->/pnincludes/overlib_mini.js"><!-- overLIB (c) Erik Bosrup --></</script>
+<div id="overDiv" style="position:absolute; visibility:hidden; z-index:1001;">
+</div>
+<!--[/if]-->
+
+<!--[if $shstats eq 'y']-->
+<center><b>
+<label><!--[pnml name="_PNCPG_STATS"]--></label>
+</b>
+<br>
+<label><!--[pnml name="_PNCPG_TOTALALBUMS"]--></label>
+:
+<!--[$numalbums]-->
+<br>
+<label><!--[pnml name="_PNCPG_TOTALPICTURES"]--></label>
+:
+<!--[$numpic]-->
+<br>
+<label><!--[pnml name="_PNCPG_TOTALHITS"]--></label>
+:
+<!--[$numhits]-->
+<br>
+<label><!--[pnml name="_PNCPG_TOTALVOTES"]--></label>
+:
+<!--[$numvotes]-->
+<br>
+<label><!--[pnml name="_PNCPG_TOTALCOMMENTS"]--></label>
+:
+<!--[$numcomments]-->
+<br><br>
+</center>
+<!--[/if]-->
+
+<!--[if $shalbum eq 'y']-->
+<center><b>
+<label><!--[pnml name="_PNCPG_LASTALBUMS"]--></label>
+</b>
+<br>
+<!--[section name="items2" loop=$items2]-->
+<A HREF="<!--[$items2[items2].url]-->"><!--[$items2[items2].title]--></A>
+<br>
+<!--[/section]-->
+</center>
+<br><br>
+<!--[/if]-->
+
+<!--[if $shrandom eq 'y']-->
+<center>
+<!--[section name="items" loop=$items]-->
+
+<!--[if $usejava eq 'y']-->
+<a href="javascript:void(0);" onmouseover="return overlib('<!--[$popup1]-->', STICKY, CAPTION, 'Menu', <!--[$menu1]-->);" onmouseout="return nd();"><IMG SRC="<!--[$items[items].picture]-->"  border="0" ALT="<!--[$items[items].caption]-->"</a>
+<!--[else]-->
+	<A HREF="<!--[$items[items].url]-->"><IMG SRC="<!--[$items[items].picture]-->" border=0 title="<!--[$items[items].title]-->"></A>
+<!--[/if]-->
+<br />
+<a href="<!--[$items[items].url]-->"><!--[$items[items].title]--></a>
+<br>
+<label for="owner"><!--[pnml name="_PNCPG_OWNER"]--></label>
+:
+<!--[$items[items].owner]-->
+<br>
+<label for="hits"><!--[pnml name="_PNCPG_HITS"]--></label>
+:
+<!--[$items[items].hits]-->
+<!--[/section]-->
+</center>
+<br><br>
+<!--[/if]-->
+
+<!--[if $shlast eq 'y']-->
+
+<center><b>
+<label><!--[pnml name="_PNCPG_LASTPICTURE"]--></label>
+</b>
+<br>
+<!--[section name="items3" loop=$items3]-->
+<!--[if $usejava eq 'y']-->
+<a href="javascript:void(0);" onmouseover="return overlib('<!--[$popup2]-->', STICKY, CAPTION, 'Menu', <!--[$menu2]-->);" onmouseout="return nd();"><IMG SRC="<!--[$items3[items3].picture]-->"  border="0" ALT="<!--[$items3[items3].caption]-->"</a>
+<!--[else]-->
+<A HREF="<!--[$items3[items3].url]-->"><IMG SRC="<!--[$items3[items3].picture]-->" border=0 title="<!--[$items3[items3].title]-->"></A>
+<!--[/if]-->
+
+<br />
+<a href="<!--[$items3[items3].url]-->"><!--[$items3[items3].title]--></a>
+<br>
+<label for="owner"><!--[pnml name="_PNCPG_OWNER"]--></label>
+:
+<!--[$items3[items3].owner]-->
+<br>
+<label for="hits"><!--[pnml name="_PNCPG_HITS"]--></label>
+:
+<!--[$items3[items3].hits]-->
+<!--[/section]-->
+</center>
+<!--[/if]-->
+
+</div>

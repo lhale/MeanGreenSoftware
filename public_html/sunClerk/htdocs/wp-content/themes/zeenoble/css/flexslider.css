@@ -1,0 +1,240 @@
+/*
+ * jQuery FlexSlider v2.0
+ * http://www.woothemes.com/flexslider/
+ *
+ * Copyright 2012 WooThemes
+ * Free to use under the GPLv2 license.
+ * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Contributing author: Tyler Smith (@mbmufffin)
+ */
+
+ 
+/* Browser Resets */
+.zeeflexslider a:active,
+.zeeflexslider a:focus  {outline: none;}
+.zeeslides,
+.zeeflex-control-nav,
+.zeeflex-direction-nav {margin: 0; padding: 0; list-style: none;} 
+
+/* FlexSlider Necessary Styles
+*********************************/ 
+.zeeflexslider {margin: 0; padding: 0;}
+.zeeflexslider .zeeslides > li {display: none; -webkit-backface-visibility: hidden;} /* Hide the slides before the JS is loaded. Avoids image jumping */
+.zeeflexslider .zeeslides img {width: 100%; display: block;}
+.zeeflex-pauseplay span {text-transform: capitalize;}
+
+/* Clearfix for the .zeeslides element */
+.zeeslides:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;} 
+html[xmlns] .zeeslides {display: block;} 
+* html .zeeslides {height: 1%;}
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+.no-js .zeeslides > li:first-child {display: block;}
+
+
+/* FlexSlider Default Theme
+********************************/
+.zeeflexslider {margin: 0 0 60px; background: #fff; border: 4px solid #fff; position: relative; -webkit-border-radius: 4px; -moz-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; box-shadow: 0 1px 4px rgba(0,0,0,.2); -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.2); -moz-box-shadow: 0 1px 4px rgba(0,0,0,.2); -o-box-shadow: 0 1px 4px rgba(0,0,0,.2); zoom: 1;}
+.zeeflex-viewport {max-height: 2000px; -webkit-transition: all 1s ease; -moz-transition: all 1s ease; transition: all 1s ease;}
+.loading .zeeflex-viewport {max-height: 300px;}
+.zeeflexslider .zeeslides {zoom: 1;}
+
+.carousel li {margin-right: 5px}
+
+
+/* Direction Nav */
+.zeeflex-direction-nav {*height: 0;}
+.zeeflex-direction-nav a {width: 30px; height: 30px; margin: -20px 0 0; display: block; position: absolute; top: 50%; z-index: 10; cursor: pointer; text-indent: -9999px; opacity: 0; -webkit-transition: all .3s ease;}
+.zeeflex-direction-nav .zeeflex-next {background-position: 100% 0; right: -36px; }
+.zeeflex-direction-nav .zeeflex-prev {left: -36px;}
+.zeeflexslider:hover .zeeflex-next {opacity: 0.8; right: 5px;}
+.zeeflexslider:hover .zeeflex-prev {opacity: 0.8; left: 5px;}
+.zeeflexslider:hover .zeeflex-next:hover, .zeeflexslider:hover .zeeflex-prev:hover {opacity: 1;}
+.zeeflex-direction-nav .zeeflex-disabled {opacity: .3!important; filter:alpha(opacity=30); cursor: default;}
+
+/* Control Nav */
+.zeeflex-control-nav {width: 100%; position: absolute; bottom: -40px; text-align: center;}
+.zeeflex-control-nav li {margin: 0 6px; display: inline-block; zoom: 1; *display: inline;}
+.zeeflex-control-paging li a {width: 11px; height: 11px; display: block; background: #666; background: rgba(0,0,0,0.5); cursor: pointer; text-indent: -9999px; -webkit-border-radius: 20px; -moz-border-radius: 20px; -o-border-radius: 20px; border-radius: 20px; box-shadow: inset 0 0 3px rgba(0,0,0,0.3);}
+.zeeflex-control-paging li a:hover { background: #333; background: rgba(0,0,0,0.7); }
+.zeeflex-control-paging li a.zeeflex-active { background: #000; background: rgba(0,0,0,0.9); cursor: default; }
+
+.zeeflex-control-thumbs {margin: 5px 0 0; position: static; overflow: hidden;}
+.zeeflex-control-thumbs li {width: 25%; float: left; margin: 0;}
+.zeeflex-control-thumbs img {width: 100%; display: block; opacity: .7; cursor: pointer;}
+.zeeflex-control-thumbs img:hover {opacity: 1;}
+.zeeflex-control-thumbs .zeeflex-active {opacity: 1; cursor: default;}
+
+@media screen and (max-width: 860px) {
+  .zeeflex-direction-nav .zeeflex-prev {opacity: 1; left: 0;}
+  .zeeflex-direction-nav .zeeflex-next {opacity: 1; right: 0;}
+}
+
+/*  ThemeZee Slider Theme (based on Responsive Slider Plugin | http://wordpress.org/extend/plugins/responsive-slider/ )
+*****************************************/
+#frontpage-slider {
+	margin: 4em !important;
+	background: transparent !important;
+	border: none !important;
+	-webkit-border-radius: 0 !important;
+	-moz-border-radius: 0 !important;
+	-o-border-radius: 0 !important;
+	border-radius: 0 !important;
+	box-shadow: none !important;
+}
+#frontpage-slider .zeeslide .slide-entry {
+	line-height: 1.6em;
+	color: #eee;
+	font-size: 1.1em;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding-bottom: 0.8em;
+}
+#frontpage-slider .zeeslide .slide-title {
+	color: #fff;
+	font-size: 2.0em;
+	margin: 0 0 0.3em 0;
+	line-height: 1.3em;
+	text-align: left;
+	font-family: 'Roboto', Verdana, Arial;
+}
+#frontpage-slider .zeeslide .slide-entry .slide-more {
+	margin-top: 2em;
+}
+#frontpage-slider .zeeslide .slide-entry .slide-more .slide-link {
+	display: inline-block;
+	padding: 0.8em 1.8em;
+	line-height: 1.5em;
+	background: #fff;
+	color: #27737f;
+}
+#frontpage-slider .zeeslide .slide-entry .slide-more .slide-link:hover {
+	background: #eee;
+}
+#frontpage-slider .zeeslide .slide-image {
+	float: right;
+	margin-left: 3em;
+	margin-top: -0.8em;
+	padding: 0.8em;
+}
+#frontpage-slider .zeeslide .slide-image img {
+	max-width: 500px;
+	width: 100%;
+	max-height: 300px;
+	height: auto;
+	border: 5px solid #fff;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* Direction Nav */
+#frontpage-slider .zeeflex-direction-nav a {
+	width: 40px !important;
+	height: 60px !important;
+	background: url(../images/flexslider-nav.png) no-repeat 0 0 !important;
+	text-align: left;
+	text-indent: -9999em;
+	top: 46% !important;
+	opacity: 0;
+	-webkit-transition: all 0.2s ease-out;
+	-moz-transition: all 0.2s ease-out;
+	-ms-transition: all 0.2s ease-out;
+	-o-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;	
+}
+#frontpage-slider .zeeflex-direction-nav .zeeflex-next {
+	background-position: -40px 0 !important; 
+	right: -3.5em !important;
+}
+#frontpage-slider .zeeflex-direction-nav .zeeflex-prev {
+	left: -3.5em !important;
+}
+#frontpage-slider:hover .zeeflex-next {
+	opacity: 0.6; 
+}
+#frontpage-slider:hover .zeeflex-prev {
+	opacity: 0.6; 
+}
+#frontpage-slider:hover .zeeflex-next:hover, #frontpage-slider:hover .zeeflex-prev:hover {
+	opacity: 0.9;
+}
+
+/* Control Nav */
+#frontpage-slider .zeeflex-control-nav {
+	width: 100%; 
+	clear: left;
+	position: absolute;
+	bottom: -3em;
+}
+#frontpage-slider .zeeflex-control-paging li a {
+	width: 13px; 
+	height: 13px; 
+	display: block; 
+	background: #eee;
+	background: rgba(255,255,255,0.25); 
+	cursor: pointer; 
+	text-indent: -9999px; 
+	-webkit-border-radius: 0; 
+	-moz-border-radius: 0; 
+	-o-border-radius: 0;
+	border-radius: 0; 
+	box-shadow: none !important;
+}
+#frontpage-slider .zeeflex-control-paging li a:hover { 
+	background: #fff; 
+	background: rgba(255,255,255,0.5);
+}
+#frontpage-slider .zeeflex-control-paging li a.zeeflex-active { 
+	background: #fff; 
+	background: rgba(255,255,255,0.5);
+	cursor: default;
+}
+
+
+/* Media Queries */
+@media only screen and (max-width: 60em) {
+	#frontpage-slider {
+		margin: 3em !important;
+	}
+	#frontpage-slider .zeeflex-direction-nav .zeeflex-next {
+		right: -2.7em !important;
+	}
+	#frontpage-slider .zeeflex-direction-nav .zeeflex-prev {
+		left: -2.7em !important;
+	}
+	#frontpage-slider .zeeflex-control-nav {
+		bottom: -2.4em;
+	}
+	#frontpage-slider .zeeslide .slide-title {
+		margin: 1em 0 0.5em 0;
+	}
+	#frontpage-slider .zeeslide .slide-image {
+		float: none;
+		margin-left: 0;
+		margin-top: 0;
+		padding: 0.1em;
+	}
+}
+@media only screen and (max-width: 50em) {
+	#frontpage-slider .zeeslide .slide-entry {
+		line-height: 1.5em;
+		font-size: 1.0em;
+	}
+	#frontpage-slider .zeeslide .slide-title {
+		font-size: 1.8em;
+	}
+}
+@media only screen and (max-width: 30em) {
+	#frontpage-slider .zeeslide .slide-entry {
+		line-height: 1.4em;
+		font-size: 1.0em;
+	}
+	#frontpage-slider .zeeslide .slide-title {
+		font-size: 1.4em;
+	}
+}

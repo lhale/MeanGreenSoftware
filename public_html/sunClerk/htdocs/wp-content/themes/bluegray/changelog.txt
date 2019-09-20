@@ -1,0 +1,71 @@
+CHANGELOG
+=========
+
+BlueGray version 2.9 - june 2015
+- file single: removed if statement
+- file functions, comments and style: changed alignment of comment nav
+- reordered file style
+- updated file readme
+
+BlueGray version 2.8 - april 2015
+- several small adjustment in stylesheet
+- removed support for document title in older WP versions 
+- files index and archive: pagination inside loop
+
+BlueGray version 2.7 - february 2015
+- added Spanish translation (thanks Miquel)
+- added German translation (thanks Frank)
+- updated French translation (thanks Ollie)
+- file style: adjusted styling comments area
+- file style: added support in Chrome for Checkbox, Radio and Select
+- file style and file custom-editor-style: finetuned img position in post and page
+- file style: reordered mobile stylesheet
+- file footer: changed file structure
+- file functions: removed class excerpt because not used anymore
+- file functions: added class to posts nav (now no empty space when posts nav is not present)
+
+BlueGray version 2.6 - december 2014
+- file header: removed wp_title because of new title-tag
+- file functions: added backwards compatibility for WP 4.0 and older
+- reordered file nav
+
+BlueGray version 2.5 - december 2014
+- file functions: added title-tag
+- updated the reset stylesheet
+- adjusted styling of several tags
+- reordered and cleaned up files style and custom-editor-style
+- reordered php files
+
+BlueGray version 2.3 - december 2014
+- file header: removed double if statement
+- file functions: added custom post excerpt lenght
+- added French translation
+- fixed minor issue with permalink
+- several css adjustments
+
+BlueGray version 2.1 - november 2014
+- file functions: added sanitize_callback to logo upload
+- file footer: removed double if statement
+- several css adjustments
+
+BlueGray version 2.0 - october 2014
+- added and adjusted text markup tags
+- several minor adjustments 
+
+BlueGray version 1.9 - july 2014
+- added several adjustments for better responsive layout
+- text-align justify for content area, sidebar and footer
+- several minor adjustments 
+
+BlueGray version 1.8 - june 2014
+- changed size of single post image
+- added featured image on single page
+- several minor adjustments 
+
+BlueGray version 1.7 - may 2014
+- several minor adjustments 
+
+BlueGray version 1.6 - april 2014 
+- first stable release
+
+

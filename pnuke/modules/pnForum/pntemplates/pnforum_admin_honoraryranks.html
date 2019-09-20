@@ -1,0 +1,78 @@
+<!--[*  $Id: pnforum_admin_honoraryranks.html,v 1.4 2005/08/06 07:14:13 landseer Exp $  *]-->
+
+<!--[ include file='pnforum_admin_header.html' ]-->
+
+<fieldset>
+    <legend style="font-weight: bold;">
+        <!--[ pnml name='_PNFORUM_ADMINHONORARYRANKS' ]-->
+    </legend>
+
+    <script type="text/javascript">
+    <!--
+    function ShowRankImage(num) {
+
+        var imageobj = document.getElementById('image' + num);
+        var rankobj  = document.getElementById('rank_image' + num);
+        imageobj.src = '<!--[ $pncore.pnForum.url_ranks_images ]-->/' + rankobj.options[rankobj.selectedIndex].value
+        return;
+    }
+
+    //-->
+    </script>
+
+    <div class="pnfadminrow98" style="background-color: <!--[ $bgcolor3 ]-->; text-align: center;">
+        <!--[ pnml name='_PNFORUM_ADMINHONORARYRANKS_INFO' html=1 ]-->
+    </div>
+    <div class="pnfadminrow98" style="background-color: <!--[ $bgcolor3 ]-->;">
+        <div class="pnfadmincol33c">
+            <strong><!--[ pnml name='_PNFORUM_HONORARY_RANK' html=1 ]--></strong>
+        </div>
+        <div class="pnfadmincol33c">
+            <strong><!--[ pnml name='_PNFORUM_IMAGE' html=1 ]--></strong>
+        </div>
+        <div class="pnfadmincol33c">
+            <strong><!--[ pnml name='_PNFORUM_ACTIONS' html=1 ]--></strong>
+        </div>
+    </div>
+
+    <!--[ foreach key=num item=rank from=$ranks ]-->
+    <form name="Rank<!--[ $num ]-->" action="<!--[ pnmodurl modname= pnForum type=admin func=ranks ]-->" method="post">
+    <div class="pnfadminrow98">
+        <input type="hidden" name="ranktype" value="<!--[ $ranktype ]-->" />
+        <input type="hidden" name="min_posts" value="-1" />
+        <input type="hidden" name="max_posts" value="0" />
+        <input type="hidden" value="<!--[ $num ]-->" name="number" />
+        <div class="pnfadmincol33c">
+            <input type="text" name="title" value="<!--[ $rank.rank_title ]-->" maxlength="50" size="20" />
+        </div>
+        <div class="pnfadmincol33c">
+            <select name="image" id="rank_image<!--[ $num ]-->" onchange="ShowRankImage(<!--[ $num ]-->)">
+            <!--[ foreach item=rankimage from=$rankimages ]-->
+            <option value="<!--[ $rankimage ]-->" <!--[ if $rankimage eq $rank.rank_image ]-->selected="selected"<!--[ /if ]-->><!--[ $rankimage ]--></option>
+            <!--[ /foreach ]-->
+            </select><img id="image<!--[ $num ]-->"src="<!--[ $pncore.pnForum.url_ranks_images ]-->/<!--[ $rank.rank_image ]-->" />
+        </div>
+        <!--[ if $num eq 0 ]-->
+        <div class="pnfadmincol33c">
+            <input type="hidden" name="actiontype" value="Add" />
+            <input type="submit" name="submit" value="<!--[ pnml name='_PNFORUM_ADD' ]-->" />
+        </div>
+        <!--[ else ]-->
+        <div class="pnfadmincol16c">
+            <input type="hidden" name="rank_id" value="<!--[ $rank.rank_id ]-->" />
+            <input type="radio" name="actiontype" checked="checked" value="Update" /><!--[ pnml name='_EDIT' ]--><br />
+            <input type="radio" name="actiontype" value="Delete" /><!--[ pnml name='_DELETE' ]-->
+        </div>
+        <div class="pnfadmincol16c">
+            <input type="submit" name="submit" value="<!--[ pnml name='_SUBMIT' ]-->" />
+        </div>
+        <!--[ /if ]-->
+    </div>
+    </form>
+    <!--[ foreachelse ]-->
+    <div class="pnfadminrow">
+        <!--[ pnml name='_PNFORUM_NORANKSINDATABASE' ]-->
+    </div>
+    <!--[ /foreach ]-->
+
+</fieldset>

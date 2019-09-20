@@ -1,0 +1,51 @@
+// ----------------------------------------------------------------------
+// POST-NUKE Content Management System
+// Copyright (C) 2001 by the Post-Nuke Development Team.
+// http://www.postnuke.com/
+// ----------------------------------------------------------------------
+// Based on:
+// PHP-NUKE Web Portal System - http://phpnuke.org/
+// Thatware - http://thatware.org/
+// ----------------------------------------------------------------------
+// LICENSE
+//
+// This program is free software; you can redistribute it and/or
+// modify it under the terms of the GNU General Public License (GPL)
+// as published by the Free Software Foundation; either version 2
+// of the License, or (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// To read the license please visit http://www.gnu.org/copyleft/gpl.html
+// ----------------------------------------------------------------------
+// Filename: modules/pnTresMailer/*.php
+// Original Author: foyleman
+// Purpose: NewsLetter Module
+// ----------------------------------------------------------------------
+//
+//
+// Special Credits:
+//
+// bigh: testing and debugging the windows server errors. I could not have
+//			made this module windows compatable without this help.
+//
+// Manuel Lemos: creating and making public his smtp class code. This gave
+//			me something to base my smtp code on.
+//
+// newmar for the italian language (minus a couple I had to add later and
+//			hope are understandable).
+//
+// Daniel Luttermann for the german translation.
+//
+// Pablo GM for the spanish translation
+//
+// PagenCyber for the french translation.
+//
+// Rudy Varner for the admin panel logo.
+//
+// Everyone who helped me debug and come up with ideas for this module.
+//
+//Karsten Doerges

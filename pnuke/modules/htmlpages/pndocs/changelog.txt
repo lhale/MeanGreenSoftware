@@ -1,0 +1,30 @@
+htmlpages v2.2
+bug fixes
+
+htmlpages v2.1
+bugfixes
+
+htmlpages v2.0
+all output templated using pnRender
+all pnHTML usage removed
+smarty/pnrender tags supported in page content
+database connections updated to new PN reference model
+all output now fully html 4.01 strict compliant and xhtml compatable *Note 1
+
+
+htmlpages v1.11
+search page included
+html block included (select it by block id)
+sorting order options in overview table
+fixed a couple of permission bugs
+change size of title field
+added printer-friendly page support
+
+htmlpages v1.0
+First release
+
+
+Notes
+
+1) This is module output only not the content of the site theme, PN itself
+(although .750 meets this standard) or the content held by the module

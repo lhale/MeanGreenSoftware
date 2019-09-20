@@ -1,0 +1,15 @@
+<style type="text/css">
+td.weekheader { background-color: [-$BGCOLOR2-]; font-size: 14pt; font-weight: bold;}
+table.weekheader { background-color: [-$BGCOLOR2-]; border: 1px solid #000000;}
+.weekheader a:link { font-size: 14pt; font-weight: bold; text-decoration: none; padding-left: 10px; padding-right: 10px;}
+.weekheader a:visited { font-size: 14pt; font-weight: bold; text-decoration: none; padding-left: 10px; padding-right: 10px;}
+td.dayheader { background-color: [-$BGCOLOR2-]; font-size: 12pt; font-weight: bold;}
+table.dayheader { background-color: [-$BGCOLOR2-]; border-top: 1px solid #000000; border-bottom: 1px solid #000000;}
+table.eventslist { background-color: [-$BGCOLOR1-]; padding: 10px;}
+td.eventslist { background-color: [-$BGCOLOR1-]; padding: 10px;}
+.dayheader a:link { font-size: 12pt; font-weight: bold; text-decoration: none;}
+.dayheader a:active { font-size: 12pt; font-weight: bold; text-decoration: none;}
+.dayheader a:hover { font-size: 12pt; font-weight: bold; text-decoration: none;}
+.dayheader a:visited { font-size: 12pt; font-weight: bold; text-decoration: none;}
+table.calcontainer { border: 1px solid #000000;}
+</style>

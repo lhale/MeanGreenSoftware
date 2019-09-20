@@ -1,0 +1,47 @@
+<!--[*  $Id: pnforum_user_movetopic.html,v 1.6 2005/08/06 07:14:13 landseer Exp $  *]-->
+
+<!--[ include file='pnforum_user_header.html' ]-->
+<!--[* pndebug *]-->
+
+<fieldset>
+    <legend>
+        <!--[ pnml name='_PNFORUM_MOVETOPIC' ]-->
+    </legend>
+    <form action="<!--[ pnmodurl modname=pnForum type=user func=topicadmin ]-->" method="post">
+    <input type="hidden" name="mode" value="<!--[ $mode ]-->" />
+    <input type="hidden" name="topic" value="<!--[ $topic_id ]-->" />
+    <input type="hidden" name="authid" value="<!--[ pnsecgenauthkey ]-->" />
+    <div style="background-color: <!--[ $bgcolor3 ]-->; width: 95%; text-align: center;">
+        <!--[ pnml name='_PNFORUM_MOVETOPIC_INFO' html=1 ]--><br />
+        <select name="forum" id="phpbb_forum">
+        <!--[ foreach item=forum from=$forums ]-->
+        <option value="<!--[ $forum.forum_id ]-->"><!--[ $forum.cat_title ]-->&nbsp;::&nbsp;<!--[ $forum.forum_name ]--></option>
+        <!--[ /foreach ]-->
+        </select>
+        <br />
+        <label for="createshadowtopic"><!--[ pnml name='_PNFORUM_CREATESHADOWTOPIC' html=1 ]--></label>
+        <input type="checkbox" id="createshadowtopic" name="createshadowtopic" value="1" />
+        <br />
+        <input type="submit" name="submit" value="<!--[ pnml name='_PNFORUM_MOVETOPIC' ]-->" />
+     </div>
+     </form>
+</fieldset>
+<br />
+<fieldset>
+    <legend>
+        <!--[ pnml name='_PNFORUM_JOINTOPICS' html=1 ]-->
+    </legend>
+    <form action="<!--[ pnmodurl modname=pnForum type=user func=topicadmin ]-->" method="post">
+    <input type="hidden" name="mode" value="join" />
+    <input type="hidden" name="topic" value="<!--[ $topic_id ]-->" />
+    <input type="hidden" name="authid" value="<!--[ pnsecgenauthkey module=pnForum ]-->" />
+    <div style="background-color: <!--[ $bgcolor3 ]-->; width: 95%; text-align: center;">
+        <label for="to_topic_id"><!--[ pnml name='_PNFORUM_JOINTOPICS_TOTOPIC' html=1 ]--></label>
+        <input type="text" id="to_topic_id" name="to_topic_id" value="" size="10" maxlength="20" />(topic_id)
+        <br />
+        <input name="submit" type="submit" value="<!--[ pnml name='_PNFORUM_JOINTOPICS' ]-->" />
+    </div>
+    </form>
+</fieldset>
+
+<!--[ include file='pnforum_user_footer.html' ]-->

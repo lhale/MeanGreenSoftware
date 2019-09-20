@@ -1,0 +1,775 @@
+<html>
+
+<head>
+<title>PostWrap 2.5 User Guide</title>
+
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+h1
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:Arial;}
+h2
+	{margin:0in;
+	margin-bottom:.0001pt;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:Arial;
+	font-style:italic;}
+h3
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:Arial;}
+h4
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:Arial;
+	font-style:italic;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	text-transform:uppercase;
+	font-weight:bold;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:12.0pt;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	font-variant:small-caps;}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:24.0pt;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	font-style:italic;}
+p.MsoToc4, li.MsoToc4, div.MsoToc4
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	font-size:9.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc5, li.MsoToc5, div.MsoToc5
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:48.0pt;
+	margin-bottom:.0001pt;
+	font-size:9.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc6, li.MsoToc6, div.MsoToc6
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:60.0pt;
+	margin-bottom:.0001pt;
+	font-size:9.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc7, li.MsoToc7, div.MsoToc7
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:1.0in;
+	margin-bottom:.0001pt;
+	font-size:9.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc8, li.MsoToc8, div.MsoToc8
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:84.0pt;
+	margin-bottom:.0001pt;
+	font-size:9.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc9, li.MsoToc9, div.MsoToc9
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:96.0pt;
+	margin-bottom:.0001pt;
+	font-size:9.0pt;
+	font-family:"Times New Roman";}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{margin-top:.5in;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:center;
+	font-size:22.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+p.MsoSubtitle, li.MsoSubtitle, div.MsoSubtitle
+	{margin-top:24.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:center;
+	font-size:16.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p.Credits, li.Credits, div.Credits
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.Name, li.Name, div.Name
+	{margin-top:24.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:center;
+	font-size:14.0pt;
+	font-family:Arial;
+	font-style:italic;}
+p.Checks, li.Checks, div.Checks
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	text-indent:-.25in;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+ /* Page Definitions */
+ @page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.25in;}
+div.Section1
+	{page:Section1;}
+@page Section2
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.25in;}
+div.Section2
+	{page:Section2;}
+@page Section3
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.25in;}
+div.Section3
+	{page:Section3;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink=purple>
+
+<div class=Section1>
+
+<p class=MsoTitle>PostWrap 2.5</p>
+
+<p class=MsoSubtitle>User Guide</p>
+
+<p class=Name><a name=name>Installation, Administration and Usage</a></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=Credits>Shawn McKenzie (a.k.a. AbraCadaver)</p>
+
+<p class=Credits><a href="http://spidean.mckenzies.net/">http://spidean.mckenzies.net</a></p>
+
+</div>
+
+<b><span style='font-size:16.0pt;font-family:Arial'><br clear=all
+style='page-break-before:always'>
+</span></b>
+
+<div class=Section2>
+
+<p class=MsoTitle>Table of Contents</p>
+
+<p class=MsoSubtitle>&nbsp;</p>
+
+<p class=MsoToc1><span
+class=MsoHyperlink><a href="#_Toc69619510">Introduction<span style='color:windowtext;
+display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>3</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="#_Toc69619511">Installation<span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>3</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><span style='font-variant:normal !important;
+text-transform:uppercase'><a href="#_Toc69619512">Upgrading from 1.x<span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>3</span></a></span></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><span style='font-variant:normal !important;
+text-transform:uppercase'><a href="#_Toc69619513">Upgrading from 2.x<span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>3</span></a></span></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="#_Toc69619514">Administration<span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>4</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><span style='font-variant:normal !important;
+text-transform:uppercase'><a href="#_Toc69619515">General<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>4</span></a></span></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><span style='font-variant:normal !important;
+text-transform:uppercase'><a href="#_Toc69619516">URL Security<span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>4</span></a></span></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><span style='font-variant:normal !important;
+text-transform:uppercase'><a href="#_Toc69619517">Miscellaneous<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>5</span></a></span></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="#_Toc69619518">Usage<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>5</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><span style='font-variant:normal !important;
+text-transform:uppercase'><a href="#_Toc69619519">HTML Anchors<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>5</span></a></span></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><span style='font-variant:normal !important;
+text-transform:uppercase'><a href="#_Toc69619520">Menu Block<span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>5</span></a></span></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><span style='font-variant:normal !important;
+text-transform:uppercase'><a href="#_Toc69619521">URL Options<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>6</span></a></span></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><span style='font-variant:normal !important;
+text-transform:uppercase'><a href="#_Toc69619522">PostWrap Block<span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>6</span></a></span></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="#_Toc69619523">Differences
+from Older Versions<span style='color:windowtext;display:none;text-decoration:
+none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>7</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="#_Toc69619524">Known Issues<span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>7</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="#_Toc69619525">Copyright<span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>8</span></a></span></p>
+
+<p class=MsoNormal></p>
+
+</div>
+
+<span style='font-size:12.0pt;font-family:"Times New Roman"'><br clear=all
+style='page-break-before:always'>
+</span>
+
+<div class=Section3>
+
+<h1><a name="_Toc69619510">Introduction</a></h1>
+
+<p class=MsoNormal>PostWrap is a PostNuke module that enables virtually any web
+content such as HTML or scripts (galleries, shopping carts, PHP, Perl, ASP,
+etc.) to be easily incorporated into your PostNuke site.  Just call the
+PostWrap module with any URL and it will display it in your PostNuke main
+area/window. I call it a content wrapper (takes any existing content anywhere
+and wraps your PostNuke site around it). PostWrap uses an IFRAME which must be supported
+by the browser and JavaScript to resize the IFRAME (optional).</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>PostWrap now comes with a block that can be added to display
+links for all URLs that have been added to PostWrap.</p>
+
+<h1><a name="_Toc69619511">Installation</a></h1>
+
+<p class=Checks><span style='font-family:Wingdings'>ü<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Unzip to your modules/ directory to create the PostWrap/
+subdirectory</p>
+
+<p class=Checks><span style='font-family:Wingdings'>ü<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Go to Administration, Modules, and Regenerate</p>
+
+<p class=Checks><span style='font-family:Wingdings'>ü<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Initialize and then Activate PostWrap</p>
+
+<h2>&nbsp;</h2>
+
+<h2><a name="_Toc69619512">Upgrading from 1.x</a></h2>
+
+<p class=Checks><span style='font-family:Wingdings'>ü<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Delete existing PostWrap directory from modules/</p>
+
+<p class=Checks><span style='font-family:Wingdings'>ü<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Unzip to your modules/ directory to create the PostWrap/
+subdirectory</p>
+
+<p class=Checks><span style='font-family:Wingdings'>ü<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Go to Administration, Modules, and Regenerate</p>
+
+<p class=Checks><span style='font-family:Wingdings'>ü<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Initialize and then Activate PostWrap</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h2><a name="_Toc69619513">Upgrading from 2.x</a></h2>
+
+<p class=Checks><span style='font-family:Wingdings'>ü<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Unzip into the modules/ directory (replace files)</p>
+
+<p class=Checks><span style='font-family:Wingdings'>ü<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Go to Administration, Modules, and Regenerate</p>
+
+<p class=Checks><span style='font-family:Wingdings'>ü<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Update and then Activate PostWrap</p>
+
+<b><span style='font-size:16.0pt;font-family:Arial'><br clear=all
+style='page-break-before:always'>
+</span></b>
+
+<h1><a name="_Toc69619514">Administration</a></h1>
+
+<p class=MsoNormal>The following options can be set from the PostWrap
+Administration menu.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h2><a name="_Toc69619515">General</a></h2>
+
+<p class=MsoNormal>The General settings page defines overall settings for the
+PostWrap module.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=Checks><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Display off-site pages, controls whether pages not on your local
+domain or server can be displayed.</p>
+
+<p class=Checks><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Allow input from browser address bar, determines whether the user
+can enter the URL in the browser address bar.</p>
+
+<p class=Checks><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Compare URL against URL Security, activates URL checking from the
+URL Security page. Otherwise, any page can be displayed if it is not restricted
+by the other settings.</p>
+
+<p class=Checks><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Add link for Open in new window, adds a link to open a new window
+above and below the page.  If one of these links is clicked, the content is
+opened in a new browser window.</p>
+
+<p class=Checks><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Use fixed title, displays a fixed title above and below the page.</p>
+
+<p class=Checks><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Auto-resize window, uses JavaScript to resize the content window.</p>
+
+<p class=Checks><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Length of viewing window in pixels, is the length of the window
+that will contain the page.  This value will only be used if Auto resize window
+= No.</p>
+
+<p class=Checks><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Width of viewing window in pixels or percent, is the width of the
+window that will contain the page. Default is 100%  </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h2><a name="_Toc69619516">URL Security</a></h2>
+
+<p class=MsoNormal>If Compare URL against URL Security = Yes in the General
+settings, then any URL must be entered here in order to be displayed.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal>Add, adds a new URL and alias (either can be used to
+     display the page)</li>
+ <li class=MsoNormal>Edit, edits an existing URL entry</li>
+ <li class=MsoNormal>Delete, deletes an existing URL entry</li>
+</ul>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>The following are the same as the General section but
+override the General setting for the specific URL.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal>Add link for Open in new window</li>
+ <li class=MsoNormal>Use fixed title</li>
+ <li class=MsoNormal>Auto-resize window</li>
+ <li class=MsoNormal>Length of viewing window in pixels</li>
+ <li class=MsoNormal>Width of viewing window in pixels or percent</li>
+</ul>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<b><i><span style='font-size:14.0pt;font-family:Arial'><br clear=all
+style='page-break-before:always'>
+</span></i></b>
+
+<h2><a name="_Toc69619517">Miscellaneous</a></h2>
+
+<p class=MsoNormal>You can modify error and user messages in the language files
+in your language directory (i.e. eng/) under modules/PostWrap/pnlang/</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal>user.php, user text, messages and errors</li>
+ <li class=MsoNormal>admin.php, admin text and messages</li>
+ <li class=MsoNormal>adminapi.php, admin error and status messages</li>
+ <li class=MsoNormal>init.php, module initialization errors and messages</li>
+</ul>
+
+<h1><a name="_Toc69619518">Usage</a></h1>
+
+<p class=MsoNormal>Just call PostWrap in module fashion with the page variable
+set to the URL or location that you want to display in PostNuke. If Compare URL
+against URL Security = Yes, then you may use either the URL or the alias that
+you defined.  The following examples assume that the URL and an Alias have been
+configured in URL Security.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h2><a name="_Toc69619519">HTML Anchors</a></h2>
+
+<p class=MsoNormal>You can use PostWrap URLs in HTML anchor tags to create
+hyperlinks in HTML documents or anywhere that HTML is supported.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><i>Using a relative URL:</i></p>
+
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt'>
+
+<p class=MsoNormal style='border:none;padding:0in'><span style='font-size:10.0pt'>&lt;a
+href=&quot;index.php?module=PostWrap&amp;page=<b>index.php</b>&quot;&gt;My
+Site&lt;/a&gt;</span></p>
+
+</div>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><i>Using an Alias:</i></p>
+
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt'>
+
+<p class=MsoNormal style='border:none;padding:0in'><span style='font-size:10.0pt'>&lt;a
+href=&quot;index.php?module=PostWrap&amp;page=<b>mysite</b>&quot;&gt;My
+Site&lt;/a&gt;</span></p>
+
+</div>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><i>Using an absolute URL:</i></p>
+
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt'>
+
+<p class=MsoNormal style='border:none;padding:0in'><span style='font-size:10.0pt'>&lt;a
+href=&quot;index.php?module=PostWrap&amp;page=<b>http://www.postnuke.org/</b>&quot;&gt;PostNuke
+Site&lt;/a&gt;</span></p>
+
+</div>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><i>Using an Alias:</i></p>
+
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt'>
+
+<p class=MsoNormal style='border:none;padding:0in'><span style='font-size:10.0pt'>&lt;a
+href=&quot;index.php?module=PostWrap&amp;page=<b>postnuke</b>&quot;&gt;PostNuke
+Site&lt;/a&gt;</span></p>
+
+</div>
+
+<p class=MsoNormal>            </p>
+
+<h2><a name="_Toc69619520">Menu Block</a></h2>
+
+<p class=MsoNormal>You can use PostWrap URLs in a PostNuke Generic Menu block
+created from Administration, Blocks.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><i>Using a relative URL:</i></p>
+
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt'>
+
+<p class=MsoNormal style='border:none;padding:0in'><span style='font-size:10.0pt'>index.php?module=PostWrap&amp;page=<b>index.php</b></span></p>
+
+</div>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><i>Using an Alias:</i></p>
+
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt'>
+
+<p class=MsoNormal style='border:none;padding:0in'><span style='font-size:10.0pt'>index.php?module=PostWrap&amp;page=<b>mysite</b></span></p>
+
+</div>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><i>Using an absolute URL:</i></p>
+
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt'>
+
+<p class=MsoNormal style='border:none;padding:0in'><span style='font-size:10.0pt'>index.php?module=PostWrap&amp;page=<b>http://www.postnuke.org/</b></span></p>
+
+</div>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><i>&nbsp;</i></p>
+
+<p class=MsoNormal><i>Using an Alias:</i></p>
+
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt'>
+
+<p class=MsoNormal style='border:none;padding:0in'><span style='font-size:10.0pt'>index.php?module=PostWrap&amp;page=<b>postnuke</b></span></p>
+
+</div>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h2><a name="_Toc69619521">URL Options</a></h2>
+
+<p class=MsoNormal>There are several variables that can be included in the URL
+that will override the settings in PostWrap Administration:</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal>The height (vertical size) of the IFRAME in pixels can be
+     set using &amp;height=</li>
+ <li class=MsoNormal>The width (horizontal size) of the IFRAME in pixels or
+     percent can be set using &amp;width=</li>
+ <li class=MsoNormal>Auto resize of the page can be set with &amp;resize=1
+     (this will override the height value if set)</li>
+ <li class=MsoNormal>The page title can be set using &amp;title=</li>
+</ul>
+
+<p class=MsoNormal><i>&nbsp;</i></p>
+
+<p class=MsoNormal><i>Examples:</i></p>
+
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt'>
+
+<p class=MsoNormal style='border:none;padding:0in'><span style='font-size:10.0pt'>index.php?module=PostWrap&amp;page=http://www.postnuke.org/&amp;<b>height=1000</b>&amp;<b>width=90%</b></span></p>
+
+</div>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt'>
+
+<p class=MsoNormal style='border:none;padding:0in'><span style='font-size:10.0pt'>index.php?module=PostWrap&amp;page=http://www.postnuke.org/&amp;<b>resize=1</b></span></p>
+
+</div>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt'>
+
+<p class=MsoNormal style='border:none;padding:0in'><span style='font-size:10.0pt'>index.php?module=PostWrap&amp;page=http://www.postnuke.org/&amp;<b>title=make
+it your choice</b></span></p>
+
+</div>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>If you are using a legacy PostNuke theme, you can use the
+PostNuke index variable you may be able to show the center and right blocks by
+including index=1.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><i>Example:</i></p>
+
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt'>
+
+<p class=MsoNormal style='border:none;padding:0in'><span style='font-size:10.0pt'>index.php?module=PostWrap&amp;page=http://www.postnuke.org/&amp;<b>index=1</b></span></p>
+
+</div>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h2><a name="_Toc69619522">PostWrap Block</a></h2>
+
+<p class=MsoNormal>PostWrap includes a block that will automatically display a
+list of links for all URLs that you have added in the URL Security section of PostWrap
+administration.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=Checks><span style='font-family:Wingdings'>ü<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Go to Administration, Blocks</p>
+
+<p class=Checks><span style='font-family:Wingdings'>ü<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Click New Block</p>
+
+<p class=Checks><span style='font-family:Wingdings'>ü<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Enter a Title</p>
+
+<p class=Checks><span style='font-family:Wingdings'>ü<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Select PostWrap/PostWrap URLs as Block</p>
+
+<p class=Checks><span style='font-family:Wingdings'>ü<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Select a block Position and Language</p>
+
+<p class=Checks><span style='font-family:Wingdings'>ü<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Click Commit changes</p>
+
+<b><span style='font-size:16.0pt;font-family:Arial'><br clear=all
+style='page-break-before:always'>
+</span></b>
+
+<h1><a name="_Toc69619523">Differences from Older Versions</a></h1>
+
+<p class=MsoNormal>PostWrap is now pnAPI compliant and is invoked using a
+different URL from those of previous versions.  For backward compatibility, the
+previous method is still supported.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><i>The old URL was of this form:</i></p>
+
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt'>
+
+<p class=MsoNormal style='border:none;padding:0in'><b><span style='font-size:
+10.0pt'>modules.php?op=modload&amp;name=PostWrap&amp;file=index&amp;page</span></b><span
+style='font-size:10.0pt'>=http://spidean.mckenzies.net/</span></p>
+
+</div>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><i>The new URL is of this form:</i></p>
+
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt'>
+
+<p class=MsoNormal style='border:none;padding:0in'><b><span style='font-size:
+10.0pt'>index.php?module=PostWrap&amp;page=</span></b><span style='font-size:
+10.0pt'> http://spidean.mckenzies.net/</span></p>
+
+</div>
+
+<h1><a name="_Toc69619524">Known Issues</a></h1>
+
+<p class=MsoNormal>When using special characters (i.e. ? &amp; % @ :) in the
+page variable in the address bar, you must translate the characters to their
+ASCII hex value preceded by a %.  The ? is %3F and &amp; is %26.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><i>Example:</i></p>
+
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt'>
+
+<p class=MsoNormal style='border:none;padding:0in'><span style='font-size:10.0pt'>page=http://somedomain.com/page.php<b>?</b>somevar=50<b>&amp;</b>othervar=login</span></p>
+
+</div>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><i>Becomes:</i></p>
+
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt'>
+
+<p class=MsoNormal style='border:none;padding:0in'><span style='font-size:10.0pt'>page=http://somedomain.com/page.php<b>%3F</b>somevar=50<b>%26</b>othervar=login</span></p>
+
+</div>
+
+<b><span style='font-size:16.0pt;font-family:Arial'><br clear=all
+style='page-break-before:always'>
+</span></b>
+
+<h1><a name="_Toc64711913"></a><a name="_Toc69619525">Copyright</a></h1>
+
+<p class=MsoNormal>Copyright © 2004 Shawn McKenzie. All rights reserved.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>No part of this document may be reproduced, stored in a
+retrieval system, or transmitted, in any form or by any means, electronic,
+mechanical, recording, or otherwise, without the prior written permission of Shawn
+ McKenzie.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>The content of this document is furnished for informational
+use only, is subject to change without notice, and should not be construed as a
+commitment by the authors or copyright holder. The authors and copyright holder
+assume no responsibility or liability for any errors or inaccuracies that may
+appear in the informational content contained in this document.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>All names and trademarks are property of their respective
+companies.</p>
+
+</div>
+
+</body>
+
+</html>

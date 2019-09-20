@@ -1,0 +1,242 @@
+How to avoid double scroll bars ?
+=================================
+In order to remove Double Scroll bars and always move to the top of the page :
+1.- Put iframe_SSI.html in the root folder of your postnuke site.
+2.- Open header.php in the root and insert just above the line saying: 
+
+    themeheader(); 
+	this code:
+	include ("iframe_SSI.html");
+	
+	and you will see something like this:
+
+	include ("iframe_SSI.html");
+	themeheader();
+
+
+How to remove the Logout option within Coppermine
+=================================================
+Open up profile.php
+Delete/Comment line 242 (ability to change the Coppermine password).
+<input type="submit" name="change_pass" value="{$lang_register_php['change_pass']}" class="button">
+
+In each theme.php, you have to delete/comment the Logout section.
+As a sample ,theme is mac_os_x :
+In coppermine/themes/mac_os_x/theme.php delete/comment lines 51-53 :
+
+Thanks to Larry Elchuk
+
+Full SCREEN
+===========
+In order to have the application opened in a separate New Window (full screen) do the following :
+Create a Core/HTML block with the following contents :
+<a href="index.php?module=pnCPG&func=main" target=_blank">Coppermine</a>
+Make sure that in Admin Panel you have checked the Full Screen option
+
+NETSCAPE
+========
+Change the iframe line within index.php as follows :
+echo "<div class=\"cpgframe\">"
+     ."<iframe id='pnCPG' src='$url'  width='580'
+height='1500' scrolling='no' marginwidth=0
+marginheight=0 frameborder=0 ></iframe></div>";
+
+then in the styleNN.css add :
+.cpgframe {
+PADDING-BOTTOM: 3px; FONT: 11px/16px tahoma, verdana,
+arial; COLOR: #3e494a; PADDING-TOP: 10px; HEIGHT:
+1500px; TEXT-ALIGN: center
+}
+
+Thanks to MDK
+
+Only PostNuke access
+====================
+In addition one needs to change a few files in Coppermine to have people always routed through pnCPG.
+Insert the following code :
+if (!USER_ID) cpg_die(ERROR, '<a href=../index.php?module=pnCPG&func=main target=_top>Click here to access the Gallery</a>', __FILE__, __LINE__);
+into the following files :
+index.php, thumbnails.php, search.php, dispaly(image/card).php and showthumb.php
+Insert this code just after :
+require('include/init.inc.php');
+
+MD-PRO
+======
+ It
+seems that MD thinks that pnCPG is an API compliant
+module but it's not. You can get it to work by leaving
+everything as is and commenting the lines below in
+index.php.
+
+//include ("header.php");
+//include ("footer.php");
+
+It'll work but the module will not be wrapped in the
+CMS. This thread at pnphpbb2 might shed some light on
+what's going on
+http://www.pnphpbb.com/index.php?name=PNphpBB2&file=viewtopic&t=4460&highlight=initialize&sid=14b6d6f04038b5ef1fa46071906da4c4
+
+If you want it wrapped in the cms this is what I did.
+I broke up pnuser.php into 2 files index.php and
+show.php below you will find the contents of these
+files. You should then be able to initialize and
+activate the module. If it doesn't work check the
+md_modules_vars table to see if the pn_type is set to
+'2' if it is change it to '1'. Go back and try the
+module again
+(modules.php?op=modload&name=pnCPG&file=index) it
+should work. You could probable make that an option in
+the admin function. Thanks for your help.
+
+index.php
+---begin file ---
+<?
+$module_name = "pnCPG";
+if (!eregi("modules.php", $PHP_SELF)) {
+   die ("You can't access this file directly...");
+}
+
+$index = 0;
+   global $admin, $user, $module_name;
+   include("header.php");
+   OpenTable();
+
+$direct = pnVarCleanFromInput('task');
+$lang = pnVarCleanFromInput('lang');
+$cat = pnVarCleanFromInput('category');
+$username=pnUserGetVar(uname);
+$username1 = $username ;
+$CPGloc1=pnModGetVar('pnCPG', '_CPGloc');
+$CPGloc=trim($CPGloc1);
+$CPGwindow=pnModGetVar('pnCPG', '_CPGwindow');
+$CPGguest=pnModGetVar('pnCPG', '_CPGguest');
+$CPGusers=pnModGetVar('pnCPG', '_CPGusers');
+$CPGguest=pnModGetVar('pnCPG', '_CPGguest');
+$CPGwrap=pnModGetVar('pnCPG', '_CPGwrap');
+$CPGlang=pnModGetVar('pnCPG', '_lang');
+$make=pnModGetVar('pnCPG', '_make');
+if ($lang!=""){
+$CPGlang=$lang ;
+}
+if (!pnUserLoggedIn()) {
+if ($CPGguest == 1){
+$username= "Guest" ;
+} else {
+$username= "" ;
+}
+}
+
+$home = pnGetBaseURL() ;
+$album = 0 ;
+$parm = $username ;
+$parm .="|";
+$parm .= $CPGusers;
+$parm .="|";
+$parm .= 0 ;
+$parm .="|";
+$parm .= $album;
+$parm .="|";
+$parm .= 0 ;
+$parm .="|";
+$parm .= $direct ;
+$parm .="|";
+$parm .= $home ;
+$parm .="|";
+$parm .= $CPGlang ;
+$parm .="|";
+$parm .= $cat ;
+$parm .="|";
+$parm .= $make ;
+
+$check=md5($parm) ;
+
+$url="$CPGloc/index_pn.php?parm=$parm%26check=$check";
+if ($CPGwindow == 1 ) {
+$url="$CPGloc/index_pn.php?parm=$parm&check=$check";
+Header('Location: '.$url );
+} else {
+if ($CPGwrap != ''){
+Header ("Location:
+modules.php?op=modload&name=PostWrap&file=show&page=$url");
+} else {
+Header ("Location:
+modules.php?op=modload&name=pnCPG&file=show&url=$url");
+}
+}
+CloseTable();
+include ("footer.php");
+?>
+
+
+
+---show.php
+--begin file --
+<?php
+/*
+if (!defined("LOADED_AS_MODULE")) {
+
+    die ("You can't access this file directly...");
+
+}
+*/
+
+
+$module_name = "pnCPG";
+
+if (!eregi("modules.php", $PHP_SELF)) {
+   die ("You can't access this file directly...");
+}
+
+
+
+$index = 0;
+
+
+   global $admin, $user, $module_name;
+   include("header.php");
+
+   OpenTable();
+
+if (!pnLocalReferer()) {
+
+    die ("You can't access this file from and external
+site...");
+
+}
+
+$guest=pnModGetVar('pnCPG', '_CPGguest');
+
+$home = pnGetBaseURL() ;
+
+$home .= "user.php?op=loginscreen&module=NS-User" ;
+
+if (!pnUserLoggedIn()) {
+
+if ($guest<1){
+
+pnRedirect($home) ;
+
+
+
+}
+
+}
+
+if ($url=="") {
+
+die ("Wrong method of calling this module use {}
+instead of []..");
+
+}
+
+
+echo "<iframe id='pnCPG' src='$url'  width='100%'
+height='1200' marginwidth=0 marginheight=0
+frameborder=0 ></iframe>";
+
+CloseTable();
+   include ("footer.php");
+
+?>
+Thanks again to MDK !!
+Please make sure to adjust with newer version of pnCPG. (tis is based upon 2.3/2.4B

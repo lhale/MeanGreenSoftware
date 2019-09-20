@@ -1,0 +1,232 @@
+<!--[* $Id: pnmenu_config.html,v 1.2 2004/04/07 18:26:40 tsmiatek Exp $ *]-->
+<!--[*  ---------------------------------------------------------------------- *]-->
+<!--[*  pnRender                                                               *]-->
+<!--[*  PostNuke wrapper class for Smarty                                      *]-->
+<!--[*  ---------------------------------------------------------------------- *]-->
+<!--[*  Author: Frank Schummertz, frank.schummertz@landseer.stuttgart.de       *]-->
+<!--[*  ---------------------------------------------------------------------- *]-->
+<!--[*  LICENSE                                                                *]-->
+<!--[*  This program is free software; you can redistribute it and/or          *]-->
+<!--[*  modify it under the terms of the GNU General Public License (GPL)      *]-->
+<!--[*  as published by the Free Software Foundation; either version 2         *]-->
+<!--[*  of the License, or (at your option) any later version.                 *]-->
+<!--[*  This program is distributed in the hope that it will be useful,        *]-->
+<!--[*  but WITHOUT ANY WARRANTY; without even the implied warranty of         *]-->
+<!--[*  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          *]-->
+<!--[*  GNU General Public License for more details.                           *]-->
+<!--[*  To read the license please visit http://www.gnu.org/copyleft/gpl.html  *]-->
+<!--[*  ---------------------------------------------------------------------- *]-->
+<!--[*  Purpose of this template:                                              *]-->
+<!--[*  pnmenu configuration                                                   *]-->
+<!--[*  ---------------------------------------------------------------------- *]-->
+<!--[* debug *]-->
+<input type='hidden' name='highLinkID' value='<!--[ $vars.highLinkID ]-->'>
+    <tr>
+        <td class="pn-title">
+            <!--[ pnml name='_PNM_DISPLAY' ]-->
+        </td>
+        <td>
+        </td>
+    </tr>
+    
+    <tr>
+        <td class="pn-normal">
+            <!--[ pnml name='_PNM_BLOCKTITLE' ]-->:
+        </td>
+        <td>
+            <table>
+                <!--[ foreach key=language item=bname from=$vars.blocktitle ]-->
+                </tr>
+                    <td>
+                        <!--[ $language ]-->&nbsp;:&nbsp;
+                    </td>
+                    <td>
+                        <input type="text" name="<!--[ $language ]-->_blocktitle" size="40" maxlength="255" value="<!--[ $bname|pnvarprepfordisplay ]-->" class="pn-normal">
+                    </td>
+                </tr>
+                <!--[ /foreach ]-->
+            </table>
+        </td>
+    </tr>
+
+    <tr>
+        <td class="pn-normal">
+            <!--[ pnml name='_PNM_MODULES' ]-->:
+        </td>
+        <td>
+            <input type="checkbox" value="1" name="displaymodules"<!--[ if $vars.displaymodules == 1 ]--> checked<!--[ /if ]--> >
+        </td>
+    </tr>
+    
+    <tr>
+        <td class="pn-normal">
+            <!--[ pnml name='_PNM_WAITINGCONT' ]-->:
+        </td>
+        <td>
+            <input type="checkbox" value="1" name="displaywaiting"<!--[ if $vars.displaywaiting == 1 ]--> checked<!--[ /if ]-->>
+        </td>
+    </tr>
+
+    <tr>
+        <td class="pn-normal">
+            <!--[ pnml name='_PNM_TEMPLATEFILE' ]-->:
+        </td>
+        <td>
+            <input type="input" value="<!--[ $vars.templatefile|pnvarprepfordisplay ]-->" size=30 maxlength=255 name="templatefile">
+        </td>
+    </tr>
+
+</table>
+<br><br>
+<!--[* Content *]-->
+<a name="top">
+<table border="1">
+    <tr>
+        <td>
+            &nbsp;
+        </td>
+        <td align="center" class="pn-normal" style="text-align:center">
+            <!--[ pnimg src=up.gif border=0 ]-->
+        </td>
+        <td align="center" class="pn-normal" style="text-align:center">
+            <!--[ pnimg src=down.gif border=0 ]-->
+        </td>
+        <td align="center" class="pn-normal" style="text-align:center">
+            <b><!--[ pnml name='_PNM_LINKID' ]--></b>
+        </td>
+        <td align="center" class="pn-normal" style="text-align:center">
+            <b><!--[ pnml name='_PNM_LINKDEPTH' ]--></b>
+        </td>
+        <td align="center" class="pn-normal" style="text-align:center">
+            <b><!--[ pnml name='_PNM_NEWWINDOW' ]--></b>
+        </td>
+        <td align="center" class="pn-normal" style="text-align:center">
+            <b><!--[ pnml name='_PNM_LINKURL' ]--></b>
+        </td>
+        <td align="center" class="pn-normal" style="text-align:center">
+            <b><!--[ pnml name='_PNM_LINKTITLE' ]--></b>
+        </td>
+        <td align="center" class="pn-normal" style="text-align:center">
+            <b><!--[ pnml name='_PNM_DELETE' ]--></b>
+        </td>
+        <td align="center" class="pn-normal" style="text-align:center">
+            <b><!--[ pnml name='_PNM_INSERT_BLANK_AFTER' ]--></b>
+        </td>
+    </tr>
+
+    <!--[ foreach key=num item=link from=$linklist ]-->
+
+    <tr>
+        <td align='center'>
+            <input type='radio' name='linkmove[<!--[ $link.id ]-->]' value='' checked="checked">
+        </td>
+        <td align='center'>
+            <!--[ if $num==0  ]-->
+                &nbsp;
+	    <!--[ else ]-->
+	        <!--[ pnmodurl modname="Blocks" type="admin" func="modify" bid=$blockid lid=$link.id direction="up" rnd=$rnd append="#top" assign="moveUrl" ]--> 
+	        <a href="<!--[ $moveUrl ]-->"><img src="images/v4b/arrow_up.gif"></a>
+            <!--[ /if ]-->
+        </td>
+        <td align='center'>
+            <!--[ if $num==count($linklist)-1 ]-->
+                &nbsp;
+            <!--[ else ]-->
+	        <!--[ pnmodurl modname="Blocks" type="admin" func="modify" bid=$blockid lid=$link.id direction="down" rnd=$rnd append="#top" assign="moveUrl" ]--> 
+	        <a href="<!--[ $moveUrl ]-->"><img src="images/v4b/arrow_down.gif"></a>
+            <!--[ /if ]-->
+        </td>
+        <td align='center' valign="middle">
+            <!--[ $link.id ]-->
+            <input type="hidden" name="linkid[<!--[ $num ]-->]" value=<!--[ $link.id ]--> >
+        </td>
+        <td align='center' valign="middle">
+            <input type="text" name="linkdepth[<!--[ $num ]-->]" size="5" maxlength="5" value="<!--[ $link.depth|pnvarprepfordisplay ]-->" class="pn-normal">
+        </td>
+        <td align='center' valign="middle">
+          <input type="checkbox" name="linknewwin[<!--[ $num ]-->]" <!--[ if ($link.newwin) ]-->checked<!--[ /if ]--> class="pn-normal">
+        </td>
+        <td valign="middle">
+            <table cellpadding="0" cellpacing="0" border="0">
+                <!--[ foreach key=language item=lurl from=$link.url ]-->
+                <tr>
+                    <td>
+                        <!--[ $language ]-->&nbsp;:&nbsp;<input type="text" name="<!--[ $language ]-->_linkurl[<!--[ $num ]-->]" size="30" maxlength="255" value="<!--[ $lurl|pnvarprepfordisplay ]-->" class="pn-normal">
+                    </td>
+                </tr>
+                <!--[ /foreach ]-->
+            </table>
+        </td>
+        <td valign="middle">
+            <table cellpadding="0" cellpacing="0" border="0">
+                <!--[ foreach key=language item=lname from=$link.name ]-->
+                <tr>
+                    <td>    
+                        <!--[ $language ]-->&nbsp;:&nbsp;<input type="text" name="<!--[ $language ]-->_linkname[<!--[ $num ]-->]" size="30" maxlength="255" value="<!--[ $lname|pnvarprepfordisplay ]-->" class="pn-normal">
+                    </td>
+                </tr>
+                <!--[ /foreach ]-->
+            </table>
+        </td>
+        <td align="center" valign="middle">
+            <input type="checkbox" name="linkdelete[<!--[ $num ]-->]" value="1" class="pn-normal">
+        </td>
+        <td align="center" valign="middle">
+            <input type="checkbox" name="linkinsert[<!--[ $num ]-->]" value="1" class="pn-normal" />
+        </td>
+    </tr>
+
+    <!--[ /foreach ]-->
+
+    <tr>
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            <input type="text" name="new_linkdepth" size="5" maxlength="5" class="pn-normal" />
+        </td>
+        <td align='center' valign="middle">
+          <input type="checkbox" name="new_linknewwin" class="pn-normal">
+        </td>
+        <td>
+            <table cellpadding="0" cellpacing="0" border="0">
+                <!--[ foreach item=language from=$languages ]-->
+                <tr>
+                    <td>    
+                        <!--[ $language ]-->&nbsp;:&nbsp;<input type="text" name="<!--[ $language ]-->_new_linkurl" size="30" maxlength="255" value="" class="pn-normal">
+                    </td>
+                </tr>
+                <!--[ /foreach ]-->
+            </table>
+        </td>
+        <td>
+            <table cellpadding="0" cellpacing="0" border="0">
+                <!--[ foreach item=language from=$languages ]-->
+                <tr>
+                    <td>    
+                        <!--[ $language ]-->&nbsp;:&nbsp;<input type="text" name="<!--[ $language ]-->_new_linkname" size="30" maxlength="255" value="" class="pn-normal">
+                    </td>
+                </tr>
+                <!--[ /foreach ]-->
+            </table>
+        </td>
+        <td class="pn-normal">
+            <!--[ pnml name='_PNM_NEWONE' ]-->
+        </td>
+        <td class="pn-normal">
+            <input type="checkbox" name="new_linkinsert" value="1" class="pn-normal" />
+        </td>
+    </tr>
+</table>
+<br><br>
+<table>
+

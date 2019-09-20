@@ -1,0 +1,96 @@
+333
+a:5:{s:8:"template";a:3:{s:30:"default/views/day/default.html";b:1;s:36:"default/views/global/navigation.html";b:1;s:32:"default/views/global/footer.html";b:1;}s:6:"config";a:3:{s:12:"default.conf";b:1;s:8:"lang.eng";b:1;s:15:"navigation.conf";b:1;}s:9:"timestamp";i:1257357372;s:7:"expires";i:1257360972;s:13:"cache_serials";a:0:{}}<style type="text/css">
+td.dayheader { background-color: ; font-size: 14pt; font-weight: bold; }
+table.dayheader { background-color: ; border: 1px solid #000000; }
+.dayheader a:link { font-size: 14pt; font-weight: bold; text-decoration: none; padding-left: 10px; padding-right: 10px; }
+.dayheader a:active { font-size: 14pt; font-weight: bold; text-decoration: none; padding-left: 10px; padding-right: 10px; }
+.dayheader a:hover { font-size: 14pt; font-weight: bold; text-decoration: none; padding-left: 10px; padding-right: 10px; }
+.dayheader a:visited { font-size: 14pt; font-weight: bold; text-decoration: none; padding-left: 10px; padding-right: 10px; }
+table.eventslist { background-color: ; padding: 10px; }
+td.eventslist { background-color: ; padding: 10px; }
+table.calcontainer { border: 1px solid #000000; }
+</style>
+<style type="text/css">
+.bnav 			{ border: 1px solid #000000; }
+td.nav  		{ border-right: 1px outset ; background-color:; }
+td.nav:hover 	{ border-right: 1px outset ; background-color:; }
+td.rnav 		{ background-color:; }
+td.rnav:hover 	{ background-color:; }
+td.snav 		{ border-right: 1px outset ; background-color:; font-weight : bold; }
+td.rsnav 		{ background-color:; font-weight : bold; }
+a.nav:link  	{ padding-right: 3px; padding-left: 3px; color: ; text-decoration: none; }
+a.nav:active 	{ padding-right: 3px; padding-left: 3px; color: ; text-decoration: none; }
+a.nav:hover 	{ padding-right: 3px; padding-left: 3px; color: ; text-decoration: none; }
+a.nav:visited 	{ padding-right: 3px; padding-left: 3px; color: ; text-decoration: none; }
+SELECT.nav  	{ color: ; background-color:; }
+OPTION.nav  	{ color: ; background-color:; }
+INPUT.nav 		{ color: ; background-color:; }
+</style>
+<form action="http://www.meangreensoftware.com/pnuke/index.php?module=PostCalendar&amp;func=view" method="post" enctype="application/x-www-form-urlencoded" >
+<!-- main navigation -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td nowrap valign="bottom" align="left">
+<select name="pc_username" class=""><option value="" class="">Default/Global</option><option value="__PC_ALL__" class="" >All Users</option><option value="admin"  class="">admin</option></select><select name="pc_category" class=""><option value="" class="">All Categories</option><option value="1"  class="">Default</option><option value="4"  class="">Events</option><option value="6"  class="">Volunteer</option></select><select name="pc_topic" class=""><option value="" class="">All Topics</option><option value="2"  class="">Linux</option><option value="3"  class="">MeanGreen</option><option value="1"  class="">PostNuke</option></select><input type="submit" name="submit" value="Filter" class="" /><br />
+<select name="jumpmonth" id="jumpmonth" size="1" tabindex="2"><option value="01">January</option><option value="02">February</option><option value="03">March</option><option value="04">April</option><option value="05">May</option><option value="06">June</option><option value="07">July</option><option value="08">August</option><option value="09">September</option><option value="10">October</option><option value="11" selected="selected">November</option><option value="12">December</option></select><select name="jumpday" id="jumpday" size="1" tabindex="1"><option value="01">01</option><option value="02">02</option><option value="03">03</option><option value="04">04</option><option value="05">05</option><option value="06">06</option><option value="07" selected="selected">07</option><option value="08">08</option><option value="09">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select><select name="jumpyear" id="jumpyear" size="1" tabindex="3"><option value="1999">1999</option><option value="2000">2000</option><option value="2001">2001</option><option value="2002">2002</option><option value="2003">2003</option><option value="2004">2004</option><option value="2005">2005</option><option value="2006">2006</option><option value="2007">2007</option><option value="2008">2008</option><option value="2009" selected="selected">2009</option><option value="2010">2010</option><option value="2011">2011</option><option value="2012">2012</option><option value="2013">2013</option><option value="2014">2014</option><option value="2015">2015</option><option value="2016">2016</option><option value="2017">2017</option><option value="2018">2018</option><option value="2019">2019</option><option value="2020">2020</option><option value="2021">2021</option><option value="2022">2022</option><option value="2023">2023</option><option value="2024">2024</option><option value="2025">2025</option><option value="2026">2026</option><option value="2027">2027</option><option value="2028">2028</option><option value="2029">2029</option><option value="2030">2030</option><option value="2031">2031</option><option value="2032">2032</option><option value="2033">2033</option><option value="2034">2034</option><option value="2035">2035</option><option value="2036">2036</option><option value="2037">2037</option><option value="2038">2038</option><option value="2039">2039</option></select><select name="viewtype" id="viewtype" size="1" tabindex="4"><option value="day" selected="selected">Day</option><option value="week">Week</option><option value="month">Month</option><option value="year">Year</option></select><input type="submit" name="submit" value="Jump" />
+</td>
+<td width="100%" valign="bottom" align="right">
+<table id="bnav" class="bnav" border="0" cellpadding="3" cellspacing="0" bgcolor="#ffcc00">
+<tr>
+<td nowrap align="center" valign="bottom" class="snav">
+<a class="nav" href="http://www.meangreensoftware.com/pnuke/index.php?module=PostCalendar&amp;func=view&amp;tplview=&amp;viewtype=day&amp;Date=20091107&amp;pc_username=&amp;pc_category=&amp;pc_topic=&amp;print=">Day</a>
+</td>
+<td nowrap align="center" valign="bottom" class="nav">
+<a class="nav" href="http://www.meangreensoftware.com/pnuke/index.php?module=PostCalendar&amp;func=view&amp;tplview=&amp;viewtype=week&amp;Date=20091107&amp;pc_username=&amp;pc_category=&amp;pc_topic=&amp;print=">Week</a>
+</td>
+<td nowrap align="center" valign="bottom" class="nav">
+<a class="nav" href="http://www.meangreensoftware.com/pnuke/index.php?module=PostCalendar&amp;func=view&amp;tplview=&amp;viewtype=month&amp;Date=20091107&amp;pc_username=&amp;pc_category=&amp;pc_topic=&amp;print=">Month</a>
+</td>
+<td nowrap align="center" valign="bottom" class="nav">
+<a class="nav" href="http://www.meangreensoftware.com/pnuke/index.php?module=PostCalendar&amp;func=view&amp;tplview=&amp;viewtype=year&amp;Date=20091107&amp;pc_username=&amp;pc_category=&amp;pc_topic=&amp;print=">Year</a>
+</td>
+<td nowrap align="center" valign="bottom" class="nav">
+<a class="nav" href="http://www.meangreensoftware.com/pnuke/index.php?module=PostCalendar&amp;func=submit&amp;tplview=&amp;Date=20091107">Add</a>
+</td>
+<td nowrap align="center" valign="bottom" class="rnav">
+<a class="nav" href="http://www.meangreensoftware.com/pnuke/index.php?module=PostCalendar&amp;func=search">Search</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="5" cellspacing="0" class="dayheader">
+<tr>
+<td nowrap width="100%" align="center" valign="middle" class="dayheader">
+<a href="http://www.meangreensoftware.com/pnuke/index.php?module=PostCalendar&amp;func=view&amp;tplview=&amp;viewtype=day&amp;Date=20091106&amp;pc_username=&amp;pc_category=&amp;pc_topic=">&lt;&lt;</a>
+Saturday, November 07 2009
+<a href="http://www.meangreensoftware.com/pnuke/index.php?module=PostCalendar&amp;func=view&amp;tplview=&amp;viewtype=day&amp;Date=20091108&amp;pc_username=&amp;pc_category=&amp;pc_topic=">&gt;&gt;</a>
+</td>
+<td nowrap align="right" valign="top" class="dayheader">
+</td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="1" class="calcontainer"><tr><td>
+<table width="100%" border="0" cellpadding="0" cellspacing="1"><tr><td class="eventslist">
+<div style="padding: 2px; background-color: #800000;">
+Volunteer
+</div>
+<div style="padding: 2px; border:solid 1px #800000;">
+09:00 AM  
+<a href="http://www.meangreensoftware.com/pnuke/index.php?module=PostCalendar&amp;func=view&amp;Date=20091107&amp;tplview=&amp;viewtype=details&amp;eid=5&amp;print=" 
+onMouseOver="return overlib('Volunteer'+' to'+' help'+' at'+' MeanGreen'+' events'+' coming'+' to'+' a'+' city'+' near'+' you',CAPTION,'Volunteer&#032;&#064;&#032;MeanGreen'+' events',BGCOLOR,'#800000',DELAY,500);" onMouseOut="nd();">
+Volunteer&#032;&#064;&#032;MeanGreen events</a> 
+(8:00)
+<br />
+</div>
+</td></tr></table>
+</td></tr></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="right">
+<a href="http://www.meangreensoftware.com/pnuke/index.php?module=PostCalendar&amp;func=view&amp;tplview=&amp;viewtype=day&amp;Date=20091107&amp;pc_username=&amp;pc_category=&amp;pc_topic=&amp;print=1" target="_blank">Print</a>
+</td>
+</tr>
+</table>
+</form>

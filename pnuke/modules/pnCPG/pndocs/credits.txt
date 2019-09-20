@@ -1,0 +1,14 @@
+/************************************************************************/
+/* pnCPG               (/pndoc/credits.txt)                             */
+/************************************************************************/
+pnCPG 3.2 for PN 0.7x
+Cas@nuy.info / www.nuy.info / DS Automatisering
+
+Overlib javascript : overLIB (c) Erik Bosrup
+http://www.bosrup.com/web/overlib
+
+Netscape adjustments by MDK
+
+Adjusted installation procedure (easy_readme)
+Pedro Innecco (aka Guybrush)
+/************************************************************************/

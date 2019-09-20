@@ -1,0 +1,175 @@
+// ----------------------------------------------------------------------
+// Installation: pnTresMailer Newsletter Module v5.0+
+// ----------------------------------------------------------------------
+//
+//
+//  Included is mailer_import.php. Run this file, input the database
+//	variables, and it will auto-import all of your registered users into
+//	the subscription list for mailing. This is a simple way to get all of
+//	your users into the mailing list in one step.
+//
+//
+//  Also included is csv_import.php. This file will help you to import
+//	unregistered users into your subscribers list. A brief explaination
+//	on how to do this can be found further down this document.
+//
+//
+//  Always, before making any additions or changes to your postnuke
+//  installation, it is recommended that you back everything up.
+//
+//
+//	If you are having trouble sending the newsletter out to all users, I
+//	have added support for an ALTERNATE MAILING SYSTEM as defined in the
+//	SETTINGS for the module. Sending your emails through the normal system
+//	uses a direct connection to the smtp server and is the best way to go.
+//	I included this alternate system for those that cannot use the smtp
+//	setup. The alternate system uses the php mail() function and sends the
+//	email to users through the Bcc header. This system IS NOT SUPPORTED FOR
+//	WINDOWS OPERATING SYSTEMS.
+//
+//
+// NEW INSTALL
+//
+// 1. upload the contents to the modules/pnTresMailer folder. deviation in
+// 		the folder (module) name may cause errors.
+// 
+// 2. edit or create a new template for the html mailer. I have included
+// 		the default mailer for my website as an example. It consists of
+// 		a html.tpl for html emails and text.tpl for text emails. The images
+//      in the same folder are those that belong in that template. You 
+//      should also take note of the method for href links used.
+//
+//    option template inserts that will automatically be replaced with the
+//		proper content are as follows:
+//			<!-- ISSUE -->     = current issue number
+//			<!-- DATE -->      = current issue date
+//			<!-- HEADER -->    = header text placed edit in SETTINGS
+//			<!-- NEWS -->      = module plugins data like the news
+//			<!-- FOOTER -->    = footer text placed, edit in SETTINGS
+//			<!-- USERNAME -->  = subscriber's username, must be turned on
+//
+//		note: the username insert tag can be placed in any portion of
+//			the newsletter and is not restricted to the template
+// 
+// 3. initialize and activate as a module through postnuke administration.
+//		The tables will be created for you.
+//
+//    If you're running pnTresMailer in an PostNuke >= 0.750 framework go to 
+//    Administration->Settings and enable lagacy support.
+// 
+// 4. it will now show up in your administration panel.
+// 
+// 5. users subscription link: 
+// 		http://yoursite.com/modules.php?op=modload&name=pnTresMailer&file=index
+// 
+// 6. You can also add the sideblock for subscriptions which is included
+// 
+// 7. Delete mailer_import.php
+// 
+// UPGRADE
+//
+//
+// 3.00 to 5.34 (previous versions are not supported)
+//
+//
+// Download and install version 5.34
+//
+//
+// 5.34 to current
+//
+//
+// 1. Backup your files and database for safety
+//
+// 2. You may wish to delete the existing module to remove unused files
+//
+// 3. Upload the contents of this package
+//
+// 4. Head to the modules administration page of postnuke and upgrade.
+//
+// 5. Adjust the new settings found in the Settings menu option for
+//		this module.
+// 
+// 6. Delete mailer_import.php
+//
+//
+//
+// csv_import.php : INSTRUCTIONS
+//
+// This file is described at the top of this document.
+//
+// It is always a good idea to backup your database before making changes.
+//
+// 1. Run this link: /modules.php?op=modload&name=pnTresMailer&file=csv_import&req=AddCsv
+//
+// 2. Open the CSV file that you created or exported from another program
+//		and copy the contents into the text box.
+//
+//		A CSV file is a "Comma Separated Value" document. In this case, each
+//		entry must be formatted as: Subscribers Name,Email@address.com
+//		Here is a quick example:
+//
+//			Erik,erik@somedomain.com
+//			Joe Johnson,jj@hisdomain.com
+//			Alfred,Alphy@redsdomain.net
+//			Humphrey,youknow@myaddress.com
+//
+// 3. Copy and paste the csv file contents into the text area.
+//
+// 4. Select the newsletter format to which these users will be subscribed.
+//
+// 5. Press the submit button below.
+//
+// 6. Each email address will be checked to make sure it doesn't already
+//		exist in the database. Then it will be entered.
+//
+//
+//
+// MODULES FOR THE NEWSLETTER
+//
+// Modules (plugins) can be developed to suit your needs. I have included
+//		basic modules for use with your Newsletter.
+//
+// What are Modules for pnTresMailer?
+// - Modules are plugins to the module that allow you to add custom content
+//		to the Newsletter simply.
+//
+// How do they work?
+// - Basically, they are short scripts that grab and post the content from
+//		your database or anywhere else you call to your newsletter. Once 
+//		they are created and placed in the pnTresMailer/modules directory,
+//		they are found by the system and made available for adding to
+//		your Newsletter.
+//
+// Can I make my own?
+// - If you can program php, then use any one of the supplied modules as
+//		a guide to creating your new module. I left many of the notes and
+//		comments in the supplied modules to help you with that. I would
+//		also appreciate if you would send me a copy of the new module so
+//		that I can add it the available downloads to other users of the
+//		pnTresMailer module.
+//
+//
+//
+// FINAL NOTE
+//
+// Emails are being sent as BCC recipients. This means that you can
+//		send more emails with less strain on the server.
+//		The number of emails in the bcc column of the email is set
+//		in the settings labelled -Max Emails in Bcc-. 500 is a good number
+//		but counts as high as 1000 are not unheard of.
+//
+// Most servers can only handle about 100 emails before problems occur. By
+//		placing the emails in groups of 500 (or whatever you set), you
+//		lessen the strain on the server by cutting down on the emails sent.
+//		You can send 500,000 emails now before worrying about problems
+//		occuring... and since these emails are sent one at a time, even
+//		500,000 is a low limit to consider.
+//
+//
+//
+//
+// FORUM: http://canvas.anubix.net/
+// report errors and comments to support@canvas.anubix.net
+// this file was dl'd from: http://canvas.anubix.net
+// 
+// ----------------------------------------------------------------------

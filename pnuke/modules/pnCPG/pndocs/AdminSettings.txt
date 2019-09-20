@@ -1,0 +1,64 @@
+Admin settings
+==============
+a) The Location of the Coppermine installation
+where did you install Coppermine, if you installed that in the root of your website just enter /coppermine
+
+b) Coppermine Database :
+Preferable the same as your PN database but can be different.
+Just make sure that the db-user for Postnuke has the same rights on the coppermine database.
+
+c) Coppermine Table prefix :
+Prefix for your tables, you had to enter that when installing Coppermine.
+
+d) Open Application Full Screen  [ ]
+dheck only if you wish to have Coppermine appear full screen.
+
+e) Language:  english
+What language should Coppermine start in ?
+
+f) Theme:  Default
+What theme should Coppermine start with?
+
+g) Create Postnuke user in pnCPG [ ]
+Check if Postnuke users should be automatically added to Coppermine
+
+h)Use Dynamic User Data to store password y/n:
+When checked, th coppermine password can be stored under the users account data. If none exist, one will be created.
+
+i) Make useralbum when creating user y/n:
+Check if for new users automatically a user album should be made
+
+j) Name of the Album table
+Only relevant if e1 =y,
+
+k) Create Guest account, allow unregistered (y/n) :   [ ]
+Check only if Guests within Postnuke should be allowed to view Coppermine.
+
+l) Use original Coppermine guest account y/n :   [ ]
+If standard guest account is udsed, rights are very limited.
+
+m) Update Coppermine users from Postnuke  [ ]
+Mass update of all Postnuke users into Coppermine on demand(This option will be unchecked as soon as soon as you hit the update button)
+
+n) User table for Postnuke
+Should be clear something like nuke_users
+
+o) User table for Coppermine
+should be clear something like cpg_users
+
+p) Host for Coppermine database
+Mostly it is localhost but could be remote address.
+Only fill in if the host is remote or if the Postnuke db-user has no access to the coppermine database.
+
+q) Database User for Coppermine Database
+Hopefully the PostNuke Database user has access, in that case leave blank
+
+r) Password for the user mentioned under "q"
+
+s) Postnuke Physical Home with trailing slash
+something like /home/www/postnuke/
+
+
+
+
+

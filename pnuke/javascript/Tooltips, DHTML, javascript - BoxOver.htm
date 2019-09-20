@@ -1,0 +1,599 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0025)http://boxover.swazz.org/ -->
+<HTML><HEAD><TITLE>Tooltips, DHTML, javascript - BoxOver</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252"><LINK 
+href="Tooltips, DHTML, javascript - BoxOver_files/style.css" type=text/css 
+rel=stylesheet>
+<SCRIPT src="Tooltips, DHTML, javascript - BoxOver_files/boxover.js"></SCRIPT>
+
+<SCRIPT>
+				function doMenuOut(item) {
+					item.style.background=prevMCol;
+				}
+				
+				var prevRCol;		
+				function rOver(item) {
+					prevRCol=item.style.background;
+					item.style.background='#F2F5F7';
+				}
+				
+				function rOut(item) {
+					item.style.background=prevRCol;
+				}
+				function Left(elem){
+				var x=0;
+				while(elem){
+					 x+=elem.offsetLeft;
+						elem=elem.offsetParent;
+				  } return x;
+				}
+			
+				function Top(elem){
+					 var x=0;
+					 while(elem){
+						 x+=elem.offsetTop;
+					         elem=elem.offsetParent;
+				 	 } return x;
+				}
+				
+				function selectValue(id,value) {
+					for (var i=0;i<document.getElementById(id).options.length;i++)
+						if (parseInt(document.getElementById(id).options[i].value)==parseInt(value))
+							document.getElementById(id).selectedIndex=i;
+				}
+				
+				function show(id) {
+					if (document.getElementById(id)) {
+						document.getElementById(id).style.visibility='visible';
+						//alert(id);
+						}
+						
+				}
+				
+				function showXY(callingItem,id,isRoot) {
+					if (document.getElementById(id)) {
+						if (!isRoot) {		
+							var bwidth=1;
+							document.getElementById(id).style.left=document.getElementById(callingItem).offsetWidth;					
+							document.getElementById(id).style.top=(callingItem.substr(callingItem.lastIndexOf('_')+1,callingItem.length)-1)*(document.getElementById(callingItem).offsetHeight)-bwidth;
+						}
+						else {
+							var off;
+							off=document.all?1:0;
+							document.getElementById(id).style.top=Top(document.getElementById(callingItem))+document.getElementById(callingItem).offsetHeight+off;
+							document.getElementById(id).style.left=Left(document.getElementById(callingItem));
+						}
+							
+						document.getElementById(id).style.visibility='visible'; 
+					}
+				}				
+				
+				function hide(id) {	
+					if (document.getElementById(id))
+						document.getElementById(id).style.visibility='hidden';
+				}
+		</SCRIPT>
+
+<META content="DHTML javascript tooltips / popups / graphical captions" 
+name=description>
+<META 
+content="tooltips,popups,popup,graphical caption,javascript,dhtml,floating caption" 
+name=keywords>
+<META content="MSHTML 6.00.2900.3199" name=GENERATOR></HEAD>
+<BODY leftMargin=0 topMargin=0>
+<H1>Tooltips, DHTML, javascript - BoxOver</H1>
+<CENTER>
+<TABLE style="WIDTH: 100%; BORDER-COLLAPSE: collapse; HEIGHT: 100%" 
+cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=admintopbar 
+    style="PADDING-RIGHT: 10px; PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; PADDING-TOP: 10px; HEIGHT: 40px">
+      <TABLE style="BACKGROUND: #eff7ff" width="100%">
+        <TBODY>
+        <TR>
+          <TD vAlign=top><IMG 
+            src="Tooltips, DHTML, javascript - BoxOver_files/header.png"></TD>
+          <TD style="PADDING-LEFT: 40px" vAlign=top align=middle></TD>
+          <TD vAlign=top align=right><BR><BR><B>Take back the web!</B><BR>
+            <SCRIPT type=text/javascript><!--
+google_ad_client = "pub-2688050572966777";
+google_ad_width = 110;
+google_ad_height = 32;
+google_ad_format = "110x32_as_rimg";
+google_cpa_choice = "CAAQ_-KZzgEaCHfyBUS9wT0_KOP143Q";
+google_ad_channel = "";
+//--></SCRIPT>
+
+            <SCRIPT 
+            src="Tooltips, DHTML, javascript - BoxOver_files/show_ads.js" 
+            type=text/javascript>
+</SCRIPT>
+          </TD></TR></TBODY></TABLE></TD></TR>
+  <TR>
+    <TD class=rootmenu style="HEIGHT: 25px">
+      <TABLE class=rootmenuitem cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD id=tdtop0 onmouseover="showXY('tdtop0','menu0',true)" 
+          onmouseout="hide('menu0')"><A class=blank 
+            href="http://www.swazz.org/">
+            <DIV 
+            class=rootmenuitemtext>&nbsp;&nbsp;&nbsp;Home&nbsp;&nbsp;&nbsp;</DIV></A></TD>
+          <TD id=tdtop1 onmouseover="showXY('tdtop1','menu1',true)" 
+          onmouseout="hide('menu1')">
+            <DIV 
+            class=rootmenuitemtext>&nbsp;&nbsp;&nbsp;Projects&nbsp;&nbsp;&nbsp;</DIV>
+            <DIV class=menuDropDown id=menu1 onmouseover="show('menu1')" 
+            onmouseout="hide('menu1')"><A style="TEXT-DECORATION: none" 
+            href="http://calendar.swazz.org/">
+            <DIV class=menuLink id=menu1_tx_1 
+            onmouseover="this.className='menuLinkOver';showXY('menu1_tx_1','menu1_1',false)" 
+            onmouseout="this.className='menuLink';hide('menu1_1')">Calendar</DIV></A><A 
+            style="TEXT-DECORATION: none" href="http://boxover.swazz.org/">
+            <DIV class=menuLink id=menu1_tx_2 
+            onmouseover="this.className='menuLinkOver';showXY('menu1_tx_2','menu1_2',false)" 
+            onmouseout="this.className='menuLink';hide('menu1_2')">BoxOver</DIV></A><A 
+            style="TEXT-DECORATION: none" href="http://sendmail.swazz.org/">
+            <DIV class=menuLink id=menu1_tx_3 
+            onmouseover="this.className='menuLinkOver';showXY('menu1_tx_3','menu1_3',false)" 
+            onmouseout="this.className='menuLink';hide('menu1_3')">Sendmail</DIV></A></DIV></TD>
+          <TD id=tdtop2 onmouseover="showXY('tdtop2','menu2',true)" 
+          onmouseout="hide('menu2')"><A class=blank 
+            href="http://boxover.swazz.org/forum">
+            <DIV 
+            class=rootmenuitemtext>&nbsp;&nbsp;&nbsp;Forum&nbsp;&nbsp;&nbsp;</DIV></A></TD>
+          <TD></TD>
+          <TD>&nbsp;</TD></TR></TBODY></TABLE></TD></TR>
+  <TR>
+    <TD class=body 
+    style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: #ffffff; PADDING-BOTTOM: 0px; VERTICAL-ALIGN: top; PADDING-TOP: 0px"><!-- END TOP INCLUDE -->
+      <DIV style="FLOAT: right; WIDTH: 175px" align=center><BR>
+      <SCRIPT type=text/javascript><!--
+google_ad_client = "pub-2688050572966777";
+google_ad_width = 120;
+google_ad_height = 600;
+google_ad_format = "120x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+//--></SCRIPT>
+
+      <SCRIPT src="Tooltips, DHTML, javascript - BoxOver_files/show_ads.js" 
+      type=text/javascript>
+</SCRIPT>
+      </DIV>
+      <TABLE style="WIDTH: 100%; BORDER-COLLAPSE: collapse; HEIGHT: 100%" 
+      cellPadding=0>
+        <TBODY>
+        <TR>
+          <TD 
+          style="BORDER-RIGHT: #8cb6d6 1px solid; PADDING-RIGHT: 10px; PADDING-LEFT: 10px; FONT-SIZE: 12px; PADDING-BOTTOM: 10px; VERTICAL-ALIGN: top; WIDTH: 100px; PADDING-TOP: 10px"><A 
+            class=blank href="http://boxover.swazz.org/#section25">
+            <P style="MARGIN-BOTTOM: 0px; COLOR: #214d6b"><B>What is 
+            BoxOver?</B></P></A><A class=blank 
+            href="http://boxover.swazz.org/#section21">
+            <P 
+            style="MARGIN-BOTTOM: 0px; COLOR: #214d6b"><B>Download</B></P></A><A 
+            class=blank href="http://boxover.swazz.org/#section7">
+            <P 
+            style="MARGIN-BOTTOM: 0px; COLOR: #214d6b"><B>Installation</B></P></A><A 
+            class=blank href="http://boxover.swazz.org/#section16">
+            <P 
+            style="MARGIN-BOTTOM: 0px; COLOR: #214d6b"><B>Settings</B></P></A><A 
+            class=blank href="http://boxover.swazz.org/#section14">
+            <P style="MARGIN-BOTTOM: 0px; COLOR: #214d6b"><B>Demo</B></P></A><A 
+            class=blank href="http://boxover.swazz.org/#section4">
+            <P 
+            style="MARGIN-BOTTOM: 0px; COLOR: #214d6b"><B>Features</B></P></A><A 
+            class=blank href="http://boxover.swazz.org/#section24">
+            <P 
+            style="MARGIN-BOTTOM: 0px; COLOR: #214d6b"><B>Example</B></P></A><A 
+            class=blank href="http://boxover.swazz.org/#section23">
+            <P style="MARGIN-BOTTOM: 0px; COLOR: #214d6b"><B>Changes / 
+            Bugfixes</B></P></A><A class=blank 
+            href="http://boxover.swazz.org/#section15">
+            <P style="MARGIN-BOTTOM: 0px; COLOR: #214d6b"><B>Uses</B></P></A><A 
+            class=blank href="http://boxover.swazz.org/#section9">
+            <P 
+            style="MARGIN-BOTTOM: 0px; COLOR: #214d6b"><B>Compatability</B></P></A><A 
+            class=blank href="http://boxover.swazz.org/#section5">
+            <P style="MARGIN-BOTTOM: 0px; COLOR: #214d6b"><B>Some 
+            Background</B></P></A></TD>
+          <TD style="VERTICAL-ALIGN: top">
+            <DIV id=pscroll 
+            style="PADDING-RIGHT: 10px; PADDING-LEFT: 20px; PADDING-TOP: 10px"><A 
+            style="COLOR: #ff0000" 
+            href="http://boxover.swazz.org/whysmsacsucks.html">Why sms.ac 
+            sucks</A> | <A href="http://boxover.swazz.org/forum/">Forum</A> <A 
+            class=blank name=section25>
+            <P style="FONT-SIZE: 18px; MARGIN-BOTTOM: 5px; COLOR: #214d6b"><IMG 
+            style="VERTICAL-ALIGN: middle" 
+            src="Tooltips, DHTML, javascript - BoxOver_files/25.gif">&nbsp;&nbsp;<B>What 
+            is BoxOver?</B></P></A>
+            <P>BoxOver uses javascript / DHTML to show tooltips on a website. 
+            Implementation of the tooltips, however, requires no knowledge of 
+            DHTML or javascript. Move your mouse over the items below to see 
+            examples.</P><SPAN 
+            title="header=[Vanilla tooltip] body=[these are the default styles in BoxOver]" 
+            style="FONT-SIZE: 12px; COLOR: #000000"><B>Plain</B></SPAN> | <SPAN 
+            title="header=[Fading tooltip] body=[Same as plain tooltip with a fade.  You can also specify the fade speed] fade=[on]" 
+            style="FONT-SIZE: 12px; COLOR: #000000"><B>Fade</B></SPAN> | <SPAN 
+            title="header=[Delayed tooltip] body=[Same as plain tooltip with a customised delay.] delay=[500]" 
+            style="FONT-SIZE: 12px; COLOR: #000000"><B>Delay</B></SPAN> | <SPAN 
+            title="header=[Custom CSS tooltip] body=[You can customise the tooltip through stylesheets.] cssheader=[topdivdemo1] cssbody=[botdivdemo1]" 
+            style="FONT-SIZE: 12px; COLOR: #000000"><B>Custom CSS</B></SPAN> | 
+            <SPAN 
+            title="header=[Fixed tooltip] body=[Doesn't move with the mouse.] fixedrelx=[10] fixedrely=[10]" 
+            style="FONT-SIZE: 12px; COLOR: #000000"><B>Fixed position</B></SPAN> 
+            | <SPAN 
+            title="header=[Click tooltip] body=[User must click before it displays.] fixedrelx=[10] fixedrely=[10] requireclick=[on]" 
+            style="FONT-SIZE: 12px; COLOR: #000000"><B>Click to 
+            display</B></SPAN> 
+            <P style="MARGIN-BOTTOM: 0px">You can use combinations of the above 
+            as well.</P>- BoxOver is free and distributed under the GNU license 
+            - If you wish to use it in a commercial product please link back to 
+            http://boxover.swazz.org and acknowledge it's use somewhere - If you 
+            would like to contribute please link back to this page so that I can 
+            make BoxOver the most popular tooltip available Enjoy! <BR><BR>If 
+            you like BoxOver be sure to check out the new Swazz <A 
+            style="COLOR: #ff0000" href="http://calendar.swazz.org/">javascript 
+            calendar</A>!<BR><BR><BR><A class=blank name=section21>
+            <P style="FONT-SIZE: 18px; MARGIN-BOTTOM: 5px; COLOR: #214d6b"><IMG 
+            style="VERTICAL-ALIGN: middle" 
+            src="Tooltips, DHTML, javascript - BoxOver_files/21.gif">&nbsp;&nbsp;<B>Download</B></P></A>
+            <DIV 
+            style="BORDER-RIGHT: #8cb6d6 1px solid; PADDING-RIGHT: 10px; BORDER-TOP: #8cb6d6 1px solid; PADDING-LEFT: 10px; FONT-SIZE: 12px; FLOAT: right; PADDING-BOTTOM: 10px; MARGIN-LEFT: 40px; BORDER-LEFT: #8cb6d6 1px solid; WIDTH: 150px; MARGIN-RIGHT: 100px; PADDING-TOP: 10px; BORDER-BOTTOM: #8cb6d6 1px solid">
+            <P><B>Some of BoxOver's benefits</B></P>
+            <P><B>low CPU consumption, i.e. flicker-free</B></P>
+            <P><B>works in all major browsers</B></P>
+            <P><B>lightweight, less than 10kb in size</B></P>
+            <P><B>lots of functionality</B></P>
+            <P><B>Good looking default styles, though easily 
+            customisable</B></P></DIV>Latest version: 2.1 (17th June 2006) Click 
+            <A href="http://boxover.swazz.org/download/boxover2.1.zip">here</A> 
+            to download the latest version of BoxOver tooltips. 
+            <P style="FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #ff0000">Fixed 
+            the infamous delay bug, for more info check these posts <A 
+            href="http://boxover.swazz.org/forum/make-box-not-appear-when-mouse-no-longer-over-element-t294-1.html">post 
+            1</A> <A 
+            href="http://boxover.swazz.org/forum/delay-bug-t298-1.html">post 
+            2</A> </P>Thanks to Andrew Cronin for emailing me the 
+            update!<BR><BR><BR><A class=blank name=section7>
+            <P style="FONT-SIZE: 18px; MARGIN-BOTTOM: 5px; COLOR: #214d6b"><IMG 
+            style="VERTICAL-ALIGN: middle" 
+            src="Tooltips, DHTML, javascript - BoxOver_files/7.gif">&nbsp;&nbsp;<B>Installation</B></P></A>
+            <P><B>Step 1</B><BR>Include the folllowing somewhere in the HTML of 
+            your page </P>
+            <DIV class=greydiv>&lt;SCRIPT 
+            SRC="BoxOver.js"&gt;&lt;/SCRIPT&gt;</DIV>
+            <P></P>
+            <P>NB: Make sure "src" points to the correct location of the 
+            boxOver.js file</P>
+            <P><B>Step 2</B><BR>Next, go to the code for the HTML element you 
+            would like the tooltip to appear over. <BR>For instance, imagine we 
+            had the following "div" in our HTML document.<BR><BR></P>
+            <DIV class=greydiv>&lt;DIV style="BORDER: #558844 1px 
+            solid;WIDTH:200px;HEIGHT: 75px"&gt;<BR>My div with some text 
+            inside<BR>&lt;/DIV&gt;<BR></DIV>
+            <P>This "div" looks as follows:<BR></P>
+            <DIV 
+            style="BORDER-RIGHT: #558844 1px solid; BORDER-TOP: #558844 1px solid; BACKGROUND: #99cc99; BORDER-LEFT: #558844 1px solid; WIDTH: 200px; COLOR: #558844; BORDER-BOTTOM: #558844 1px solid; HEIGHT: 75px">My 
+            div with some text inside </DIV><BR>BoxOver is configured through 
+            the "title" attribute of HTML elements.&nbsp;&nbsp;<BR>To make a 
+            tooltip appear over the "div" above we alter the code as follows: 
+            <BR><BR>
+            <DIV class=greydiv>&lt;DIV TITLE="header=[header text] body=[body 
+            text]" STYLE="BORDER: #558844 1px solid;WIDTH:200px;HEIGHT: 
+            75px"&gt;<BR>My div with some text inside.&nbsp; Move over me to see 
+            my tooltip.<BR>&lt;/DIV&gt;</DIV><BR><BR>This "div" now looks like 
+            this: 
+            <DIV title="header=[header text] body=[body text]" 
+            style="BORDER-RIGHT: #558844 1px solid; BORDER-TOP: #558844 1px solid; BACKGROUND: #99cc99; BORDER-LEFT: #558844 1px solid; WIDTH: 200px; COLOR: #558844; BORDER-BOTTOM: #558844 1px solid; HEIGHT: 75px">My 
+            div with some text inside. Move over me to see my tooltip. 
+            </DIV><BR><BR><BR><A class=blank name=section16>
+            <P style="FONT-SIZE: 18px; MARGIN-BOTTOM: 5px; COLOR: #214d6b"><IMG 
+            style="VERTICAL-ALIGN: middle" 
+            src="Tooltips, DHTML, javascript - BoxOver_files/16.gif">&nbsp;&nbsp;<B>Settings</B></P></A>The 
+            "installation" section details the most simple way to initialise 
+            BoxOver.&nbsp; <BR>There are many tweaks which can be set to 
+            customise it to your needs.&nbsp; <BR>As shown above BoxOver is set 
+            through a tag's "title" attribute.&nbsp;<BR><BR>The general format 
+            is given by<BR><BR>
+            <DIV class=greydiv>title="parameter1=[value1] parameter2=[value2] 
+            parameter3=[value3]......" </DIV><BR><BR>The following table lists 
+            settings for BoxOver. 
+            <TABLE 
+            style="BORDER-RIGHT: #8cb6d6 1px solid; BORDER-TOP: #8cb6d6 1px solid; BORDER-LEFT: #8cb6d6 1px solid; BORDER-BOTTOM: #8cb6d6 1px solid; BORDER-COLLAPSE: collapse" 
+            cellPadding=5>
+              <TBODY>
+              <TR>
+                <TD class=tableheadcell>Parameter</TD>
+                <TD class=tableheadcell>Possible values</TD>
+                <TD class=tableheadcell>Default </TD>
+                <TD class=tableheadcell>Description</TD></TR>
+              <TR>
+                <TD>header</TD>
+                <TD>Any character</TD>
+                <TD>blank</TD>
+                <TD>Specifies the header text of the tooltip</TD></TR>
+              <TR>
+                <TD>body</TD>
+                <TD>Any character</TD>
+                <TD>blank</TD>
+                <TD>Specifies the body text of the tooltip</TD></TR>
+              <TR>
+                <TD>fixedrelx</TD>
+                <TD>Any integer</TD>
+                <TD>N/A</TD>
+                <TD>Forces the X-coordinate of the tooltip to stay fixed 
+                  (offset is relative to the annotated HTML element)</TD></TR>
+              <TR>
+                <TD>fixedrely</TD>
+                <TD>Any integer</TD>
+                <TD>N/A</TD>
+                <TD>Forces the Y-coordinate of the tooltip to stay fixed 
+                  (offset is relative to the annotated HTML element)</TD></TR>
+              <TR>
+                <TD>fixedabsx</TD>
+                <TD>Any integer</TD>
+                <TD>N/A</TD>
+                <TD>Forces the X-coordinate of the tooltip to stay fixed (X is 
+                  an offset relative to the body of the HTML document)</TD></TR>
+              <TR>
+                <TD>fixedabsy</TD>
+                <TD>Any integer</TD>
+                <TD>N/A</TD>
+                <TD>Forces the Y-coordinate of the tooltip to stay fixed (Y is 
+                  an offset relative to the body of the HTML document)</TD></TR>
+              <TR>
+                <TD>windowlock</TD>
+                <TD>on / off</TD>
+                <TD>on</TD>
+                <TD>Make tooltip stick to side of the window if user moves 
+                  close to the side of the screen.</TD></TR>
+              <TR>
+                <TD>cssbody</TD>
+                <TD>Any defined style class</TD>
+                <TD>Built in styles</TD>
+                <TD>Specifies CSS class for styles to be used on tooltip 
+                body.</TD></TR>
+              <TR>
+                <TD>cssheader</TD>
+                <TD>Any defined style class</TD>
+                <TD>Built in styles</TD>
+                <TD>Specifies CSS class for styles to be used on tooltip 
+                  header.</TD></TR>
+              <TR>
+                <TD>offsetx</TD>
+                <TD>Any integer</TD>
+                <TD>10</TD>
+                <TD>Horizontal offset, in pixels, of the tooltip relative to 
+                  the mouse cursor.</TD></TR>
+              <TR>
+                <TD>offsety</TD>
+                <TD>Any integer</TD>
+                <TD>10</TD>
+                <TD>Vertical offset, in pixels, of the tooltip relative to the 
+                  mouse cursor.</TD></TR>
+              <TR>
+                <TD>doubleclickstop</TD>
+                <TD>on / off</TD>
+                <TD>on</TD>
+                <TD>Specifies whether to halt the tooltip when the user double 
+                  clicks on the HTML element with the tooltip.</TD></TR>
+              <TR>
+                <TD>singleclickstop</TD>
+                <TD>on / off</TD>
+                <TD>off</TD>
+                <TD>Specifies whether to halt the tooltip when the user single 
+                  clicks on the HTML element with the tooltip. <SPAN 
+                  style="FONT-SIZE: 11px">- if both singleclickstop and 
+                  doubleclickstop are set to "on", singleslclickstop takes 
+                  preference.</SPAN></TD></TR>
+              <TR>
+                <TD>requireclick</TD>
+                <TD>on / off</TD>
+                <TD>off</TD>
+                <TD>Specifies whether the user must first click the element 
+                  before a tooltip appears. Intended for use on links so that 
+                  information appears while the link is followed.</TD></TR>
+              <TR>
+                <TD>hideselects</TD>
+                <TD>on / off</TD>
+                <TD>off</TD>
+                <TD>Specifies whether to hide all SELECT boxes on page when 
+                  popup is activated.</TD></TR>
+              <TR>
+                <TD>fade</TD>
+                <TD>on / off</TD>
+                <TD>off</TD>
+                <TD>Specifies whether to fade tooltip into visibility.</TD></TR>
+              <TR>
+                <TD>fadespeed</TD>
+                <TD>Number between 0 and 1</TD>
+                <TD>0.04</TD>
+                <TD>Specifies how fast to fade in tooltip.</TD></TR>
+              <TR>
+                <TD>delay</TD>
+                <TD>Any integer</TD>
+                <TD>0</TD>
+                <TD>Specifies delay in milliseconds before tooltip 
+              displays.</TD></TR></TBODY></TABLE><BR><BR><BR><A class=blank 
+            name=section14>
+            <P style="FONT-SIZE: 18px; MARGIN-BOTTOM: 5px; COLOR: #214d6b"><IMG 
+            style="VERTICAL-ALIGN: middle" 
+            src="Tooltips, DHTML, javascript - BoxOver_files/14.gif">&nbsp;&nbsp;<B>Demo</B></P></A>Move 
+            your mouse over the block below or the highlighted words to to see 
+            BoxOver tooltips in action. 
+            <DIV 
+            title="header=[The grey div] body=[This div is a demo div on the boxover page]" 
+            style="BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #000000 1px solid; BACKGROUND: #ababab; BORDER-LEFT: #000000 1px solid; WIDTH: 100px; BORDER-BOTTOM: #000000 1px solid; HEIGHT: 100px"></DIV>Move 
+            your <SPAN 
+            title="header=[Custom CSS popup] body=[This is a popup which gets it styles from the stylesheet on this page] cssheader=[topdivdemo1] cssbody=[botdivdemo1]" 
+            style="COLOR: #ff0000">mouse</SPAN> over the <SPAN 
+            title="header=[Veritcally free popup] body=[This is a popup who is restricted to only move vertically] fixedabsx=[50]" 
+            style="COLOR: #ff0000">highlighted</SPAN> words in this sentence to 
+            see different uses for <SPAN 
+            title="header=[Fixed popup] body=[This is a fixed popup at a specified point] fixedabsx=[50] fixedabsy=[400]" 
+            style="COLOR: #ff0000">BoxOver</SPAN>.<BR><BR><BR><A class=blank 
+            name=section4>
+            <P style="FONT-SIZE: 18px; MARGIN-BOTTOM: 5px; COLOR: #214d6b"><IMG 
+            style="VERTICAL-ALIGN: middle" 
+            src="Tooltips, DHTML, javascript - BoxOver_files/4.gif">&nbsp;&nbsp;<B>Features</B></P></A>
+            <LI>Optimised for lowest CPU usage with lightning response times 
+            <LI>Tested in all major browsers 
+            <LI>Easy to set up with only a basic knowledge of HTML 
+            <LI>Open source <BR><BR><BR><A class=blank name=section24>
+            <P style="FONT-SIZE: 18px; MARGIN-BOTTOM: 5px; COLOR: #214d6b"><IMG 
+            style="VERTICAL-ALIGN: middle" 
+            src="Tooltips, DHTML, javascript - BoxOver_files/24.gif">&nbsp;&nbsp;<B>Example</B></P></A>You 
+            can see a working example page with BoxOver <A 
+            href="http://boxover.swazz.org/example.html">here</A>. 
+            <BR><BR><BR><A class=blank name=section23>
+            <P style="FONT-SIZE: 18px; MARGIN-BOTTOM: 5px; COLOR: #214d6b"><IMG 
+            style="VERTICAL-ALIGN: middle" 
+            src="Tooltips, DHTML, javascript - BoxOver_files/23.gif">&nbsp;&nbsp;<B>Changes 
+            / Bugfixes</B></P></A>
+            <TABLE>
+              <TBODY>
+              <TR>
+                <TD>19 Jan 2005</TD>
+                <TD>Fixed bug of tooltip not appearing when hovering over the 
+                  tooltip's HTML element before the page is fully loaded.</TD></TR>
+              <TR>
+                <TD>27 Jan 2005</TD>
+                <TD>Created the example page you see below.&nbsp; Also changed 
+                  script so that normal title attributes on a page still 
+              work.</TD></TR>
+              <TR>
+                <TD>05 Feb 2005</TD>
+                <TD>Sorted out opacity in default styles for FireFox. Also 
+                  altered event binding slightly.</TD></TR>
+              <TR>
+                <TD>11 Feb 2005</TD>
+                <TD>Revamped the example page.</TD></TR>
+              <TR>
+                <TD>20 Apr 2005</TD>
+                <TD>Added "singleclickstop" attribute allowing user to specify 
+                  whether window should halt element is singleclicked.</TD></TR>
+              <TR>
+                <TD>15 Jun 2005</TD>
+                <TD>Made change to fix bug with intermittent problems 
+                  regarding boxover not appearing/initialising.</TD></TR>
+              <TR>
+                <TD colSpan=2><SPAN 
+                  style="FONT-WEIGHT: bold; FONT-SIZE: 11px">This last change is 
+                  a lie. My change didn't actually do anything, oops. But the 
+                  problem is fixed by placing the &lt;SCRIPT&gt; tags at the 
+                  bottom of the page</SPAN></TD></TR>
+              <TR>
+                <TD>12 Jul 2005</TD>
+                <TD>Fixed DOCTYPE error where boxover was not working with 
+                  certain DOCTYPE declarations. Thanks to Relien from France for 
+                  sending me the update!</TD></TR>
+              <TR>
+                <TD>24 Jul 2005</TD>
+                <TD>Fixed scrolling bug in IE6 when standards mode invoked 
+                  with DOCTYPE, see forum for details.</TD></TR>
+              <TR>
+                <TD>31 Aug 2005</TD>
+                <TD>Included option to hide select boxes to workaround IE6 bug 
+                  with select boxes.</TD></TR>
+              <TR>
+                <TD>25 Sep 2005</TD>
+                <TD>Fixed DOCTYPE and CSS problems.</TD></TR>
+              <TR>
+                <TD>16 Nov 2005</TD>
+                <TD>Added new requireclick attribute for use on links as 
+                  requested in the forum</TD></TR>
+              <TR>
+                <TD>12 Dec 2005</TD>
+                <TD>Added delay and fade options</TD></TR>
+              <TR>
+                <TD>16 Apr 2006</TD>
+                <TD>Fixed IE 5.0 bug, IE6 bug, restructured certain things <A 
+                  href="http://boxover.swazz.org/forum/patch-for-bug-on-some-ie-50-t288-1.html">post 
+                  1</A> | <A 
+                  href="http://boxover.swazz.org/forum/patch-for-quotobject-does-not-support-this-property-or-methodquot-problem-t290-1.html">post 
+                  2</A></TD></TR>
+              <TR>
+                <TD>17 Jun 2006</TD>
+                <TD>Fixed delay bug, <A 
+                  href="http://boxover.swazz.org/forum/make-box-not-appear-when-mouse-no-longer-over-element-t294-1.html">post 
+                  1</A> | <A 
+                  href="http://boxover.swazz.org/forum/delay-bug-t298-1.html">post 
+                  2</A></TD></TR></TBODY></TABLE><BR><BR><BR><A class=blank 
+            name=section15>
+            <P style="FONT-SIZE: 18px; MARGIN-BOTTOM: 5px; COLOR: #214d6b"><IMG 
+            style="VERTICAL-ALIGN: middle" 
+            src="Tooltips, DHTML, javascript - BoxOver_files/15.gif">&nbsp;&nbsp;<B>Uses</B></P></A>
+            <LI>Tooltips 
+            <LI>Data grids with BoxOver showing extra details for each row 
+            <LI>TITLE attribute replacement 
+            <LI>Neatening presentation <BR><BR><BR><A class=blank name=section9>
+            <P style="FONT-SIZE: 18px; MARGIN-BOTTOM: 5px; COLOR: #214d6b"><IMG 
+            style="VERTICAL-ALIGN: middle" 
+            src="Tooltips, DHTML, javascript - BoxOver_files/9.gif">&nbsp;&nbsp;<B>Compatability</B></P></A>
+            <LI>Works in all latest browsers incl. IE 6, IE 5, Mozilla 1.4+, 
+            FireFox 0.9.3&nbsp;Opera 7 <BR><BR><BR><A class=blank name=section5>
+            <P style="FONT-SIZE: 18px; MARGIN-BOTTOM: 5px; COLOR: #214d6b"><IMG 
+            style="VERTICAL-ALIGN: middle" 
+            src="Tooltips, DHTML, javascript - BoxOver_files/5.gif">&nbsp;&nbsp;<B>Some 
+            Background</B></P></A>Well BoxOver went through many changes over 
+            the time I developed it (ey stop yawning). It started uot as a 
+            behaviour - which was a problem because you limited to IE, though 
+            there was a component out that some sharp bugger developed which 
+            allowed using behaviours in mozilla. There was some problem I 
+            couldn't resolve going this route though - also it required that the 
+            user be familiar with XML, too complicated for all you dummies out 
+            there. So then I came up with the idea of configuration through the 
+            title tag. At first I wanted to see if browsers would recognise 
+            custom tags (e.g. &lt;img boxover=""&gt;) which I could manipulate 
+            javascript side. Problem was that some browsers didn't pull the 
+            value through from the HTML into javascript. So Then I decided on 
+            the TITLE tag. It's for tooltips afterall and it made sense that 
+            they one should be able to stylise them. The initial spark which 
+            made me decide to do it was using overlib. Probably the best known 
+            tooltip out there. I didn't like it though, it was 30kb big first 
+            off - thats quite a chunk to download just for tooltips. Also it 
+            used up a lot of CPU and tended to flicker. It is also harder to set 
+            up, you need a basic knowledge of javascript - well not really 
+            though you do have to call a javascript function which might 
+            frighten some people away. So I designed this component with all 
+            this in mind, and after many many hours of trying different methods 
+            I got it working just as I envisioned it. In the process I learnt 
+            one hell of a lot of javascript. It also feels good to know that a 
+            couple of people out there might use something I wrote. Well if you 
+            finished reading this, nice one. Over and 
+          out.<BR><BR><BR></LI></DIV></TD></TR></TBODY></TABLE>
+      <SCRIPT>
+		//window.onload=fitdiv;
+		var div;
+		function fitdiv() {
+			div=document.getElementById('pscroll');
+			div.style.overflow='auto';
+			div.style.height=document.body.clientHeight-200;
+			var i=1;
+			while((document.body.scrollHeight<=document.body.clientHeight) && (i<100)){			
+				i++;
+				div.style.height=parseInt(div.offsetHeight)+2;
+			}
+			i=1;
+		/**	while((document.body.scrollHeight>document.body.clientHeight) && (i<20)) {
+				i++;
+			} **/
+			document.body.style.overflow='hidden';
+		}
+		
+		//document.onclick=test;
+		
+		function test() {
+		alert(document.body.scrollHeight+':'+document.body.offsetHeight);
+		}
+	</SCRIPT>
+<!-- START BOTTOM INCLUDE --></TD></TR>
+  <TR>
+    <TD class=admintopbar 
+    style="FONT-SIZE: 11px; MARGIN-BOTTOM: 0px; COLOR: #254c6a; HEIGHT: 25px"></TD></TR></TBODY></TABLE>
+<SCRIPT src="Tooltips, DHTML, javascript - BoxOver_files/boxover.js"></SCRIPT>
+</CENTER></BODY></HTML>

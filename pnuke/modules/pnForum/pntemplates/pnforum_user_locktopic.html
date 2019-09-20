@@ -1,0 +1,31 @@
+<!--[*  $Id: pnforum_user_locktopic.html,v 1.5 2005/08/06 07:14:13 landseer Exp $  *]-->
+
+<!--[ include file='pnforum_user_header.html' ]-->
+<!--[* pndebug *]-->
+
+<fieldset>
+    <legend>
+        <!--[ if $mode eq "lock" ]-->
+            <!--[ pnml name='_PNFORUM_LOCKTOPIC' ]-->
+        <!--[ else ]-->
+            <!--[ pnml name='_PNFORUM_UNLOCKTOPIC' ]-->
+        <!--[ /if ]-->
+    </legend>
+
+    <form action="<!--[ pnmodurl modname=pnForum type=user func=topicadmin ]-->" method="post">
+    <input type="hidden" name="mode" value="<!--[ $mode ]-->" />
+    <input type="hidden" name="topic" value="<!--[ $topic_id ]-->" />
+    <input type="hidden" name="authid" value="<!--[ pnsecgenauthkey ]-->" />
+    <div style="background-color: <!--[ $bgcolor3 ]-->; width: 95%; text-align: center;">
+        <!--[ if $mode eq "lock" ]-->
+            <!--[ pnml name='_PNFORUM_LOCKTOPIC_INFO' html=1 ]--><br />
+            <input type="submit" name="submit" value="<!--[ pnml name='_PNFORUM_LOCKTOPIC' ]-->" />
+        <!--[ else ]-->
+            <!--[ pnml name='_PNFORUM_UNLOCKTOPIC_INFO' html=1 ]--><br />
+            <input type="submit" name="submit" value="<!--[ pnml name='_PNFORUM_UNLOCKTOPIC' ]-->" />
+        <!--[ /if ]-->
+    </div>
+    </form>
+</fieldset>
+
+<!--[ include file='pnforum_user_footer.html' ]-->

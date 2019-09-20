@@ -1,0 +1,17 @@
+<!--[*  ---------------------------------------------------------------------- *]-->
+<!--[*  Thomas.Smiatek@value4business.com                                      *]-->
+<!--[*  ---------------------------------------------------------------------- *]-->
+
+<div style="white-space:nowrap;">
+    <!--[ if $url && $text ]-->    
+        <!--[ $spc ]-->
+        <a href="<!--[ $url ]-->" title="<!--[ $desc ]-->" <!--[ if $spc_size > 0 ]-->class="pnmenu-normal"<!--[ else ]-->class="pnmenu-title"<!--[ /if ]--> <!--[ $targettxt ]--> onmouseover="<!--[ $js_text ]-->.src='images/menu/pfeil02sup.gif';"<!--[ if !$selected ]--> onmouseout="<!--[ $js_text ]-->.src='images/menu/pfeil01sup.gif';"<!--[ /if ]-->>
+        <!--[ if $selected ]-->
+        <img name="<!--[ $js_text ]-->" src="images/menu/pfeil02sup.gif" width="12" height="12" alt="" />
+        <!--[ else ]-->
+        <img name="<!--[ $js_text ]-->" src="images/menu/pfeil01sup.gif" width="12" height="12" alt="" />
+        <!--[ /if ]-->
+        <span <!--[ if $spc_size > 0 ]-->class="pnmenu-normal"<!--[ else ]-->class="pnmenu-title"<!--[ /if ]-->> <!--[ $text ]--></span></a>
+    <!--[ /if ]-->
+    <br />
+</div>

@@ -1,0 +1,170 @@
+FRAMESET {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.top_icon {
+	BORDER-RIGHT: white 2px solid; PADDING-RIGHT: 0px; BORDER-TOP: white 2px solid; DISPLAY: block; PADDING-LEFT: 0px; FLOAT: left; PADDING-BOTTOM: 0px; MARGIN: 0px auto; BORDER-LEFT: white 2px solid; PADDING-TOP: 0px; BORDER-BOTTOM: white 2px solid
+}
+.top_icon_selected {
+	BORDER-RIGHT: red 2px solid; PADDING-RIGHT: 0px; BORDER-TOP: red 2px solid; DISPLAY: block; PADDING-LEFT: 0px; FLOAT: left; PADDING-BOTTOM: 0px; MARGIN: 0px auto; BORDER-LEFT: red 2px solid; PADDING-TOP: 0px; BORDER-BOTTOM: red 2px solid
+}
+/* iPhone & Android capable devices usually at 320px (absolute) */
+.bodywidth { 
+	width: 300px; 
+}
+
+.top_block {
+	width: 100%;
+	display: block;
+	white-space: nowrap;
+	height: 39px;
+	OVERFLOW: auto; 
+	MARGIN: 0px auto; 
+}
+
+.top_block_colored {
+	width: 100%;
+	display: block;
+	white-space: nowrap;
+	height: 39px;
+	OVERFLOW: auto; 
+	MARGIN: 0px auto;
+	background-color:	yellow; 
+}
+
+.banner {
+	width: 240px;
+	height: 100%;
+	background-image: url('../images/Loveguru.jpg');
+	float: left;
+}
+	
+.banner2 {
+	width: 240px;
+	height: 100%;
+	background-image: url('../images/Luxor.jpg');
+	float: left;
+}
+
+/* This is used to rigidly (absolutely) position the clickable target area */
+.click_area {
+	width: 22px;
+	height: 22px;
+	position:absolute;
+	left:217px;
+	top:7px;
+}
+
+/* This is used to position the clickable target area (for rollover2) */
+.click_area2 {
+	width: 22px;
+	height: 22px;
+	float: left;
+	padding-left: 5px;
+	padding-top: 7px;
+	
+}
+
+.click_icon {
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+a.click_icon span {
+	background-image: url('../images/Click_video.jpg') ;
+	background-repeat: no-repeat;
+	height: 22px;
+	width: 22px;
+}
+	
+a.click_span {
+	background-image: url('../images/Click_video.jpg') ;
+	background-repeat: no-repeat;
+	height: 22px;
+	width: 22px;
+}
+
+
+/* This is used to position the clickable rollover area */
+.rollover_area {
+	width: 25px;
+	height: 25px;
+	float: left;
+	padding-left: 5px;
+	padding-top: 7px;
+	
+}
+
+/* Tricky business here is that the text geometry adjusts how
+	much of the image is seen
+*/
+.rollover a {
+	width: 22px;
+	height: 22px;
+	background: url('../images/Click_video.jpg') ;
+	background-repeat: no-repeat;
+	margin: 0px;
+	padding: 0px;
+	font-size: 21px;
+	letter-spacing: 18px;
+	text-decoration: none;
+}
+
+/* X,Y position relative to top left */
+.rollover a:hover { 
+background-position: 1px 1px;
+opacity:	0.4;
+}
+.rollover a:active {
+background-position: 0 +1px;
+opacity:	0.7;
+}
+
+
+/* Tricky business here is that the text geometry adjusts how
+	much of the image is seen
+*/
+.rollover2 a {
+	width: 22px;
+	height: 22px;
+	background: url('../images/Click_call.jpg') ;
+	background-repeat: no-repeat;
+	margin: 0px;
+	padding: 0px;
+	font-size: 21px;
+	letter-spacing: 18px;
+	text-decoration: none;
+}
+
+/* X,Y position relative to top left */
+.rollover2 a:hover { 
+background-position: 1px 1px;
+opacity:	0.4;
+}
+.rollover2 a:active {
+background-position: 0 +1px;
+opacity:	0.7;
+}
+
+#main {
+	CLEAR: both
+}
+
+/* vertically centered text area */
+.center_text {
+	padding: 10px 0px 0px 10px;
+	width:	200px;
+	float: left;
+/*	text-align: center */
+}
+
+/* vertically centered icon area */
+.center_icon {
+	padding: 10px 0px 0px 60px;
+	float:	left;
+}
+
+.overlay {
+	COLOR: #000022; BACKGROUND-COLOR: #ddcc22
+}

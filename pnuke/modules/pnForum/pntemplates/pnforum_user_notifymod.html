@@ -1,0 +1,22 @@
+<!--[*  $Id: pnforum_user_notifymod.html,v 1.2 2005/08/06 07:14:13 landseer Exp $  *]-->
+
+<!--[ include file='pnforum_user_header.html' ]-->
+<!--[* pndebug *]-->
+
+<fieldset>
+    <legend>
+        <!--[ pnml name='_PNFORUM_NOTIFYMODERATOR_TITLE' ]-->
+    </legend>
+
+    <form action="<!--[ pnmodurl modname=pnForum type=user func=report ]-->" method="post">
+    <input type="hidden" name="post" value="<!--[ $post.post_id ]-->" />
+    <input type="hidden" name="authid" value="<!--[ pnsecgenauthkey ]-->" />
+    <div style="background-color: <!--[ $bgcolor3 ]-->; width: 95%; text-align: left;">
+        <!--[ pnml name='_PNFORUM_NOTIFYMODERATOR_INFO' html=1 ]--><br />
+        <textarea rows="6" cols="60" name="comment"></textarea><br />
+        <input type="submit" name="submit" value="<!--[ pnml name='_SUBMIT' ]-->" />
+    </div>
+    </form>
+</fieldset>
+
+<!--[ include file='pnforum_user_footer.html' ]-->

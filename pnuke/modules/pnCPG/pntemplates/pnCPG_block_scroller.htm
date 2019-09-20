@@ -1,0 +1,27 @@
+<!--[*  $Id: pnCPG_scroller_block.htm,v 1.4 2004/02/05 23:43:19 markwest Exp $  *]-->
+<div style="text-align:center;">
+<!--[if $width eq 0]-->
+<MARQUEE BEHAVIOR=scroll align=center  DIRECTION=<!--[$dir]--> HEIGHT=<!--[$height]--> SCROLLAMOUNT=<!--[$amount1]--> SCROLLDELAY=<!--[$delay]-->  TRUESPEED onmouseover=this.stop() onmouseout=this.start() >
+<!--[else]-->
+<MARQUEE BEHAVIOR=scroll align=center  DIRECTION=<!--[$dir]--> HEIGHT=<!--[$height]--> SCROLLAMOUNT=<!--[$amount1]--> SCROLLDELAY=<!--[$delay]--> SCROLLWIDTH=<!--[$width]--> TRUESPEED onmouseover=this.stop() onmouseout=this.start() >
+<!--[/if]-->
+
+
+
+<!--[section name="items" loop=$items]-->
+<center>
+<A HREF="<!--[$items[items].url]-->"><IMG SRC="<!--[$items[items].picture]-->" border=0 title="<!--[$items[items].title]-->"></A>
+<!--[$content1]-->
+</center>
+<!--[/section]-->
+</marquee>
+</div>
+
+
+
+
+
+
+
+
+

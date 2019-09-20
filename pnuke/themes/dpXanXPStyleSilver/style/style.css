@@ -1,0 +1,305 @@
+/* Us4Earth sytle sheet, An Amalgam of many style sheets
+ * padding = top right bottom left;	(Clockwise)
+ */
+BODY	{
+	FONT-FAMILY: Tahoma, Verdana,Helvetica; 
+	FONT-SIZE: 11px;
+	scrollbar-3dlight-color:#c2c2c2;
+	scrollbar-face-color: #7E98CB;
+	scrollbar-highlight-color: #C4D2ED;
+	scrollbar-shadow-color: #7E98CB;
+	scrollbar-3dlight-color: #C4D2ED;
+	scrollbar-arrow-color:  #021A4A;
+	scrollbar-track-color: #C4D2ED;
+	scrollbar-darkshadow-color: #021A4A;
+}
+P			{ FONT-FAMILY: Tahoma, Verdana,Helvetica; FONT-SIZE: 12px; COLOR: #800000;}
+DIV			{ FONT-FAMILY: Tahoma, Verdana,Helvetica; FONT-SIZE: 11px}
+INPUT		{ FONT-FAMILY: Tahoma, Verdana,Helvetica; FONT-SIZE: 11px}
+TEXTAREA	{ FONT-FAMILY: Tahoma, Verdana,Helvetica; FONT-SIZE: 11px}
+FORM 		{ FONT-FAMILY: Tahoma, Verdana,Helvetica; FONT-SIZE: 11px}
+SELECT		{ FONT-FAMILY: Tahoma, Verdana,Helvetica; FONT-SIZE: 11px}
+IMG 		{ border: 0px; }
+FONT		{ FONT-FAMILY: Tahoma, Verdana,Helvetica; FONT-SIZE: 11px}
+TD			{ FONT-FAMILY: Tahoma, Verdana,Helvetica; FONT-SIZE: 11px}
+/* LDH - added */
+H1			{ FONT-FAMILY: Tahoma, Verdana,Helvetica; font-size: 18px; COLOR: #800000;}
+LI			{ FONT-FAMILY: Tahoma, Verdana,Helvetica; FONT-SIZE: 10pt; COLOR: #000000;}
+
+hr {
+  border: 0;
+  width: 90%;
+  color: #800;
+  background-color: #800;
+  height: 3px;
+}
+
+A:link   	{BACKGROUND: none; COLOR: #800000; FONT-SIZE: 14px; FONT-FAMILY: Tahoma, Verdana, Helvetica; TEXT-DECORATION: none}
+A:active    {BACKGROUND: none; COLOR: red; FONT-SIZE: 14px; FONT-FAMILY: Tahoma, Verdana, Helvetica; TEXT-DECORATION: underline}
+A:visited   {BACKGROUND: none; COLOR: #800000; FONT-SIZE: 14px; FONT-FAMILY: Tahoma, Verdana, Helvetica; TEXT-DECORATION: none}
+A:hover     {BACKGROUND: none; COLOR: green; FONT-SIZE: 14px; FONT-FAMILY: Tahoma, Verdana, Helvetica; TEXT-DECORATION: underline}
+
+.biglinktext
+{
+	FONT-SIZE: 14pt; FONT-WEIGHT: normal;
+}
+
+a.bluelink,a.bluelink:visited
+{
+color: #00f;
+FONT-SIZE: 16px;
+FONT-FAMILY: Tahoma, Verdana, Helvetica;
+text-decoration: none
+}
+
+a.bluelink:hover,a.bluelink:active
+{
+color: #f90;
+FONT-SIZE: 16px;
+FONT-FAMILY: Tahoma, Verdana, Helvetica;
+text-decoration: underline
+}
+
+/* Top page banner */
+p.Banner
+{
+ 	margin-bottom:.0001pt;
+	font-size: x-large;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+	margin-left: 0in;
+	margin-right: 0in;
+	margin-top: 0in;
+	text-align: center;
+	color: #800000;
+}
+
+a.Banner,a.Banner:visited
+{
+	color: #800;
+	font-size: x-large;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+	text-decoration: none
+}
+
+a.Banner:hover,a.Banner:active
+{
+	color: green;
+	font-size: x-large;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+	text-decoration: underline
+}
+
+/* Summary usually used just before big text. Derived orig fr MsoNormal */
+	
+ p.Summary
+{
+ 	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family: Arial, Helvetica, sans-serif;
+	margin-left: 0in;
+	margin-right: 0in;
+	margin-top: 0in;
+	text-align: center;
+	padding: 4 4  4 4;
+	color: #800000;
+}
+
+/* Usually used for descriptive text below a header or summary. It's the text workhorse */
+.bigtext
+{
+	color: #000;
+	font-size:12.0pt;
+}
+
+.biggertext
+{
+	color: #000;
+	font-size:14.0pt;
+}
+
+.title 		{BACKGROUND: none; COLOR: #003399; FONT-SIZE: 14px; FONT-WEIGHT: bold; FONT-FAMILY: Tahoma, Verdana, Helvetica; TEXT-DECORATION: none}
+.content 	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px; FONT-FAMILY: Tahoma, Verdana, Helvetica}
+.storytitle 	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px; FONT-WEIGHT: bold; FONT-FAMILY: Tahoma, Verdana, Helvetica; TEXT-DECORATION: none}
+.storycat	{BACKGROUND: none; FONT-SIZE: 12pt;  FONT-FAMILY: Tahoma, Verdana, Helvetica; TEXT-DECORATION: underline}
+.boxtitle 	{BACKGROUND: none; COLOR: #800000; FONT-SIZE: 14px; FONT-WEIGHT: bold; FONT-FAMILY: Tahoma, Verdana, Helvetica; TEXT-DECORATION: none}
+.boxcontent 	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px; FONT-FAMILY: Tahoma, Verdana, Helvetica}
+.option 	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; FONT-FAMILY: Tahoma, Verdana, Helvetica; TEXT-DECORATION: none}
+.tiny		{BACKGROUND: none; COLOR: #003399; FONT-SIZE: 11px; FONT-WEIGHT: normal; FONT-FAMILY: Tahoma, Verdana, Helvetica; TEXT-DECORATION: none}
+.title2 	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 14px; FONT-WEIGHT: bold; FONT-FAMILY: Tahoma, Verdana, Helvetica; TEXT-DECORATION: none}
+.content2 	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px; FONT-FAMILY: Tahoma, Verdana, Helvetica}
+.storytitle2 	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px; FONT-WEIGHT: bold; FONT-FAMILY: Tahoma, Verdana, Helvetica; TEXT-DECORATION: none}
+.storycat2	{BACKGROUND: none; COLOR: #003399; FONT-SIZE: 11px; FONT-WEIGHT: bold; FONT-FAMILY: Tahoma, Verdana, Helvetica; TEXT-DECORATION: underline}
+.boxtitle2 	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px; FONT-WEIGHT: bold; FONT-FAMILY: Tahoma, Verdana, Helvetica; TEXT-DECORATION: none}
+.boxcontent2 	{BACKGROUND: none; COLOR: #003399; FONT-SIZE: 11px; FONT-FAMILY: Tahoma, Verdana, Helvetica}
+.option2 	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px; FONT-WEIGHT: bold; FONT-FAMILY: Tahoma, Verdana, Helvetica; TEXT-DECORATION: none}
+.tiny2		{BACKGROUND: none; COLOR: #003399; FONT-SIZE: 11px; FONT-WEIGHT: normal; FONT-FAMILY: Tahoma, Verdana, Helvetica; TEXT-DECORATION: none}
+.artikel        {BACKGROUND: none; COLOR: #000000; FONT-SIZE: 9px; FONT-WEIGHT: normal; FONT-FAMILY: Tahoma, Verdana, Helvetica; TEXT-DECORATION: none}
+.thema          {BACKGROUND: none; COLOR: #003399; FONT-SIZE: 9px; FONT-WEIGHT: normal; FONT-FAMILY: Tahoma, Verdana, Helvetica; TEXT-DECORATION: none}
+
+.pn-normal           { color: #000000; font-family: Tahoma, Verdana, Helvetica; font-size: 11px; text-decoration: none; FONT-WEIGHT: normal; }
+.pn-normal A:link 	 { color: #003399; font-family: Tahoma, Verdana, Helvetica; font-size: 11px; text-decoration: underline; FONT-WEIGHT: normal; }
+.pn-normal A:visited { color: #003399; font-family: Tahoma, Verdana, Helvetica; font-size: 11px; text-decoration: underline; FONT-WEIGHT: normal; }
+.pn-normal A:hover   { color: #6E009C; font-family: Tahoma, Verdana, Helvetica; font-size: 11px; text-decoration: underline; FONT-WEIGHT: normal; }
+.pn-normal A:active  { color: #003399; font-family: Tahoma, Verdana, Helvetica; font-size: 11px; text-decoration: underline; FONT-WEIGHT: normal; }
+
+.pn-storytitle           { color: #000000; font-family: Tahoma, Verdana, Helvetica; font-size: 12px; text-decoration: none; FONT-WEIGHT: bold; }
+.pn-storytitle A:link 	 { color: #003399; font-family: Tahoma, Verdana, Helvetica; font-size: 12px; text-decoration: underline; FONT-WEIGHT: bold; }
+.pn-storytitle A:visited { color: #003399; font-family: Tahoma, Verdana, Helvetica; font-size: 12px; text-decoration: underline; FONT-WEIGHT: bold; }
+.pn-storytitle A:hover   { color: #6E009C; font-family: Tahoma, Verdana, Helvetica; font-size: 12px; text-decoration: underline; FONT-WEIGHT: bold; }
+.pn-storytitle A:active  { color: #003399; font-family: Tahoma, Verdana, Helvetica; font-size: 12px; text-decoration: underline; FONT-WEIGHT: bold; }
+
+.pn-title           { color: #000000; font-family: Tahoma, Verdana, Helvetica; font-size: 14px; font-weight: bold; text-decoration: none; }
+.pn-title A:link    { color: #003399; font-family: Tahoma, Verdana, Helvetica; font-size: 14px; font-weight: bold; text-decoration: underline; }
+.pn-title A:visited { color: #003399; font-family: Tahoma, Verdana, Helvetica; font-size: 14px; font-weight: bold; text-decoration: underline; }
+.pn-title A:hover   { color: #6E009C; font-family: Tahoma, Verdana, Helvetica; font-size: 14px; font-weight: bold; text-decoration: underline; }
+.pn-title A:active  { color: #003399; font-family: Tahoma, Verdana, Helvetica; font-size: 14px; font-weight: bold; text-decoration: underline; }
+
+.pn-sub           { color: #000000; font-family: Tahoma, Verdana, Helvetica; font-size: 9px; font-weight: normal; text-decoration: none; }
+.pn-sub A:link    { color: #003399; font-family: Tahoma, Verdana, Helvetica; font-size: 9px; font-weight: normal; text-decoration: underline; }
+.pn-sub A:visited { color: #003399; font-family: Tahoma, Verdana, Helvetica; font-size: 9px; font-weight: normal; text-decoration: underline; }
+.pn-sub A:hover   { color: #6E009C; font-family: Tahoma, Verdana, Helvetica; font-size: 9px; font-weight: normal; text-decoration: underline; }
+.pn-sub A:active  { color: #003399; font-family: Tahoma, Verdana, Helvetica; font-size: 9px; font-weight: normal; text-decoration: underline; }
+
+.pn-logo          { color: #000000; font-family: Tahoma, Verdana, Helvetica; font-size: 16px; font-weight: bold; text-decoration: none; }
+A.pn-logo:link    { color: #003399; font-family: Tahoma, Verdana, Helvetica; font-size: 16px; font-weight: bold; text-decoration: underline; }
+A.pn-logo:visited { color: #003399; font-family: Tahoma, Verdana, Helvetica; font-size: 16px; font-weight: bold; text-decoration: underline; }
+A.pn-logo:hover   { color: #6E009C; font-family: Tahoma, Verdana, Helvetica; font-size: 16px; font-weight: bold; text-decoration: underline; }
+A.pn-logo:active  { color: #003399; font-family: Tahoma, Verdana, Helvetica; font-size: 16px; font-weight: bold; text-decoration: underline; }
+
+.pn-logo-small { color: #000000; font-family: Tahoma, Verdana, Helvetica; font-size: 11px; font-weight: bold; text-decoration: none; }
+
+.pn-pagetitle    { color: #000000; font-family: Tahoma, Verdana, Helvetica; font-size: 14px; font-weight: bold; text-decoration: none; }
+.pn-blocktitle   { color: #6477d6; FONT-FAMILY: Tahoma, Verdana, Helvetica; FONT-SIZE: 12px; FONT-WEIGHT: bold; text-decoration: none; }
+/* LDH - added bgcolor */
+.pn-blockcontent { color: #0C42BC; background:#FFFF99; FONT-FAMILY: Tahoma, Verdana, Helvetica; FONT-SIZE: 11px; font-weight: normal; text-decoration: none; }
+
+.pn-login        { color: #FFFFFF; font-family: Tahoma, Verdana, Helvetica; font-size: 11px; text-decoration: none; FONT-WEIGHT: bold; font-style: italic; }
+
+/* boxover elements */
+.boxover_tab
+{ 
+	background: #fff;
+	color: #800000;	/* orig=#003399 */
+	border-color:#800000;
+	border-style: double double double double;
+	padding: 0 3 0 3;
+	font-size: 12pt;
+	width: 250px;
+}
+
+.boxover
+{ 
+	background: #fff;
+	color: #800000;
+	border-color:#800000;
+	border-style: double double double double;
+	padding: 0 3 0 3;
+	font-size: 12pt;
+}
+
+/* Form elements */
+input,textarea,select { border-color:#0266C4; color:#000000; border:1px solid; font-family: Tahoma, Verdana, Helvetica; font-size : 11px; font-weight : normal; }
+input.post,textarea.post,select { background:#DFF0FF }
+input { text-indent: 2px }
+input.button { background:#efefef; border:1px solid; color:#000000; font:11px Tahoma, Verdana, Helvetica; }
+input.mainoption { background:#fafafa; font-weight:bold }
+input.liteoption { background:#fafafa; font-weight:normal }
+
+/* LDH - Customized button: */
+input.btn
+{
+   color:#050;
+   font-family:'trebuchet ms',helvetica,sans-serif;
+   font-size:9pt;
+   font-weight:bold;
+   background-color:#ffc;
+   border:1px solid;
+   border-top-color:#696;
+   border-left-color:#696;
+   border-right-color:#363;
+   border-bottom-color:#363;
+   filter:progid:DXImageTransform.Microsoft.Gradient
+      (GradientType=0,StartColorStr='#ffffffff',EndColorStr='#ffeeddaa');
+}
+
+/* LDH - customized table cells */
+td.cell
+{
+	border-top:none;
+	border-left:solid;
+	border-bottom:solid windowtext 1.0pt;
+	border-right:solid windowtext 1.0pt;
+  	padding:0in 5.4pt 0in 5.4pt;
+}
+
+/* Sidebar menu selector (choose <div id="...">	
+ */
+/* NOTE: width setting below determines ultimate sidebar width - adjust cautiously */
+#sidebar {
+	float: left;
+	width: 130px;
+}
+
+#sidebar ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#sidebar li {
+	margin-bottom: 5px;
+}
+
+/* LDH - this one appears to affect the left nav main menu */
+#sidebar li ul {
+	padding: 1px;
+	border: none;
+	border-top: none;
+}
+
+#sidebar ul li ul li ul{
+	border: none;
+}
+
+/* This determines the vertical spacing between menu entries
+ * plus adds a dotted line seperator. A border is at a cell level.
+ */
+#sidebar li li {
+	margin: 0;
+	padding: 1px 0;
+	background: url(../images/img09.gif) repeat-x;
+/*	border: solid 1px; */
+}
+
+#sidebar li li.first {
+	background: none;
+}
+
+#sidebar li h2 {
+	height: 30px;
+	margin: 0;
+	padding: 10px 0 0 15px;
+	background: url(../images/img10.jpg) no-repeat;
+	letter-spacing: -1px;
+	color: #327EBE;
+}
+
+#sidebar a:link {
+	text-decoration: none;
+}
+
+#sidebar a:hover {
+	text-decoration: underline;
+}
+
+/* Left nav links w/ starting '>' image */
+#sidebar li a {
+	padding-left: 7px;
+	background: url(../images/img11.gif) no-repeat left center;
+	FONT-SIZE: 12pt;
+	FONT-FAMILY: Helvetica;
+	FONT-WEIGHT: bold;
+}

@@ -1,0 +1,711 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: zeeVision\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-08-31 20:19+0100\n"
+"PO-Revision-Date: 2013-08-31 20:19+0100\n"
+"Last-Translator: Ulrich Pogson <grapplerulrich@gmail.com>\n"
+"Language-Team: ThemeZee <contact@themezee.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e;_x;_ex;_n;esc_attr_e;esc_attr__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 1.5.7\n"
+
+#: 404.php:9
+msgid "404 Error: Not found"
+msgstr ""
+
+#: 404.php:12
+msgid ""
+"The page you trying to reach does not exist, or has been moved. Please use "
+"the menus or the search box to find what you are looking for"
+msgstr ""
+
+#: 404.php:14
+msgid "Search"
+msgstr ""
+
+#: 404.php:17
+msgid "Recent Posts"
+msgstr ""
+
+#: 404.php:27
+msgid "Pages"
+msgstr ""
+
+#: archive.php:10
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr ""
+
+#: archive.php:10
+msgid "F Y"
+msgstr ""
+
+#: archive.php:12
+msgid "Archives"
+msgstr ""
+
+#: author.php:12
+#, php-format
+msgid "Author Archives: %s"
+msgstr ""
+
+#: category.php:8
+#, php-format
+msgid "Category Archives: %s"
+msgstr ""
+
+#: comments.php:13
+msgid "Enter password to view comments."
+msgstr ""
+
+#: comments.php:21 includes/template-tags.php:74
+msgid "One comment"
+msgstr ""
+
+#: comments.php:21 includes/template-tags.php:74
+#, php-format
+msgid "% comments"
+msgstr ""
+
+#: comments.php:44
+msgid "Leave a Reply"
+msgstr ""
+
+#: comments.php:45
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr ""
+
+#: functions.php:90
+msgid "Main Navigation"
+msgstr ""
+
+#: functions.php:122
+msgid "Main Sidebar"
+msgstr ""
+
+#: functions.php:124
+msgid ""
+"Appears on posts and also pages (in case Sidebar Pages has no widgets) "
+"except frontpage/fullwidth template."
+msgstr ""
+
+#: functions.php:131
+msgid "Sidebar Pages"
+msgstr ""
+
+#: functions.php:133
+msgid ""
+"Appears on static pages only. Leave this widget area empty to use Main "
+"Sidebar on pages."
+msgstr ""
+
+#: functions.php:142 includes/options/settings/settings-frontpage.php:16
+msgid "Frontpage Widgets"
+msgstr ""
+
+#: functions.php:144
+msgid "Three column horizontal widget area displayed on frontpage template."
+msgstr ""
+
+#: functions.php:201
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: functions.php:215
+msgid "zeeVision Theme"
+msgstr ""
+
+#: functions.php:243
+msgid "Pingback:"
+msgstr ""
+
+#: functions.php:244 functions.php:260
+msgid "(Edit)"
+msgstr ""
+
+#: functions.php:254
+#, php-format
+msgid "%s says:"
+msgstr ""
+
+#: functions.php:270
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: image.php:22
+msgid "Previous"
+msgstr ""
+
+#: image.php:23
+msgid "Next"
+msgstr ""
+
+#: image.php:25
+msgid "Return to Gallery"
+msgstr ""
+
+#: image.php:26
+msgid "Return to"
+msgstr ""
+
+#: loop-excerpt.php:11 loop.php:10 includes/template-tags.php:208
+#: includes/template-tags.php:247
+msgid "Read more &raquo;"
+msgstr ""
+
+#: search.php:9 search.php:23
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: search.php:29
+msgid ""
+"No matches. Please try again, or use the navigation menus to find what you "
+"search for."
+msgstr ""
+
+#: searchform.php:3
+msgid "Search..."
+msgstr ""
+
+#: sidebar.php:20
+msgid "Widget Area"
+msgstr ""
+
+#: tag.php:8
+#, php-format
+msgid "Tag Archives: %s"
+msgstr ""
+
+#: includes/template-tags.php:54
+#, php-format
+msgid ""
+"Posted on <a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time datetime="
+"\"%3$s\">%4$s</time></a>"
+msgstr ""
+
+#: includes/template-tags.php:64
+#, php-format
+msgid "by <a href=\"%1$s\" title=\"%2$s\" rel=\"author\">%3$s</a>"
+msgstr ""
+
+#: includes/template-tags.php:66
+#, php-format
+msgid "View all posts by %s"
+msgstr ""
+
+#: includes/template-tags.php:74
+msgid "Leave a comment"
+msgstr ""
+
+#: includes/template-tags.php:78
+msgid "Edit Post"
+msgstr ""
+
+#: includes/template-tags.php:90 includes/template-tags.php:106
+#, php-format
+msgid "Posted in %1$s"
+msgstr ""
+
+#: includes/template-tags.php:113
+#, php-format
+msgid "tagged with %1$s"
+msgstr ""
+
+#: includes/template-tags.php:139
+msgid "&laquo; Older Entries"
+msgstr ""
+
+#: includes/template-tags.php:140
+msgid "Recent Entries &raquo;"
+msgstr ""
+
+#: includes/customization/custom-jscript.php:18
+msgid "Menu"
+msgstr ""
+
+#: includes/options/options-framework.php:17
+#: includes/options/options-framework.php:71
+msgid "Theme Options"
+msgstr ""
+
+#: includes/options/options-framework.php:43
+msgid "Use this Image"
+msgstr ""
+
+#: includes/options/options-framework.php:75
+msgid "Theme Options successfully updated."
+msgstr ""
+
+#: includes/options/options-framework.php:101
+msgid "Save Changes"
+msgstr ""
+
+#: includes/options/options-framework.php:133
+#: includes/options/options-framework.php:135
+msgid "Welcome"
+msgstr ""
+
+#: includes/options/options-framework.php:283
+msgid "Upload Image"
+msgstr ""
+
+#: includes/options/options-setup.php:28
+msgid "General"
+msgstr ""
+
+#: includes/options/options-setup.php:33
+msgid "Colors"
+msgstr ""
+
+#: includes/options/options-setup.php:38
+msgid "Front Page"
+msgstr ""
+
+#: includes/options/options-setup.php:43
+#: includes/options/settings/settings-frontpage.php:60
+#: includes/options/settings/settings-slider.php:47
+#: includes/options/settings/settings-slider.php:86
+msgid "Slider Content"
+msgstr ""
+
+#: includes/options/options-setup.php:57
+msgid "Theme Data"
+msgstr ""
+
+#: includes/options/options-setup.php:59
+msgid "Name"
+msgstr ""
+
+#: includes/options/options-setup.php:60
+msgid "Version"
+msgstr ""
+
+#: includes/options/options-setup.php:61
+msgid "(Changelog)"
+msgstr ""
+
+#: includes/options/options-setup.php:62
+msgid "Author"
+msgstr ""
+
+#: includes/options/options-setup.php:67
+msgid "Upgrade"
+msgstr ""
+
+#: includes/options/options-setup.php:70
+msgid "Check out the PRO Version"
+msgstr ""
+
+#: includes/options/options-setup.php:71
+msgid "Join the Theme Club and get Support"
+msgstr ""
+
+#: includes/options/options-setup.php:76
+msgid "Help to translate"
+msgstr ""
+
+#: includes/options/options-setup.php:78
+msgid ""
+"You want to use this WordPress theme in your native language? Then help out "
+"to translate it!"
+msgstr ""
+
+#: includes/options/options-setup.php:80
+msgid "Join the Online Translation Project"
+msgstr ""
+
+#: includes/options/options-setup.php:85
+msgid "Subscribe Now"
+msgstr ""
+
+#: includes/options/options-setup.php:87
+msgid ""
+"Subscribe now and get informed about each <b>Theme Release</b> from ThemeZee."
+msgstr ""
+
+#: includes/options/options-setup.php:89
+msgid "RSS Feed"
+msgstr ""
+
+#: includes/options/options-setup.php:90
+msgid "Email Subscription"
+msgstr ""
+
+#: includes/options/options-setup.php:91
+msgid "Follow me on Twitter"
+msgstr ""
+
+#: includes/options/options-setup.php:92
+msgid "Become a Facebook Fan"
+msgstr ""
+
+#: includes/options/options-setup.php:109
+msgid "Thank you for installing this theme!"
+msgstr ""
+
+#: includes/options/options-setup.php:111
+msgid "Welcome to"
+msgstr ""
+
+#: includes/options/options-setup.php:113
+msgid ""
+"First of all, the theme options might alarm you, <b>but don't panic</b>. "
+"Everything is organized and documented well enough for you."
+msgstr ""
+
+#: includes/options/options-setup.php:118
+msgid "Want more features?"
+msgstr ""
+
+#: includes/options/options-setup.php:120
+msgid "Check out"
+msgstr ""
+
+#: includes/options/options-setup.php:121
+msgid ""
+"The <b>PRO Version</b> provide additional features to <b>customize</b> and "
+"configure your Theme."
+msgstr ""
+
+#: includes/options/options-setup.php:122
+msgid "Some Pro Features:"
+msgstr ""
+
+#: includes/options/options-setup.php:124
+msgid "+ Custom Color Management"
+msgstr ""
+
+#: includes/options/options-setup.php:125
+msgid "+ Unlimited Slides on frontpage template"
+msgstr ""
+
+#: includes/options/options-setup.php:126
+msgid "+ several Pro Widgets"
+msgstr ""
+
+#: includes/options/options-setup.php:127
+msgid "+ Custom Font Manager"
+msgstr ""
+
+#: includes/options/options-setup.php:128
+msgid "+ Footer Widgets"
+msgstr ""
+
+#: includes/options/options-setup.php:129
+msgid "+ and a lot more.."
+msgstr ""
+
+#: includes/options/options-setup.php:131
+msgid "Learn more about the PRO Version"
+msgstr ""
+
+#: includes/options/options-setup.php:136
+msgid "Need support?"
+msgstr ""
+
+#: includes/options/options-setup.php:138
+msgid "Join the Theme Club"
+msgstr ""
+
+#: includes/options/options-setup.php:139
+msgid ""
+"You want <b>top-notch Support</b> for installing and configuring your Theme? "
+"Become a <b>Member</b>!"
+msgstr ""
+
+#: includes/options/options-setup.php:140
+msgid "Theme Club Features:"
+msgstr ""
+
+#: includes/options/options-setup.php:142
+msgid "+ access to the Support Forum at ThemeZee.com"
+msgstr ""
+
+#: includes/options/options-setup.php:143
+msgid "+ download all Pro Themes"
+msgstr ""
+
+#: includes/options/options-setup.php:144
+msgid "+ advanced online Theme Documentation"
+msgstr ""
+
+#: includes/options/options-setup.php:145
+msgid "+ fast and helpful answers to all your questions"
+msgstr ""
+
+#: includes/options/options-setup.php:147
+msgid "Learn more about the Theme Club"
+msgstr ""
+
+#: includes/options/options-setup.php:154
+msgid "Not happy with"
+msgstr ""
+
+#: includes/options/options-setup.php:156
+msgid "ThemeZee.com provide several other <b>free WordPress Themes</b>."
+msgstr ""
+
+#: includes/options/options-setup.php:157
+msgid "Click here to browse through all of my themes."
+msgstr ""
+
+#: includes/options/settings/settings-colors.php:7
+msgid "Predefined Color Schemes"
+msgstr ""
+
+#: includes/options/settings/settings-colors.php:15
+msgid "Black"
+msgstr ""
+
+#: includes/options/settings/settings-colors.php:16
+msgid "Brown"
+msgstr ""
+
+#: includes/options/settings/settings-colors.php:17
+msgid "Green"
+msgstr ""
+
+#: includes/options/settings/settings-colors.php:18
+msgid "Orange"
+msgstr ""
+
+#: includes/options/settings/settings-colors.php:19
+msgid "Purple"
+msgstr ""
+
+#: includes/options/settings/settings-colors.php:20
+msgid "Red"
+msgstr ""
+
+#: includes/options/settings/settings-colors.php:21
+msgid "Teal"
+msgstr ""
+
+#: includes/options/settings/settings-colors.php:22
+msgid "Standard"
+msgstr ""
+
+#: includes/options/settings/settings-colors.php:29
+msgid "Set Color Scheme"
+msgstr ""
+
+#: includes/options/settings/settings-colors.php:30
+msgid "Please select your color scheme here."
+msgstr ""
+
+#: includes/options/settings/settings-frontpage.php:7
+msgid "Activate Frontpage Template"
+msgstr ""
+
+#: includes/options/settings/settings-frontpage.php:10
+msgid "Frontpage Slider"
+msgstr ""
+
+#: includes/options/settings/settings-frontpage.php:13
+msgid "Frontpage Intro"
+msgstr ""
+
+#: includes/options/settings/settings-frontpage.php:26
+msgid "Turn on Frontpage Template?"
+msgstr ""
+
+#: includes/options/settings/settings-frontpage.php:27
+msgid ""
+"Check this to automatically display the frontpage template on HOME page. You "
+"can also manually create a page and select the \"Frontpage Template\" page "
+"template instead of using this option."
+msgstr ""
+
+#: includes/options/settings/settings-frontpage.php:35
+msgid "Show Frontpage Slider?"
+msgstr ""
+
+#: includes/options/settings/settings-frontpage.php:36
+msgid ""
+"Check this to activate the Slideshow displayed on the front page template."
+msgstr ""
+
+#: includes/options/settings/settings-frontpage.php:42
+msgid "Slider Animation"
+msgstr ""
+
+#: includes/options/settings/settings-frontpage.php:48
+msgid "Horizontal Slider"
+msgstr ""
+
+#: includes/options/settings/settings-frontpage.php:49
+msgid "Fade Slider"
+msgstr ""
+
+#: includes/options/settings/settings-frontpage.php:53
+msgid "Slider Speed"
+msgstr ""
+
+#: includes/options/settings/settings-frontpage.php:54
+msgid ""
+"Enter the speed of the slideshow cycling (timeout between slides), in "
+"milliseconds."
+msgstr ""
+
+#: includes/options/settings/settings-frontpage.php:61
+msgid ""
+"Please note: You can insert your content which is displayed in the slideshow "
+"on the <b>\"Slider Content\" tab</b>."
+msgstr ""
+
+#: includes/options/settings/settings-frontpage.php:69
+msgid "Frontpage Intro Text"
+msgstr ""
+
+#: includes/options/settings/settings-frontpage.php:70
+msgid "Enter here the Text of the Frontpage Intro."
+msgstr ""
+
+#: includes/options/settings/settings-frontpage.php:78
+msgid "About Frontpage Widgets"
+msgstr ""
+
+#: includes/options/settings/settings-frontpage.php:79
+msgid ""
+"Please note: You can configure your widgets to be displayed on the frontpage "
+"template on <b>Appearance > Widgets</b>."
+msgstr ""
+
+#: includes/options/settings/settings-general.php:7
+msgid "Header Settings"
+msgstr ""
+
+#: includes/options/settings/settings-general.php:10
+msgid "Layout Settings"
+msgstr ""
+
+#: includes/options/settings/settings-general.php:13
+msgid "Custom CSS Code"
+msgstr ""
+
+#: includes/options/settings/settings-general.php:24
+msgid "Logo Image"
+msgstr ""
+
+#: includes/options/settings/settings-general.php:25
+msgid ""
+"Paste the full Image URL of your logo or click Upload Image. Leave this "
+"field blank to display the site title instead of a logo image."
+msgstr ""
+
+#: includes/options/settings/settings-general.php:31
+msgid "Show Tagline?"
+msgstr ""
+
+#: includes/options/settings/settings-general.php:32
+msgid ""
+"Check this if you want to show your tagline(blog description) below the logo"
+msgstr ""
+
+#: includes/options/settings/settings-general.php:40
+msgid "Sidebar Options"
+msgstr ""
+
+#: includes/options/settings/settings-general.php:46
+msgid "Left Sidebar"
+msgstr ""
+
+#: includes/options/settings/settings-general.php:47
+msgid "Right Sidebar"
+msgstr ""
+
+#: includes/options/settings/settings-general.php:51
+msgid "Footer Content"
+msgstr ""
+
+#: includes/options/settings/settings-general.php:52
+msgid "Enter the content which is displayed in the footer here."
+msgstr ""
+
+#: includes/options/settings/settings-general.php:60
+msgid "Custom CSS"
+msgstr ""
+
+#: includes/options/settings/settings-general.php:61
+msgid "Place your Custom CSS code here."
+msgstr ""
+
+#: includes/options/settings/settings-slider.php:7
+msgid "Frontpage Slideshow"
+msgstr ""
+
+#: includes/options/settings/settings-slider.php:10
+msgid "Frontpage Slide #1"
+msgstr ""
+
+#: includes/options/settings/settings-slider.php:13
+msgid "Frontpage Slide #2"
+msgstr ""
+
+#: includes/options/settings/settings-slider.php:23
+msgid "About the FrontPage Slider"
+msgstr ""
+
+#: includes/options/settings/settings-slider.php:24
+msgid ""
+"<b>Please note:</b> The slider content inserted here on this option page is "
+"displayed in the frontpage slideshow. You have to <b>activate the frontpage "
+"template and frontpage slider</b> on the \"Front Page\" tab in order to "
+"display the slideshow."
+msgstr ""
+
+#: includes/options/settings/settings-slider.php:33
+#: includes/options/settings/settings-slider.php:72
+msgid "Slider Image"
+msgstr ""
+
+#: includes/options/settings/settings-slider.php:34
+#: includes/options/settings/settings-slider.php:73
+msgid ""
+"You can upload your slider image by clicking \"Upload Image\" or just paste "
+"the full Image URL here."
+msgstr ""
+
+#: includes/options/settings/settings-slider.php:40
+#: includes/options/settings/settings-slider.php:79
+msgid "Slider Title"
+msgstr ""
+
+#: includes/options/settings/settings-slider.php:41
+#: includes/options/settings/settings-slider.php:80
+msgid "Please enter the slider title here."
+msgstr ""
+
+#: includes/options/settings/settings-slider.php:48
+#: includes/options/settings/settings-slider.php:87
+msgid "You can enter the slideshow content here (basic HTML allowed)."
+msgstr ""
+
+#: includes/options/settings/settings-slider.php:54
+#: includes/options/settings/settings-slider.php:93
+msgid "Slider Link Name"
+msgstr ""
+
+#: includes/options/settings/settings-slider.php:55
+#: includes/options/settings/settings-slider.php:94
+msgid ""
+"Enter the link name in case your slide should be hyperlinked to some URL."
+msgstr ""
+
+#: includes/options/settings/settings-slider.php:61
+#: includes/options/settings/settings-slider.php:100
+msgid "Slider Link URL"
+msgstr ""
+
+#: includes/options/settings/settings-slider.php:62
+#: includes/options/settings/settings-slider.php:101
+msgid "Enter the URL of the link which the slide should point to."
+msgstr ""

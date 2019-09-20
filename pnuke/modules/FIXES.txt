@@ -1,0 +1,15 @@
+
+=== -patch1 ===
+
+* Fix for urls in attachment mod viewing member profile and view attachment
+  control panel
+* Correct "post not available" when deleting posts while post notification is
+  disabled
+* Fix: Adding members to usergroups doesn't work
+* Fix: Unable to modify user profiles in the admin panel
+* Fix: Missing pagination in merbers list
+* Fix "Quote Selected" button in quick reply
+* Fix wrong redirection when post confirmation is disabled
+* Fix new PN popup with Firefox
+* Support for automated version check in admin panel
+* Added Gravatar support

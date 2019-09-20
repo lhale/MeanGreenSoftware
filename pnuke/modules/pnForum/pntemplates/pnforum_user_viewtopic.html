@@ -1,0 +1,238 @@
+<!--[*  $Id: pnforum_user_viewtopic.html,v 1.78 2005/11/05 12:50:18 landseer Exp $  *]-->
+
+<!--[ include file='pnforum_user_header.html' ]-->
+
+<!--[ pnmodcallhooks hookobject=item hookaction=display hookid=$topic.topic_id implode=false ]-->
+
+<!--[ pnimg src="profile.gif" assign=profile alt='_PNFORUM_PROFILE' altml=true ]-->
+
+<!--[* pndebug *]-->
+
+<div style="text-align: left;">
+<!--[ if $topic.access_moderate eq 1 ]-->
+    <p>
+    <!--[ if $topic.topic_status eq 0 ]-->
+        <a title="<!--[ pnml name='_PNFORUM_LOCKTOPIC' ]-->" href="<!--[ pnmodurl modname=pnForum type=user func=topicadmin mode=lock topic=$topic.topic_id ]-->"><!--[ pnimg src="lock_topic.gif" alt="_PNFORUM_LOCKTOPIC" altml=true ]--></a>
+    <!--[ else ]-->
+        <a title="<!--[ pnml name='_PNFORUM_UNLOCKTOPIC' ]-->" href="<!--[ pnmodurl modname=pnForum type=user func=topicadmin mode=unlock topic=$topic.topic_id ]-->"><!--[ pnimg src="unlock_topic.gif" alt="_PNFORUM_UNLOCKTOPIC" altml=true ]--></a>
+    <!--[ /if ]-->
+    <!--[ if $topic.sticky eq 0 ]-->
+        <a title="<!--[ pnml name='_PNFORUM_STICKYTOPIC' ]-->" href="<!--[ pnmodurl modname=pnForum type=user func=topicadmin mode=sticky topic=$topic.topic_id ]-->"><!--[ pnimg src="make_sticky.gif" alt="_PNFORUM_STICKYTOPIC" altml=true ]--></a>
+    <!--[ else ]-->
+        <a title="<!--[ pnml name='_PNFORUM_UNSTICKYTOPIC' ]-->" href="<!--[ pnmodurl modname=pnForum type=user func=topicadmin mode=unsticky topic=$topic.topic_id ]-->"><!--[ pnimg src="make_unsticky.gif" alt="_PNFORUM_UNSTICKYTOPIC" altml=true ]--></a>
+    <!--[ /if ]-->
+    <a title="<!--[ pnml name='_PNFORUM_MOVETOPIC' ]-->" href="<!--[ pnmodurl modname=pnForum type=user func=topicadmin mode=move topic=$topic.topic_id ]-->"><!--[ pnimg src="move_topic.gif" alt="_PNFORUM_MOVETOPIC" altml=true ]--></a>
+    <a title="<!--[ pnml name='_PNFORUM_DELETETOPIC' ]-->" href="<!--[ pnmodurl modname=pnForum type=user func=topicadmin mode=delete topic=$topic.topic_id ]-->"><!--[ pnimg src="delete_topic.gif" alt="_PNFORUM_DELETETOPIC" altml=true ]--></a>
+</p>
+<!--[ /if ]-->
+<br />
+<p>
+<!--[ if $topic.topic_id neq $topic.prev_topic_id ]-->
+<a title="<!--[ pnml name='_PNFORUM_PREVIOUS_TOPIC' ]-->" href="<!--[ pnmodurl modname=pnForum type=user func=viewtopic topic=$topic.prev_topic_id ]-->"><!--[ pnimg src="prev.gif" alt="_PNFORUM_PREVIOUS_TOPIC" altml=true ]--></a>
+<!--[ /if ]-->
+<!--[ addtopic_button forum_id=$topic.forum_id cat_id=$topic.cat_id ]-->
+<!--[ mailtopic_button topic_id=$topic.topic_id cat_id=$topic.cat_id forum_id=$topic.forum_id ]-->
+<!--[ printtopic_button topic_id=$topic.topic_id cat_id=$topic.cat_id forum_id=$topic.forum_id ]-->
+<!--[ subscribetopic_button topic_id=$topic.topic_id cat_id=$topic.cat_id forum_id=$topic.forum_id ]-->
+<!--[ if $topic.topic_id neq $topic.next_topic_id ]-->
+<a title="<!--[ pnml name='_PNFORUM_NEXT_TOPIC' ]-->" href="<!--[ pnmodurl modname=pnForum type=user func=viewtopic topic=$topic.next_topic_id ]-->"><!--[ pnimg src="next.gif" alt="_PNFORUM_NEXT_TOPIC" altml=true ]--></a>
+<!--[ /if ]-->
+</p>
+<p>
+<!--[* start of breadcrumbs *]-->
+<a href="<!--[ pnmodurl modname=pnForum type=user func=main ]-->"><strong><!--[ pnml name='_PNFORUM_START' ]--></strong></a><strong><!--[ pnml name='_PNFORUM_SEPARATOR' html=1 ]--></strong>
+<a href="<!--[ pnmodurl modname=pnForum type=user func=main viewcat=$topic.cat_id ]-->"><strong><!--[ $topic.cat_title ]--></strong></a><strong><!--[ pnml name='_PNFORUM_SEPARATOR' html=1 ]--></strong>
+<a href="<!--[ pnmodurl modname=pnForum type=user func=viewforum forum=$topic.forum_id]-->"><strong><!--[ $topic.forum_name ]--></strong></a><strong><!--[ pnml name='_PNFORUM_SEPARATOR' html=1 ]-->
+<!--[ $topic.topic_title|pnvarprepfordisplay|pnvarcensor ]--></strong><br />
+<!--[* end of breadcrumbs *]-->
+<!--[ pnml name='_PNFORUM_MODERATEDBY' ]-->:
+<!--[ listforummods moderators=$topic.forum_mods ]-->
+</p>
+</div>
+<!--[ topicpager total=$topic.total_posts start=$topic.post_start topic_id=$topic.topic_id ]-->
+<table class="pnForum-border" border="0" cellpadding="5" cellspacing="0" width="100%" summary="<!--[ $topic.topic_title|pnvarprepfordisplay|pnvarcensor ]-->">
+    <thead>
+    <tr style="background-color:<!--[ $bgcolor2 ]-->;text-align:left;">
+        <th id="col_0" abbr="<!--[ pnml name='_PNFORUM_AUTHOR' ]-->" style="width:20%;"><a id="top" title="<!--[ pnml name='_PNFORUM_BOTTOM' ]-->" href="#bottom"><!--[ pnimg src="go_down.gif" alt="_PNFORUM_BOTTOM" altml=true ]--></a>&nbsp;</th>
+        <th id="col_1" abbr="<!--[ pnml name='_PNFORUM_TOPIC' ]-->" colspan="2" style="width:80%;"><h1 class="pn-title"><strong><!--[ $topic.topic_title|pnvarprepfordisplay|pnvarcensor ]--></strong></h1></th>
+    </tr>
+    </thead>
+    <tbody>
+        <!--[ counter start=0 print=false assign=post_counter]-->
+        <!--[ foreach key=num item=post from=$topic.posts ]-->
+        <!--[ counter ]-->
+        <tr style="background-color:<!--[ $bgcolor3 ]-->;">
+            <td align="left">
+                <!--[ if $post_counter == $post_count ]-->
+                <a id="bottom" />
+                <!--[ /if ]-->
+                <a id="pid<!--[ $post.post_id ]-->" />
+                <!--[ if $post.poster_data.pn_uid neq 1 ]-->
+                    <strong><!--[ $post.poster_data.pn_uname|profilelink ]--></strong>
+                <!--[ else ]-->
+                    <strong><!--[ $post.poster_data.pn_uname ]--></strong>
+                <!--[ /if ]-->
+            </td>
+            <td align="right" colspan="2">
+                <strong><!--[ pnml name='_PNFORUM_POSTED' ]-->:</strong>&nbsp;<!--[ $post.posted_unixtime|date_format:"%d.%m.%Y, %H:%M" ]-->
+                <!--[ if $post.poster_data.moderate eq true]-->
+                    <!--[ if ($num neq 0) or ($topic.start neq 0)  ]-->
+                        <a title="<!--[ pnml name='_PNFORUM_MOVEPOST' ]-->" href="<!--[ pnmodurl modname=pnForum type=user func=movepost post=$post.post_id ]-->"><!--[ pnimg src="move_post.gif" alt='_PNFORUM_MOVEPOST' altml=true ]--></a>
+                        <a title="<!--[ pnml name='_PNFORUM_SPLITTOPIC' ]-->" href="<!--[ pnmodurl modname=pnForum type=user func=splittopic post=$post.post_id ]-->"><!--[ pnimg src="splitit.gif" alt='_PNFORUM_SPLITTOPIC' altml=true ]--></a>
+                    <!--[ /if ]-->
+                <!--[ /if ]-->
+            </td>
+        </tr>
+        <tr style="background-color:none;text-align:left;">
+            <td headers="col_0" style="background-color:<!--[ $bgcolor3 ]-->;" valign="top">
+            <!--[ if $post.poster_data.pn_uid neq 1 ]-->
+                <!--[ if $post.poster_data.rank ]-->
+                    <strong><!--[ $post.poster_data.rank|pnvarprepfordisplay ]--></strong>
+                    <!--[ if $post.poster_data.rank_image ]-->
+                        <br /><img src="<!--[ $post.poster_data.rank_image ]-->" alt="<!--[ $post.poster_data.rank ]-->" <!--[ $post.poster_data.rank_image_image_attr.3 ]--> />
+                    <!--[ /if ]-->
+                <!--[ /if ]-->
+                <br />
+                <!--[ if $post.poster_data.pn_user_avatar_attr.0 neq 1 ]-->
+                <!--[ $post.poster_data.pn_uname|profilelink:'':$post.poster_data.pn_user_avatar ]-->
+                <!--[ /if ]-->
+                <br />
+                <br /><div style="border-top-style: solid; border-top-width: 1px;"><!--[ pnml name='_PNFORUM_REG_SINCE' ]-->:&nbsp;<!--[ $post.poster_data.pn_user_regdate|pndate_format:"%b. %Y"  ]--></div>
+                <!--[ pnml name='_PNFORUM_POSTS' ]-->:&nbsp;<!--[ $post.poster_data.user_posts ]-->
+                <br /><br /><!--[ pnml name='_PNFORUM_STATUS' ]-->:&nbsp;<!--[ if $post.poster_data.online  ]--><!--[ pnml name='_PNFORUM_ONLINE' ]--><!--[ else ]--><!--[ pnml name='_PNFORUM_OFFLINE' ]--><!--[ /if ]-->
+                <br /><!--[ if !$post.poster_data.online  ]--><!--[ pnml name='_PNFORUM_LAST_SEEN' ]-->:&nbsp;<!--[ $post.poster_data.user_lastvisit|date_format:"%d.%m.%y"  ]--><!--[ /if ]-->
+                <!--[ if $post.poster_data.pn_uid neq 1 ]-->
+                    <!--[ if $post.poster_data.seeip eq true ]-->
+                        <br /><a title="<!--[ pnml name='_PNFORUM_VIEWIP' ]-->" href="<!--[ pnmodurl modname=pnForum type=user func=topicadmin mode=viewip post=$post.post_id topic=$topic.topic_id ]-->"><!--[ pnml name='_PNFORUM_VIEWIP' ]--></a>
+                    <!--[ /if ]-->
+                <!--[ /if ]-->
+                <!--[ else ]-->
+                    <!--[ pnml name='_PNFORUM_UNREGISTERED' ]-->
+
+                <!--[ /if ]-->
+
+            </td>
+            <td colspan="2" style="vertical-align:top;background-color:<!--[ $bgcolor1 ]-->;" headers="col_1">
+                <!--[ $post.post_text ]-->
+            </td>
+        </tr>
+        <tr style="height:18px;">
+            <td headers="col_0" style="background-color:<!--[ $bgcolor3 ]-->;">
+                <a title="<!--[ pnml name='_PNFORUM_TOP' ]-->" href="#top"><!--[ pnimg src="go_up.gif" alt="_PNFORUM_TOP" altml=true ]--></a>&nbsp;
+            </td>
+            <td headers="col_1" style="background-color:<!--[ $bgcolor3 ]-->;">
+                <!--[ if $post.poster_data.pn_uid neq 1 ]-->
+                    <!--[ $post.poster_data.pn_uname|profilelink:'':$profile ]-->
+                    <!--[ pnmodgetinfo modname='Messages' info='type' assign=type]-->
+                    <!--[ if $type eq 1 ]-->
+                    <a title="<!--[ pnml name='_PNFORUM_SEND_PM' ]-->" href="index.php?name=Messages&amp;file=replypmsg&amp;send=1&amp;uname=<!--[ $post.poster_data.pn_uname ]-->"><!--[ pnimg src="sendpm.gif" alt='_PNFORUM_SEND_PM' altml=true ]--></a>
+                    <!--[ else ]-->
+                    <a title="<!--[ pnml name='_PNFORUM_SEND_PM' ]-->" href="<!--[ pnmodurl modname=Messages func=compose uname=$post.poster_data.pn_uname ]-->"><!--[ pnimg src="sendpm.gif" alt='_PNFORUM_SEND_PM' altml=true ]--></a>
+                    <!--[ /if ]-->
+                    <!--[ if $post.poster_data.pn_url neq "" ]-->
+                        <a title="<!--[ pnml name='_PNFORUM_HOMEPAGE' ]-->" href="<!--[ $post.poster_data.pn_url|pnvarprepfordisplay]-->"><!--[ pnimg src="myhp.gif" alt='_PNFORUM_HOMEPAGE' altml=true ]--></a>
+                    <!--[ /if ]-->
+
+
+
+                <!--[ /if ]-->
+            </td>
+            <td headers="col_1" style="text-align:right;background-color:<!--[ $bgcolor3 ]-->;">
+                <!--[ if $topic.topic_status neq 1 ]-->
+                    <!--[ if $post.poster_data.reply eq true]-->
+                        <a title="<!--[ pnml name='_PNFORUM_REPLYQUOTE' ]-->" href="<!--[ pnmodurl modname=pnForum type=user func=reply post=$post.post_id ]-->"><!--[ pnimg src="answertoz.gif" alt='_PNFORUM_REPLYQUOTE' altml=true ]--></a>
+                    <!--[ /if ]-->
+                    <!--[ if $post.poster_data.edit eq true]-->
+                        <a title="<!--[ pnml name='_PNFORUM_EDITDELETE' ]-->" href="<!--[ pnmodurl modname=pnForum type=user func=editpost post=$post.post_id ]-->"><!--[ pnimg src="modify.gif" alt='_PNFORUM_EDITDELETE' altml=true ]--></a>
+                    <!--[ /if ]-->
+                <!--[ else ]-->
+                    <!--[ pnimg src=closedt.gif alt="_PNFORUM_TOPICLOCKED" altml=true ]-->
+                <!--[ /if ]-->
+                <a href="<!--[ pnmodurl modname=pnForum type=user func=report post=$post.post_id ]-->" title="<!--[ pnml name='_PNFORUM_NOTIFYMODERATOR ]-->"><!--[ pnimg src="notifymod.gif" ]--></a>
+            </td>
+        </tr>
+        <tr style="height:5px;">
+            <td colspan="3">&nbsp;</td>
+        </tr>
+        <!--[ /foreach ]-->
+    </tbody>
+</table>
+<!--[ topicpager total=$topic.total_posts start=$topic.post_start topic_id=$topic.topic_id ]-->
+<br />
+<!--[ pnupper_fileuploads objectid=$topic.topic_id ]-->
+<br />
+<!--[ if ($topic.topic_status neq 1) and ($topic.access_comment eq true) ]-->
+    <div style="clear: both;">
+    <form name="post" id="post" action="<!--[ pnmodurl modname=pnForum type=user func=reply ]-->" method="post" enctype="multipart/form-data">
+    <table class="pnForum-border" border="0" cellpadding="5" cellspacing="0" width="100%" summary="<!--[ pnml name='_PNFORUM_QUICKREPLY' ]-->">
+        <tr style="width:100%;">
+            <td colspan="2"><strong><!--[ pnml name='_PNFORUM_OPTIONS' ]--></strong></td>
+            <td style="width:70%;"><strong><!--[ pnml name='_PNFORUM_ONEREPLY' ]--></strong></td>
+        </tr>
+        <tr style="width:100%;">
+            <td colspan="2">
+                <table border="0" cellpadding="1" cellspacing="0">
+                    <!--[ if $pncore.logged_in ]-->
+                    <tr style="width:100%;">
+                        <td style="width:5%;"><input type="checkbox" id="attach_signature" name="attach_signature" checked="checked" value="1" /></td>
+                        <td style="text-align:left;"><label for="attach_signature"><!--[ pnml name='_PNFORUM_ATTACHSIGNATURE' ]--></label></td>
+                    </tr>
+                    <tr style="width:100%;">
+                        <td style="width:5%;"><input type="checkbox" id="subscribe_topic" name="subscribe_topic" <!--[ if $topic.is_subscribed eq true ]-->checked="checked"<!--[ /if ]--> value="1" /></td>
+                        <td style="text-align:left;"><label for="subscribe_topic"><!--[ pnml name='_PNFORUM_NOTIFYME' ]--></label></td>
+                    </tr>
+                    <!--[ /if ]-->
+                    <tr style="width:100%;">
+                        <td style="width:5%;"><input type="checkbox" name="preview" id="preview" tabindex="0" /></td>
+                        <td style="text-align:left;"><label for="preview"><!--[ pnml name='_PNFORUM_PREVIEW' ]--></label></td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <textarea name="message" rows="5" cols="50" id="message"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="vertical-align:top; text-align:center;">
+                <br /><br /><br />
+                <input type="hidden" name="forum" value="<!--[ $topic.forum_id ]-->" />
+                <input type="hidden" name="topic" value="<!--[ $topic.topic_id ]-->" />
+                <input type="hidden" name="quote" value="" />
+                <input type="hidden" name="authid" value="<!--[ pnsecgenauthkey module=pnForum ]-->" />
+
+                <button name="submit" type="submit" value="submit" style="border: none; background: transparent;" title="<!--[ pnml name='_PNFORUM_SUBMIT' ]-->">
+                <!--[ pnimg src="ok.gif" alt="_PNFORUM_SUBMIT" altml=true ]-->
+                </button>
+                <br /><br /><br />
+                <button name="reset" type="button" value="reset" style="border: none; background: transparent;" title="<!--[ pnml name='_PNFORUM_CANCELPOST' ]-->" onclick="self.location.href='<!--[ pnmodurl modname=pnForum type=user func=viewtopic topic=$topic.topic_id ]-->'">
+                <!--[ pnimg src="cancel.gif" alt="_PNFORUM_CANCELPOST" altml=true ]-->
+                </button>
+
+                <!--[*
+                HTML for Typetool - not supported!!!
+                    <input name="submit" type="submit" value=" <!--[ pnml name='_PNFORUM_SUBMIT' ]--> " />
+                    <br /><br /><br />
+                    <input name="cancel" type="submit" value=" <!--[ pnml name='_PNFORUM_CANCELPOST' ]--> " />
+                *]-->
+
+            </td>
+            <td>
+                <!--[ if $pncore.pnForum.striptags == 'yes' ]-->
+                    <!--[ pnml name='_PNFORUM_NOHTMLALLOWED' ]--><br />
+                    <br />
+                <!--[ /if ]-->
+                <!--[ plainbbcode textfieldid=message ]-->
+                <!--[ bbsmile textfieldid=message ]-->
+                <!--[ $hooks.pnUpper ]--><br />
+            </td>
+        </tr>
+    </table>
+    </form>
+
+    </div>
+<!--[ /if ]-->
+<div style="text-align:center;">
+<!--[ $hooks.Ratings ]-->
+</div>
+
+<!--[ include file='pnforum_user_footer.html' ]-->

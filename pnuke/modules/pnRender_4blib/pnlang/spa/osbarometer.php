@@ -1,0 +1,118 @@
+<?php
+
+define('_OS_BAROMETER_TITLE',                   'Barómetro&nbsp;del&nbsp;Sitio');
+define('_OS_BAROMETER_CONFIG',			'Configuración');
+define('_OS_BAROMETER_CONFIG_CACHE_SECONDS',	'Tiempo a guardar en caché el contenido de los bloques (en segundos)');
+define('_OS_BAROMETER_CONFIG_SHOW_LABELS',	'Mostrar Etiquetas');
+define('_OS_BAROMETER_CONFIG_SHOW_USERS',	'Mostrar Estadísticas de Usuario');
+define('_OS_BAROMETER_CONFIG_SHOW_ADDRESSBOOK',	'Mostrar Estadísticas de Libreta de Direcciones');
+define('_OS_BAROMETER_CONFIG_SHOW_CALENDAR',	'Mostrar Estadísticas de Calendario');
+define('_OS_BAROMETER_CONFIG_SHOW_COMMENTS',	'Mostrar Estadísticas de Comentarios');
+define('_OS_BAROMETER_CONFIG_SHOW_DOWNLOADS',	'Mostrar Estadísticas de Descargas');
+define('_OS_BAROMETER_CONFIG_SHOW_EVENTS',	'Mostrar Estadísticas de Eventos');
+define('_OS_BAROMETER_CONFIG_SHOW_FAQS',	'Mostrar Estadísticas de FAQ');
+define('_OS_BAROMETER_CONFIG_SHOW_FORUM',	'Mostrar Estadísticas de Foro');
+define('_OS_BAROMETER_CONFIG_SHOW_HELPDESK',	'Mostrar Estadísticas de Mesa de Ayuda');
+define('_OS_BAROMETER_CONFIG_SHOW_NEWS',	'Mostrar Estadísticas de Noticias');
+define('_OS_BAROMETER_CONFIG_SHOW_PHOTOSHARE',	'Mostrar Estadísticas de Photoshare');
+define('_OS_BAROMETER_CONFIG_SHOW_PAGESETTER',	'Mostrar Estadísticas de Pagesetter');
+define('_OS_BAROMETER_CONFIG_SHOW_PROJECTS',	'Mostrar Estadísticas de Proyectos');
+define('_OS_BAROMETER_CONFIG_SHOW_RBS',		'Mostrar Estadísticas de RBS');
+define('_OS_BAROMETER_CONFIG_SHOW_SERVICE',	'Mostrar Esadísticas de Servicio');
+define('_OS_BAROMETER_CONFIG_SHOW_WEBLINKS',	'Mostrar Estadísticas de Enlaces Web');
+
+define('_OS_BAROMETER_USERS',			'Usuarios');
+define('_OS_BAROMETER_USERS_ALT',		'Usuarios: Logueados / Invitados / Registrados');
+define('_OS_BAROMETER_USERS_COUNT',		'Usuarios Registrados');
+define('_OS_BAROMETER_USERS_GUESTS',		'Invitados');
+define('_OS_BAROMETER_USERS_ONLINE',		'Usuarios logueados');
+
+define('_OS_BAROMETER_ADDRESSBOOK',		'Direcciones');
+define('_OS_BAROMETER_ADDRESSBOOK_ALT',		'Libreta de direcciones: Compañías / Ramas / Direcciones');
+define('_OS_BAROMETER_ADDRESSBOOK_COMPANIES',	'Compañías');
+define('_OS_BAROMETER_ADDRESSBOOK_BRANCHES',	'Ramas');
+define('_OS_BAROMETER_ADDRESSBOOK_ADDRESSES',	'Direcciones');
+
+define('_OS_BAROMETER_CALENDAR',		'Calendario');
+define('_OS_BAROMETER_CALENDAR_ALT',		'Calendario: Categorías / Entradas');
+define('_OS_BAROMETER_CALENDAR_CATEGORIES',	'Número de Categorías');
+define('_OS_BAROMETER_CALENDAR_COUNT',		'Número de Entradas de Calendario');
+
+define('_OS_BAROMETER_COMMENTS',		'Comentarios');
+define('_OS_BAROMETER_COMMENTS_ALT',		'Comentarios: Comentarios / Módulos / Objetos');
+define('_OS_BAROMETER_COMMENTS_COUNT',		'Comentarios Totales');
+define('_OS_BAROMETER_COMMENTS_MODULES',	'Módulos de Comentario');
+define('_OS_BAROMETER_COMMENTS_OBJECTS',	'Objetos de Comentario');
+
+define('_OS_BAROMETER_DOWNLOADS',		'Descargas');
+define('_OS_BAROMETER_DOWNLOADS_ALT',		'Descargas: Descargas / Clicks');
+define('_OS_BAROMETER_DOWNLOADS_COUNT',		'Número de Descargas');
+define('_OS_BAROMETER_DOWNLOADS_HITS',		'Archivos descargados');
+define('_OS_BAROMETER_DOWNLOADS_SIZE',		'Tamaño de Descarga');
+define('_OS_BAROMETER_DOWNLOADS_SIZE_ALT',	'Tamaño de archivo / Tráfico');
+define('_OS_BAROMETER_DOWNLOADS_FILESIZE',	'Tamaño de achivo de Descargas (en MB)');
+define('_OS_BAROMETER_DOWNLOADS_TRAFFIC',	'Tráfico Total de Descargas (en GB)');
+define('_OS_BAROMETER_DOWNLOADS_GB',		'GB');
+
+define('_OS_BAROMETER_EVENTS',			'Eventos');
+define('_OS_BAROMETER_EVENTS_ALT',		'Eventos: Eventos / Registros');
+define('_OS_BAROMETER_EVENTS_COUNT',		'Número de Eventos');
+define('_OS_BAROMETER_EVENTS_REGS',		'Número de Registros');
+
+define('_OS_BAROMETER_FAQ',			'FAQs');
+define('_OS_BAROMETER_FAQ_ALT',			'FAQs: Categorías / FAQs');
+define('_OS_BAROMETER_FAQ_CATEGORIES',		'Número de Categorías');
+define('_OS_BAROMETER_FAQ_COUNT',		'Número de FAQs');
+
+define('_OS_BAROMETER_FORUM',			'Foro');
+define('_OS_BAROMETER_FORUM_ALT',		'Foro: Foros / Temas / Mensajes');
+define('_OS_BAROMETER_FORUM_COUNT',		'Número de Foros');
+define('_OS_BAROMETER_FORUM_TOPICS',		'Número de Temas');
+define('_OS_BAROMETER_FORUM_POSTS',		'Número de Mensajes');
+
+define('_OS_BAROMETER_HELPDESK',		'Mesa de Ayuda');
+define('_OS_BAROMETER_HELPDESK_ALT',		'Mesa de Ayuda: Abiertos / Tickets');
+define('_OS_BAROMETER_HELPDESK_COUNT',		'Número total de Tickets');
+define('_OS_BAROMETER_HELPDESK_OPEN',		'Tickets Abiertos');
+
+define('_OS_BAROMETER_NEWS',			'Noticias');
+define('_OS_BAROMETER_NEWS_ALT',		'Noticias: Temas / Historias / Clicks');
+define('_OS_BAROMETER_NEWS_TOPICS',		'Número de Temas');
+define('_OS_BAROMETER_NEWS_STORIES',		'Número de Historias');
+define('_OS_BAROMETER_NEWS_HITS',		'Número de Lecturas');
+
+define('_OS_BAROMETER_PGSETTER',		'Pagesetter');
+define('_OS_BAROMETER_PGSETTER_ALT',		'Pagesetter: Tipos de Publicación / Publicaciones / Revisiones');
+define('_OS_BAROMETER_PGSETTER_TOPICS',		'Número de Tipos de Publicación');
+define('_OS_BAROMETER_PGSETTER_STORIES',	'Número de Publicaciones');
+define('_OS_BAROMETER_PGSETTER_HITS',		'Número de Revisiones');
+
+define('_OS_BAROMETER_PHOTOSHARE',		'Medios');
+define('_OS_BAROMETER_PHOTOSHARE_ALT',		'Medios: Carpetas / Imágenes');
+define('_OS_BAROMETER_PHOTOSHARE_FOLDERS',	'Número de Carpetas');
+define('_OS_BAROMETER_PHOTOSHARE_IMAGES',	'Número de Imágenes');
+
+define('_OS_BAROMETER_PROJECTS',		'Proyectos');
+define('_OS_BAROMETER_PROJECTS_ALT',		'Administración de Proyectos: Proyectos / Pendientes / Log de cambio');
+define('_OS_BAROMETER_PROJECTS_COUNT',		'Número de Proyectos');
+define('_OS_BAROMETER_PROJECTS_TODO',		'Número de Pendientes');
+define('_OS_BAROMETER_PROJECTS_CHANGELOG',	'Número de Entradas de Log de cambio');
+
+define('_OS_BAROMETER_RBS',			'Recursos');
+define('_OS_BAROMETER_RBS_ALT',			'Recursos: Categorías / Recursos / Entradas');
+define('_OS_BAROMETER_RBS_CATEGORIES',		'Número de Categorías');
+define('_OS_BAROMETER_RBS_RESOURCES',		'Número de Recursos');
+define('_OS_BAROMETER_RBS_COUNT',		'Número de Entradas Reservadas');
+
+define('_OS_BAROMETER_SERVICE',			'Servicio');
+define('_OS_BAROMETER_SERVICE_ALT',		'Servicio: Proyectos / Abiertos / Defectuosos');
+define('_OS_BAROMETER_SERVICE_PROJECTS',	'Número de Proyectos');
+define('_OS_BAROMETER_SERVICE_OPEN',		'Número de Defectos Abiertos');
+define('_OS_BAROMETER_SERVICE_COUNT',		'Número Total de Defectos');
+
+define('_OS_BAROMETER_WEBLINKS',		'Enlaces Web');
+define('_OS_BAROMETER_WEBLINKS_ALT',		'Enlaces Web: Enlaces / Clicks');
+define('_OS_BAROMETER_WEBLINKS_COUNT',		'Número de Enlaces Web');
+define('_OS_BAROMETER_WEBLINKS_HITS',		'Número de Clicks');
+
+?>

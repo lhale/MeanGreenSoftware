@@ -1,0 +1,43 @@
+===================================
+zeeNoble Changelog
+===================================
+
+Version 1.0.5
+-----------------------------------
+[added] new theme options layout for WP 3.8
+[changed] embed google fonts with protocal relative url
+[fixed] double quotation on tagline in header.php
+
+Version 1.0.4
+-----------------------------------
+[added] featured image header for pages
+[fixed] logo and widget overflow issue
+
+Version 1.0.3
+-----------------------------------
+[added] unique name for theme options array in the database
+[added] Text Domain in style.css
+[changed] made all text strings translatable
+[fixed] custom color change for read more button on slideshow
+[fixed] custom header image function
+[fixed] register default fonts
+
+Version 1.0.2
+-----------------------------------
+[added] pluggable function to display custom header image
+[added] allow shortcodes in footer content and frontpage intro text
+[fixed] broken layout issues for Internet Explorer 8
+[fixed] small slideshow display bug
+[fixed] frontpage template loading for static front pages
+
+Version 1.0.1
+-----------------------------------
+[changed] replaced query_posts to display recent posts on 404.php
+[changed] escaped all home_url() functions with esc_url()
+[changed] escaped all permalink functions with esc_url()
+[fixed] make big logo images resizeable on mobile devices
+[fixed] select form element overflow bug
+
+Version 1.0
+-----------------------------------
+Final Version

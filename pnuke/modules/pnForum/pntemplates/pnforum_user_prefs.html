@@ -1,0 +1,79 @@
+<!--[*  $Id: pnforum_user_prefs.html,v 1.12 2005/08/06 07:14:13 landseer Exp $  *]-->
+
+<!--[ include file=pnforum_user_header.html ]-->
+
+<!--[* pndebug *]-->
+
+<h1 style="text-align: center;"><strong><!--[ pnml name='_PNFORUM_SETTING' ]--></strong></h1>
+
+<div class="pnfadminrow98" style="background: <!--[ $bgcolor2 ]-->; height: 1.2em;">
+    <div class="pnfadmincol49" style="margin-left: 5px;">
+        <strong><!--[ pnml name='_PNFORUM_RECENT_POST_ORDER' ]--></strong>
+    </div>
+    <div class="pnfadmincol49" style="text-align: center;">
+        <!--[ post_order_button return_to=prefs ]-->&nbsp;
+    </div>
+</div>
+
+<div class="pnfadminrow98" style="background: <!--[ $bgcolor2 ]-->; height: 1.2em;">
+    <div class="pnfadmincol49" style="margin-left: 5px;">
+        <strong><!--[ pnml name='_PNFORUM_MANAGETOPICSUBSCRIPTIONS' ]--></strong>
+    </div>
+    <div class="pnfadmincol49" style="text-align: center;">
+        <a href="<!--[ pnmodurl modname=pnForum type=user func=topicsubscriptions ]-->" title="<!--[ pnml name='_PNFORUM_MANAGETOPICSUBSCRIPTIONS' ]-->"><!--[ pnimg src="managetopicsubscriptions.gif" altml=true alt="_PNFORUM_MANAGETOPICSUBSCRIPTIONS" ]--></a>
+    </div>
+</div>
+
+
+<div style="clear: both;"></div>
+
+<br />
+<table bgcolor="<!--[ $bgcolor2 ]-->" border="0" cellpadding="3" cellspacing="1" width="100%">
+    <thead>
+    <tr bgcolor="<!--[ $bgcolor2 ]-->" align="left">
+        <th style="width:50%; height:28px;">
+            <strong><!--[ pnml name='_PNFORUM_CATEGORY ]--> / <!--[ pnml name='_PNFORUM_FORUM' ]--></strong>
+        </th>
+        <th style="width:25%; height:28px; text-align: center;">
+            <strong><!--[ pnml name='_PNFORUM_SUBSCRIBE_STATUS' ]--></strong>
+        </th>
+        <!--[ if $favorites_enabled eq "yes" ]-->
+        <th style="width:25%; height:28px; text-align: center;">
+            <strong><!--[ pnml name='_PNFORUM_FAVORITE_STATUS' ]--></strong>
+        </th>
+        <!--[ /if ]-->
+    </tr>
+    </thead>
+    <tbody>
+    <!--[ foreach item=category from=$tree ]-->
+    <tr align="left" valign="top">
+        <td colspan="2" height="28">
+            <strong><!--[ $category.cat_title ]--></strong>
+        </td>
+        <!--[ if $favorites_enabled eq "yes" ]-->
+        <td>&nbsp;</td>
+        <!--[ /if ]-->
+    </tr>
+    <!--[ foreach item=forum from=$category.forums ]-->
+    <tr bgcolor="<!--[ $bgcolor3 ]-->" style="text-align:left; vertical-align:top;">
+        <td width="50%">
+          	<a href="<!--[ pnmodurl modname=pnForum type=user func=viewforum forum=$forum.forum_id ]-->"><strong><!--[ $forum.forum_name ]--></strong></a>
+    	    <br />
+        	<!--[ $forum.forum_desc ]-->
+        </td>
+        <td style="text-align:center; vertical-align:middle;">
+            <!--[ subscribeforum_button forum_id=$forum.forum_id cat_id=$category.cat_id return_to=prefs]-->&nbsp;<br />
+        </td>
+        <!--[ if $favorites_enabled eq "yes" ]-->
+        <td style="text-align:center; vertical-align:middle;">
+            <!--[ favoriteforum_button forum_id=$forum.forum_id cat_id=$category.cat_id return_to=prefs]-->&nbsp;
+		</td>
+        <!--[ /if ]-->
+    </tr>
+
+    <!--[ /foreach ]-->
+    <!--[ /foreach ]-->
+    </tbody>
+</table>
+
+<!--[ include file='pnforum_user_footer.html' ]-->

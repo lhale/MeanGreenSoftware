@@ -1,0 +1,18 @@
+/*
+ * Background Styles for IE8 only
+ *
+ */
+
+#mainnav-menu a, #footer-widgets .widgettitle {
+	background: url(images/transparent-10pc.png) repeat !important;
+}
+#mainnav-menu a:hover,
+#footer-widgets .widget-tabbed .tabdiv  li.widget-thumb .wp-post-image,
+#footer-widgets .widget-tabbed .tabdiv li.widget-avatar img,
+#footer-widgets .widget-recent-posts .wp-post-image,
+#footer-widgets .widget-recent-comments img {
+	background: url(images/transparent-20pc.png) repeat !important;
+}
+#footer-widgets .widget {
+	background: url(images/transparent-5pc.png) repeat !important;
+}

@@ -1,0 +1,92 @@
+
+BODY	{
+	FONT-FAMILY: Tahoma, Verdana,Helvetica; 
+	FONT-SIZE: 11px
+	scrollbar-3dlight-color:#c2c2c2;
+	scrollbar-face-color: #7E98CB;
+	scrollbar-highlight-color: #C4D2ED;
+	scrollbar-shadow-color: #7E98CB;
+	scrollbar-3dlight-color: #C4D2ED;
+	scrollbar-arrow-color:  #021A4A;
+	scrollbar-track-color: #C4D2ED;
+	scrollbar-darkshadow-color: #021A4A;
+}
+P			{ FONT-FAMILY: Tahoma, Verdana,Helvetica; FONT-SIZE: 11px}
+DIV			{ FONT-FAMILY: Tahoma, Verdana,Helvetica; FONT-SIZE: 11px}
+INPUT		{ FONT-FAMILY: Tahoma, Verdana,Helvetica; FONT-SIZE: 11px}
+TEXTAREA	{ FONT-FAMILY: Tahoma, Verdana,Helvetica; FONT-SIZE: 11px}
+FORM 		{ FONT-FAMILY: Tahoma, Verdana,Helvetica; FONT-SIZE: 11px}
+SELECT		{ FONT-FAMILY: Tahoma, Verdana,Helvetica; FONT-SIZE: 11px}
+IMG 		{ border: 0px; }
+FONT		{ FONT-FAMILY: Tahoma, Verdana,Helvetica; FONT-SIZE: 11px}
+TD			{ FONT-FAMILY: Tahoma, Verdana,Helvetica; FONT-SIZE: 11px}
+
+A:link   	{BACKGROUND: none; COLOR: #003399; FONT-SIZE: 11px; FONT-FAMILY: Tahoma, Verdana, Helvetica; TEXT-DECORATION: underline}
+A:active    {BACKGROUND: none; COLOR: #003399; FONT-SIZE: 11px; FONT-FAMILY: Tahoma, Verdana, Helvetica; TEXT-DECORATION: underline}
+A:visited   {BACKGROUND: none; COLOR: #003399; FONT-SIZE: 11px; FONT-FAMILY: Tahoma, Verdana, Helvetica; TEXT-DECORATION: underline}
+A:hover     {BACKGROUND: none; COLOR: #6E009C; FONT-SIZE: 11px; FONT-FAMILY: Tahoma, Verdana, Helvetica; TEXT-DECORATION: underline}
+
+.title 		{BACKGROUND: none; COLOR: #003399; FONT-SIZE: 14px; FONT-WEIGHT: bold; FONT-FAMILY: Tahoma, Verdana, Helvetica; TEXT-DECORATION: none}
+.content 	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px; FONT-FAMILY: Tahoma, Verdana, Helvetica}
+.storytitle 	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px; FONT-WEIGHT: bold; FONT-FAMILY: Tahoma, Verdana, Helvetica; TEXT-DECORATION: none}
+.storycat	{BACKGROUND: none; COLOR: #003399; FONT-SIZE: 11px; FONT-WEIGHT: bold; FONT-FAMILY: Tahoma, Verdana, Helvetica; TEXT-DECORATION: underline}
+.boxtitle 	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px; FONT-WEIGHT: bold; FONT-FAMILY: Tahoma, Verdana, Helvetica; TEXT-DECORATION: none}
+.boxcontent 	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px; FONT-FAMILY: Tahoma, Verdana, Helvetica}
+.option 	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 12px; FONT-WEIGHT: bold; FONT-FAMILY: Tahoma, Verdana, Helvetica; TEXT-DECORATION: none}
+.tiny		{BACKGROUND: none; COLOR: #003399; FONT-SIZE: 11px; FONT-WEIGHT: normal; FONT-FAMILY: Tahoma, Verdana, Helvetica; TEXT-DECORATION: none}
+.title2 	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 14px; FONT-WEIGHT: bold; FONT-FAMILY: Tahoma, Verdana, Helvetica; TEXT-DECORATION: none}
+.content2 	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px; FONT-FAMILY: Tahoma, Verdana, Helvetica}
+.storytitle2 	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px; FONT-WEIGHT: bold; FONT-FAMILY: Tahoma, Verdana, Helvetica; TEXT-DECORATION: none}
+.storycat2	{BACKGROUND: none; COLOR: #003399; FONT-SIZE: 11px; FONT-WEIGHT: bold; FONT-FAMILY: Tahoma, Verdana, Helvetica; TEXT-DECORATION: underline}
+.boxtitle2 	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px; FONT-WEIGHT: bold; FONT-FAMILY: Tahoma, Verdana, Helvetica; TEXT-DECORATION: none}
+.boxcontent2 	{BACKGROUND: none; COLOR: #003399; FONT-SIZE: 11px; FONT-FAMILY: Tahoma, Verdana, Helvetica}
+.option2 	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px; FONT-WEIGHT: bold; FONT-FAMILY: Tahoma, Verdana, Helvetica; TEXT-DECORATION: none}
+.tiny2		{BACKGROUND: none; COLOR: #003399; FONT-SIZE: 11px; FONT-WEIGHT: normal; FONT-FAMILY: Tahoma, Verdana, Helvetica; TEXT-DECORATION: none}
+.artikel        {BACKGROUND: none; COLOR: #000000; FONT-SIZE: 9px; FONT-WEIGHT: normal; FONT-FAMILY: Tahoma, Verdana, Helvetica; TEXT-DECORATION: none}
+.thema          {BACKGROUND: none; COLOR: #003399; FONT-SIZE: 9px; FONT-WEIGHT: normal; FONT-FAMILY: Tahoma, Verdana, Helvetica; TEXT-DECORATION: none}
+
+.pn-normal           { color: #000000; font-family: Tahoma, Verdana, Helvetica; font-size: 11px; text-decoration: none; FONT-WEIGHT: normal; }
+.pn-normal A:link 	 { color: #003399; font-family: Tahoma, Verdana, Helvetica; font-size: 11px; text-decoration: underline; FONT-WEIGHT: normal; }
+.pn-normal A:visited { color: #003399; font-family: Tahoma, Verdana, Helvetica; font-size: 11px; text-decoration: underline; FONT-WEIGHT: normal; }
+.pn-normal A:hover   { color: #6E009C; font-family: Tahoma, Verdana, Helvetica; font-size: 11px; text-decoration: underline; FONT-WEIGHT: normal; }
+.pn-normal A:active  { color: #003399; font-family: Tahoma, Verdana, Helvetica; font-size: 11px; text-decoration: underline; FONT-WEIGHT: normal; }
+
+.pn-storytitle           { color: #000000; font-family: Tahoma, Verdana, Helvetica; font-size: 12px; text-decoration: none; FONT-WEIGHT: bold; }
+.pn-storytitle A:link 	 { color: #003399; font-family: Tahoma, Verdana, Helvetica; font-size: 12px; text-decoration: underline; FONT-WEIGHT: bold; }
+.pn-storytitle A:visited { color: #003399; font-family: Tahoma, Verdana, Helvetica; font-size: 12px; text-decoration: underline; FONT-WEIGHT: bold; }
+.pn-storytitle A:hover   { color: #6E009C; font-family: Tahoma, Verdana, Helvetica; font-size: 12px; text-decoration: underline; FONT-WEIGHT: bold; }
+.pn-storytitle A:active  { color: #003399; font-family: Tahoma, Verdana, Helvetica; font-size: 12px; text-decoration: underline; FONT-WEIGHT: bold; }
+
+.pn-title           { color: #000000; font-family: Tahoma, Verdana, Helvetica; font-size: 14px; font-weight: bold; text-decoration: none; }
+.pn-title A:link    { color: #003399; font-family: Tahoma, Verdana, Helvetica; font-size: 14px; font-weight: bold; text-decoration: underline; }
+.pn-title A:visited { color: #003399; font-family: Tahoma, Verdana, Helvetica; font-size: 14px; font-weight: bold; text-decoration: underline; }
+.pn-title A:hover   { color: #6E009C; font-family: Tahoma, Verdana, Helvetica; font-size: 14px; font-weight: bold; text-decoration: underline; }
+.pn-title A:active  { color: #003399; font-family: Tahoma, Verdana, Helvetica; font-size: 14px; font-weight: bold; text-decoration: underline; }
+
+.pn-sub           { color: #000000; font-family: Tahoma, Verdana, Helvetica; font-size: 9px; font-weight: normal; text-decoration: none; }
+.pn-sub A:link    { color: #003399; font-family: Tahoma, Verdana, Helvetica; font-size: 9px; font-weight: normal; text-decoration: underline; }
+.pn-sub A:visited { color: #003399; font-family: Tahoma, Verdana, Helvetica; font-size: 9px; font-weight: normal; text-decoration: underline; }
+.pn-sub A:hover   { color: #6E009C; font-family: Tahoma, Verdana, Helvetica; font-size: 9px; font-weight: normal; text-decoration: underline; }
+.pn-sub A:active  { color: #003399; font-family: Tahoma, Verdana, Helvetica; font-size: 9px; font-weight: normal; text-decoration: underline; }
+
+.pn-logo          { color: #000000; font-family: Tahoma, Verdana, Helvetica; font-size: 16px; font-weight: bold; text-decoration: none; }
+A.pn-logo:link    { color: #003399; font-family: Tahoma, Verdana, Helvetica; font-size: 16px; font-weight: bold; text-decoration: underline; }
+A.pn-logo:visited { color: #003399; font-family: Tahoma, Verdana, Helvetica; font-size: 16px; font-weight: bold; text-decoration: underline; }
+A.pn-logo:hover   { color: #6E009C; font-family: Tahoma, Verdana, Helvetica; font-size: 16px; font-weight: bold; text-decoration: underline; }
+A.pn-logo:active  { color: #003399; font-family: Tahoma, Verdana, Helvetica; font-size: 16px; font-weight: bold; text-decoration: underline; }
+
+.pn-logo-small { color: #000000; font-family: Tahoma, Verdana, Helvetica; font-size: 11px; font-weight: bold; text-decoration: none; }
+
+.pn-pagetitle    { color: #000000; font-family: Tahoma, Verdana, Helvetica; font-size: 14px; font-weight: bold; text-decoration: none; }
+.pn-blocktitle   { color: #6477d6; FONT-FAMILY: Tahoma, Verdana, Helvetica; FONT-SIZE: 12px; FONT-WEIGHT: bold; text-decoration: none; }
+.pn-blockcontent { color: #0C42BC; FONT-FAMILY: Tahoma, Verdana, Helvetica; FONT-SIZE: 11px; font-weight: normal; text-decoration: none; }
+
+.pn-login        { color: #FFFFFF; font-family: Tahoma, Verdana, Helvetica; font-size: 11px; text-decoration: none; FONT-WEIGHT: bold; font-style: italic; }
+
+/* Form elements */
+input,textarea,select { border-color:#0266C4; color:#000000; border:1px solid; font-family: Tahoma, Verdana, Helvetica; font-size : 11px; font-weight : normal; }
+input.post,textarea.post,select { background:#DFF0FF }
+input { text-indent: 2px }
+input.button { background:#efefef; border:1px solid; color:#000000; font:11px Tahoma, Verdana, Helvetica; }
+input.mainoption { background:#fafafa; font-weight:bold }
+input.liteoption { background:#fafafa; font-weight:normal }

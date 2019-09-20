@@ -1,0 +1,19 @@
+<!--[*  $Id: pnforum_admin_pop3test.html,v 1.1 2005/05/27 09:53:56 landseer Exp $  *]-->
+
+<!--[ include file='pnforum_admin_header.html' ]-->
+
+<fieldset>
+    <legend>
+        <b><!--[ pnml name='_PNFORUM_POP3TESTRESULTS' ]--></b>
+    </legend>
+    <!--[ foreach item=message from=$messages ]-->
+        <div><!--[ $message ]--></div>
+    <!--[ /foreach ]-->
+    <br />
+    <form action="" method="post">
+        <div>
+            <input type="submit" name="backtoforum" value="<!--[ pnml name='_PNFORUM_BACKTOFORUMADMIN' ]-->" />
+            <input type="hidden" name="forum_id" value="<!--[ $forum_id ]-->" />
+        </div>
+    </form>
+</fieldset>

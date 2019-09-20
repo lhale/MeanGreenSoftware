@@ -1,0 +1,349 @@
+// Installation: pnTresMailer Newsletter Module v6.02a3
+// --------------------------------------------------
+//
+// 
+// 
+// Allgemeines/Einleitung
+// ======================
+// 
+//    In diesem Archiv ist die Datei mailer_import.php enthalten. 
+//    Führen Sie diese Datei aus, geben Sie die Datenbank- Variablen
+//    ein und es werden alle registrierten Benutzer Ihrer Webseite 
+//    in die Newsletter- Abonnenten Datenbank importiert.
+// 
+//    Dies ist die einfachste Möglichkeit alle bisher auf Ihrer 
+//    Webseite registrierten Benutzer für den Erhalt des Newsletter 
+//    einzutragen.
+// 
+//    Es sollte jedoch sichergestellt sein, dass die Benutzer, welche 
+//    Sie mit dem PHP- Skript mailer_import.php importieren, auch 
+//    wirklich den Newsletter erhalten möchten. Andernfalls kann das 
+//    unerwünschte Versenden Ihres Newsletter als SPAM (UCE/UBE- Mailing)
+//    aufgefasst werden.
+//
+//    Des weiteren ist die Datei csv_import.php enthalten. Mit Hilfe
+//    dieser Datei können Sie anonyme bzw. nicht registrierte Benutzer
+//    in Ihre Abonnenten- Datenbank importieren. Wie Sie die Datei
+//    csv_import.php verwenden erfahren Sie im Laufe dieser Installations-
+//    anleitung.
+// 
+// 
+//    Bevor Sie jedoch Änderungen an Ihrer bereits lauffähigen Postnuke- 
+//    Installation vornehmen, sollten Sie in jedem Fall ein Backup Ihrer 
+//    Installation und Ihrer Datenbank anfertigen.
+//
+//
+//
+// Hinweise zum Mail- Server Setup
+// ===============================
+//
+//    Bedingt durch Fehler, die mit PHP unter Windows- Betriebssystemen
+//    auftreten können, kann die PHP- Funktion "php mail()" zur Zeit nicht
+//    mit Windows- Betriebssystemen zusammen genutzt werden. Auf Grund
+//    dieser Tatsache, dass solche Implementierungen sehr häufig diverse
+//    Fehler verursachen, besteht nun in der Administration des Newsletter
+//    die Möglichkeit, einen SMTP- Server direkt anzugeben. Bei Verwendung
+//    dieser Möglichkeit sollten anschliessend keine Fehler mehr auftreten.
+//
+//    Das bedeutet: wenn in den Einstellungen des pnTresMailer die Option
+//    "Alt. Mail System" aktiviert ist, wird der Newsletter über die PHP-
+//    Funktion "php mail()" versendet. Diese Option ist standardmäßig
+//    deaktiviert. Stattdessen wird der Mailserver, welcher in dem Feld
+//    "Ausgehender Mail Server" spezifiziert ist, verwendet. 
+//
+//    In den meisten Fällen kann man jedoch davon ausgehen, dass beide
+//    Methoden zum Versenden des Newsletter funktionieren. Für den Fall,
+//    dass eine der beiden Methoden nicht funktionieren sollte, kann man
+//    immer noch die alternative Methode auswählen.
+//
+//    In das Feld "Ausgehender Mail Server" lassen sich verschiedene Werte
+//    eingeben, abhängig von der Server- Konfiguration.
+//    Bei einigen Webhostern funktioniert als Server "localhost", bei
+//    anderen Webhostern ist der komplette Mailserver- Name anzugeben.
+//    Wenn für die Domain ein MX- Eintrag (Mail Exchanger) vorhanden ist,
+//    reicht hier die Angabe des Domain- Namens.
+//
+//    Der Newsletter wird über BCC (Blind-Carbon-Copy) versendet. Dies
+//    ist unter Anderem auch ein Grund, warum Windows- Betriebssysteme
+//    bei dem Versand des Newsletter Probleme bereiten können, wenn die
+//    PHP- Funktion "mail()" verwendet wird.
+// 
+// 
+// 
+// Erklärung:
+// ==========
+// 
+//    CC (Carpon-Copy):
+// 
+//      Der Empfänger sieht, wer die eMail auch noch erhalten hat. Dieses 
+//      System eignet sich ausschliesslich für geschlossene Benutzergruppen, 
+//      wo jeder jeden kennt! Also innerhalb der Firma oder eines Vereins. 
+// 
+//    
+//    BCC (Blind-Carbon-Copy):
+// 
+//      Der Erstempfänger ist sichtbar. Die anderen Empfänger sind für den 
+//      Leser nicht sichtbar. Verwenden Sie dieses Verfahren um eMail- 
+// 	Massensendungen zu verschicken. Es geht niemand etwas an, an wenn 
+// 	Sie die eMails noch versendet haben. Zudem hat es niemand gerne, wenn
+// 	man die persönliche eMail-Adresse unkontrolliert weiterverbreitet. 
+// 
+//    
+//
+// 
+// Installation
+// ============
+//
+// 
+//    Neue Installation
+//    =================
+//
+// 
+// 	1. Entpacken Sie den Inhalt  des komprimierten Archives in einen 
+// 	   temporären Ordner.
+// 
+// 	2. Kopieren Sie den kompletten Ordner - pnTresMailer - mit allen 
+// 	   Unterverzeichnissen in den Modulordner Ihrer Postnuke- Installation.
+// 	   Bitte benennen Sie den Ordner pnTresMailer nicht um, da dies zu 
+// 	   Fehlern führen kann.
+// 
+// 	3. Ändern oder Erstellen Sie eine neue Mailvorlage für den 
+// 	   pnTresMailer. In dem Ordner "templates/default" finden Sie bereits 
+// 	   die englische- und unter default_german eine deutsche Newsletter- Vorlage.
+//     In den Ordnern Templates/default oder default_german finden Sie zwei
+77     Vorlagen (html.tpl und  text.tpl).
+// 	   Die Vorlagendatei html.tpl wird für den Newsletter im HTML- Format 
+// 	   verwendet und die Vorlagendatei text.tpl für den Newsletter im Text-
+// 	   Format. Die enthaltenen Bilder gehören jeweils zu dem verwendeten 
+// 	   Newsletter- Format. 
+// 	   Bitte beachten Sie die Methode zum Setzen von Links über das 
+// 	   href- Attribut.
+// 
+// 	4. Wechseln Sie in Postnuke zur Modul- Administration. Klicken Sie auf
+// 	   "Module erneut erzeugen". Anschliessend suchen Sie bitte das Modul 
+// 	   "pnTresMailer" und klicken Sie auf initialisieren. Dadurch werden die
+// 	   benötigten Datenbanken generiert. Anschliessend ist es erforderlich, 
+// 	   dass Modul zu aktivieren.
+// 
+//         Wenn Sie das TresMailer Modul mit PostNuke in der Version 0.750 oder höher
+//         verwenden, schalten sie den "legacy support" in den Einstellungen ein.
+//
+// 	5. Zur Administration des pnTresMailer Modules wechseln Sie bitte wieder
+// 	   zur Postnuke- Administration. In dem Administrations- Menü sollte nun ein
+// 	   neues Symbol - pnTresMailer - zur Verfügung stehen.
+// 
+// 	6. Plazieren Sie einen Link auf Ihrer Webseite, über den sich 
+// 	   interessierte Benutzer für Ihren Newsletter anmelden können. 
+// 	   Der Link zur Anmeldung für den Newsletter lautet:
+// 
+// 	   http://yoursite.com/modules.php?op=modload&name=pnTresMailer&file=index
+// 
+// 	7. Alternativ können Sie einen Modul- Block für die Abonnierung Ihres 
+// 	   Newsletter zur Verfügung stellen. Wechseln Sie hierzu in das Postnuke- 
+// 	   Administrationsmenü und wählen Sie dort den Punk "Böcke" aus. 
+// 	   Klicken Sie anschliessend auf "neu anlegen". Hier haben Sie die 
+// 	   Möglichkeit, einen Namen für den Modul- Block anzugeben. Dieser Name ist
+// 	   prinizipiell frei wählbar. Wählen Sie dann in dem Dropdown- Feld "Block" 
+// 	   bitte pnTresMailer/Newsletter Subscription Block aus. Definieren Sie dann 
+// 	   noch die Position, an welcher der Block platziert werden soll und für 
+// 	   welche Sprachen dieser angezeigt werden soll.
+// 
+// 	8. Löschen Sie auf Ihrem Webserver die Dateien import105.php und 
+// 	   mailer_import.php, welche Sie zuvor auf Ihren Webserver kopiert haben.
+
+// 	9. Aktualisieren Sie nun bitte die Einstellungen für den pnTresMailer, 
+// 	    wie Absender- Name, Absender- eMail usw.
+// 
+//
+// Update
+// ======
+// 
+//
+//    Von 1.5 auf 3.0 (frühere Versionen werden nicht unterstützt)
+//    ===============
+//
+// 
+// 	1. Deaktivieren Sie das alte Modul in der Postnuke- Moduladministration, 
+// 	   löschen Sie es aber nicht. Löschen Sie den Modulblock, falls Sie diesen 
+// 	   verwendet haben in Ihrer Postnuke- Blockadministration.
+// 
+// 	2. Da Sie die älteren pnTresMailer Module manuell über die enthaltenen 
+// 	   SQL- Dateien installieren mussten, sollten Sie keine Schwierigkeiten haben,
+// 	   die Datenbank- Tabellen manuell zu entfernen.
+// 	
+// 	   Diese Datenbank- Tabellen müssen manuell entfernt werden:
+// 
+// 	   nuke_nl_var
+// 	   nuke_nl_var_ct
+// 	   nuke_nl_mail_arch
+// 
+//         Wenn Sie eine pnTresMailer Version ab 3.2 einsetzen und das Erstellen der 
+// 	   benötigten Tabellen über die Initialisierung des Modules pnTresMailer 
+// 	   schlägt fehl, ist es erforderlich, diese Datenbank- Tabellen ebenfalls
+// 	   zu löschen:
+// 
+// 	   nuke_nl_arch_subscriber
+// 	   nuke_nl_archive
+// 	   nuke_nl_modules
+// 	   nuke_nl_subscriber
+// 
+// 	   Diese Datenbank- Tabellen können zum Einen manuell über den "drop" Befehl 
+// 	   gelöscht werden oder zum Anderen über phpMyAdmin.
+// 
+// 	   Die einzigste Datenbank- Tabelle die nicht gelöscht wurde, ist die Tabelle
+// 	   nuke_nl_user. In dieser Tabelle sind die Empfänger des Newsletter enthalten.
+// 
+// 	   Hinweis: Der Tabellenname nuke_...... ist der Prefix für Ihre Postnuke- 
+// 	   Installation. Daher kann dieser Prefix abweichend sein. Wenn Sie jedoch an
+// 	   den Standardeinstellungen nichts geändert haben, so wird als Prefix 
+// 	   "nuke_...." verwendet.
+// 
+// 	3. Kopieren Sie den Inhalt des neuen Modules in Ihr Postnuke Modulverzeichnis. 
+// 	   Initialisieren Sie das Modul und aktivieren Sie es.
+// 
+// 	4. Kopieren Sie die Datei upgrade105.php in Ihr Haupt- bzw. Root- Verzeichnis 
+// 	   auf dem // Webserver und führen Sie die Datei aus. Hiermit werden alle 
+// 	   Abonennten Ihres bisherigen Newsletter in die neu verwendete Datenbank kopiert.
+// 
+// 	5. Löschen Sie die Datei import105.php und mailer_import.php
+// 
+// 	6. Entfernen Sie das alte pnTresMailer Newsletter Modul über die Postnuke- 
+// 	   Moduladministration und löschen Sie das Verzeichnis auf Ihrem Webserver.
+// 
+// 	7. Sie können nun wieder einen Link zur Newsletter- Registrierung bzw. 
+// 	   Verwaltung auf Ihrer Webseite plazieren oder einen neuen Modul- Block erstellen.
+// 
+// 	   Bitte stellen Sie sicher, dass Sie die Einstellungen des Newsletter anpassen.
+// 
+//
+// 
+//    Von 3.0 auf die aktuelle Version
+//    ================================
+//
+// 
+// 	1. Erstestellen Sie bitte ein Backup Ihrer Dateien und Ihrer Datenbank.
+// 
+// 	2. Wenn Sie möchten, können Sie das bereits exstierende Modul von Ihrem 
+// 	   Webserver entfernen, indem Sie es löschen.
+// 
+// 	3. Kopieren Sie den Inhalt des pnTresMailer- Moduls in Ihr Postnuke- Modul 
+// 	   Verzeichnis
+// 
+// 	4. Wechseln Sie innerhalb von Postnuke zur Modul- Administration. Klicken Sie 
+// 	   bei Bedarf auf "Module anzeigen" bzw. "erneut erzeugen". Bei dem Modul 
+// 	   "pnTresMailer" sollte nun ein Hinweis zu sehen sein (Neue Version installiert).
+// 	   Daneben sollten Sie einen Link mit dem Namen "aktualisieren" bzw. "upgrade(n)"
+// 	   sehen. Nach dem Anklicken dieses Links werden die neuen Datenbanktabellen 
+// 	   erstellt bzw. aktualisiert.
+// 
+// 	5. Aktivieren Sie das Modul
+// 
+// 	6. Wechseln Sie zur Administration des pnTresMailer und passen Sie dort die 
+// 	   Einstellungen des Newsletter an.
+// 
+// 	7. Löschen Sie die Datei import105.php und mailer_import.php
+//
+//
+//
+//    csv_import.php : Verwendung
+//    ===========================
+//
+//
+//    Diese Datei wurde zu Beginn dieser Datei erwähnt.
+//
+//    Bevor Sie jedoch Änderungen an Ihrer bereits lauffähigen Postnuke- 
+//    Installation vornehmen, sollten Sie in jedem Fall ein Backup Ihrer 
+//    Installation und Ihrer Datenbank anfertigen.
+//
+//
+//	1. Rufen Sie in Ihrem Webbrowser diesen Link auf: 
+//	modules.php?op=modload&name=pnTresMailer&file=csv_import&req=AddCsv
+//
+//	2. Öffnen Sie die CSV- Datei auf, welche Sie zuvor mit einem anderen
+//	   Programm exportiert haben und kopieren Sie den Inhalt dieser Datei
+//	   in das Text Feld, welches Sie nach dem Aufruf des in Schritt 1
+//	   genannten Links in Ihrem Webbrowser sehen.
+//
+//	   CSV- Datei (Comma Separated Value)
+//	
+//	   Eine CSV- Datei ist eine Datei, in welcher die Einträge durch ein
+//	   , (Komma) getrennet werden. Diese Datei kann beispielsweise dieses
+//	   Aussehen haben:
+//
+//		Erik,erik@somedomain.com
+//		Joe Johnson,jj@hisdomain.com
+//		Alfred,Alphy@redsdomain.net
+//
+//	3. Wählen Sie das Format des Newsletters (HTML oder Text) aus, welches
+//	   diese Benutzer erhalten sollen
+//
+//	4. Speichern Sie Ihre Einstellungen mit Submit bzw. Bestätigen
+//
+//	5. Beim Import der Daten wird das Vorhandensein einer bereits bestehenden
+//	   eMail- Adresse geprüft um sicherzustellen, dass der Newsletter nicht
+//	   mehrmals an die gleiche eMail- Adresse verschickt wird.
+// 
+// 
+// 
+// Module für den Newsletter
+// =========================
+//
+// 
+//    Module (Plugins) werden erstellt, um unterschiedlichen Anforderungen gerecht 
+//    zu werden. Es sind bereits mehrere Standard- Module enthalten, welche sofort 
+//    benutzbar sind.
+// 
+// 
+//   Was sind Module für den pnTresMailer?
+// 
+// 	Module sind Plugins, welche einem mit wenig Aufwand erlauben, verschiedene 
+// 	Newsletter- Inhalte zur Verfügung zu stellen.
+//
+//
+//   Wie arbeiten solche Plugins?
+// 
+//	Diese Plugins sind kleine PHP- Skripte, welche unterschiedliche Daten aus der 
+// 	Datenbank abfragen und diese als Inhalt an den Newsletter übergeben. Je nach 
+// 	Plugin bzw. Skript werden verschiedene Daten abgefragt und entsprechend für 
+// 	den Versand aufbereitet und formatiert. Beispielsweise als Tabelle, nur Artikel- 
+// 	Überschriften, neue Mitglieder usw.
+// 
+// 	Neue Module können durch einfaches Kopieren in das pnTresMailer Modulverzeichnis 
+// 	hinzugefügt werden. Diese neu hinzugefügten Module werden automatisch erkannt.
+//
+// 
+//   Kann ich mein eigenes Plugin erstellen?
+// 
+// 	Dies stellt, sofern Sie bereits PHP- Kenntnisse besitzen, kein grösseres Problem
+// 	dar. Sie können dabei eines der bereits enthaltenen Module als Vorlage benutzen. 
+// 	In diesen Modulen sind viele Kommentare und Bemerkungen enthalten, die es 
+// 	vereinfachen, dass Modul seinen eigenen Bedürfnissen anzupassen. Wenn Sie ein eigenes
+// 	Modul erstellt haben wäre es nett von Ihnen, wenn Sie dieses der Allgemeinheit zur 
+// 	Verfügung stellen könnten.
+//
+// 
+//
+//   FINAL NOTE
+//
+// 	Emails are being sent as BCC recipients. This means that you can
+// 	send more emails with less strain on the server.
+// 	The number of emails in the bcc column of the email is set
+// 	in the settings labelled -Max Emails in Bcc-. 500 is a good number
+// 	but counts as high as 1000 are not unheard of.
+//
+// 	Most servers can only handle about 100 emails before problems occur. By
+// 	placing the emails in groups of 500 (or whatever you set), you
+// 	lessen the strain on the server by cutting down on the emails sent.
+// 	You can send 500,000 emails now before worrying about problems
+// 	occuring... and since these emails are sent one at a time, even
+// 	500,000 is a low limit to consider.
+//
+//
+//
+//
+// FORUM: 
+// http://canvas.anubix.net/
+// 
+// report errors and comments to support@camvas.anubix.net
+// this file was dl'd from: http://canvas.anubix.net
+// 

@@ -1,0 +1,14 @@
+<?php /* Smarty version 2.6.14, created on 2007-12-05 06:19:20
+         compiled from memberslist_admin_menu.htm */ ?>
+<?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
+smarty_core_load_plugins(array('plugins' => array(array('function', 'admincategorymenu', 'memberslist_admin_menu.htm', 2, false),array('function', 'pngetstatusmsg', 'memberslist_admin_menu.htm', 3, false),array('function', 'pnml', 'memberslist_admin_menu.htm', 4, false),array('function', 'memberslistadminlinks', 'memberslist_admin_menu.htm', 6, false),)), $this); ?>
+<?php echo smarty_function_admincategorymenu(array(), $this);?>
+
+<?php echo smarty_function_pngetstatusmsg(array(), $this);?>
+
+<h1><?php echo smarty_function_pnml(array('name' => '_MEMBERSLIST'), $this);?>
+</h1>
+<div class="pn-menu">
+<?php echo smarty_function_memberslistadminlinks(array(), $this);?>
+
+</div>

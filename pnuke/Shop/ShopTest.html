@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+  <!--
+  FatFreeCart.com AddToCart Snippet
+  @version: 0.1
+  @date: 07/30/2007
+  @author: Ropu (rovagnati at gmail)
+  //-->
+  <table cellspacing="2" cellpadding="2" bgcolor="#ffffff" style="border: thin solid rgb(100,100,100);font-family: Verdana; font-size: 11px; color: rgb(0, 0, 0);">    
+    <tr align="center">
+      <th bgcolor="#dddddd" style="color: rgb(0, 0, 0);">WTF#1</th>
+    </tr>
+    <tr>
+      <td align="center">
+      <!-- ADD TO CART button code. -->
+        <form target="ej_ejc" action="https://www.e-junkie.com/ecom/fgb.php?c=cart&cl=1&ejc=2" method="post">
+        <div style="background:#eeeeee">
+                        Color
+                    <input type="hidden" name="on0" value="Color"/>
+<select name="os0" style="width:97%">
+<option value="red">red</option>
+<option value="black"> black</option>
+<option value="white"> white</option>
+</select>
+</div>
+<div style="background:#eeeeee">
+                        Size
+                    <input type="hidden" name="on1" value="Size"/>
+<select name="os1" style="width:97%">
+<option value="Large">Large</option>
+<option value="Medium"> Medium</option>
+<option value="Small"> Small</option>
+</select>
+</div>
+<div style="background:#eeeeee">
+                        Shape
+                    <input type="hidden" name="on2" value="Shape"/>
+<select name="os2" style="width:97%">
+<option value="pointy">pointy</option>
+<option value="square"> square</option>
+</select>
+</div>
+  
+      <!-- google merchant id (remove if not using Google Checkout) -->
+          <input type="hidden" name="merchant_id" value="420379979568748"/>
+      <!-- paypal email(remove if not using PayPal) -->
+          <input type="hidden" name="business" value="RdWd@paypal.com"/>
+      <!-- site url -->
+          <input type="hidden" name="site_url" value="http://www.us4earth.com"/>
+      <!-- contact email (where we can notify of the updates) -->
+          <input type="hidden" name="contact_email" value="ellayararwhy@yahoo.com"/>
+      <!-- you thank you page -->
+          <input type="hidden" name="return_url" value="http://www.us4earth.com"/>
+      <!-- any custom info you want to pass -->
+          <input type="hidden" name="custom" value=""/>
+      <!-- currency (USD for Google Checkout USA, GBP for Google Checkout UK. For PayPal: any currency that PayPal supports -->
+          <input type="hidden" name="currency_code" value="USD"/>
+      <!-- shipping cost -->
+          <input type="hidden" name="shipping" value=".25"/>
+      <!-- shipping cost of each additional unit -->
+          <input type="hidden" name="shipping2" value=".15"/>
+      <!--handling cost -->
+          <input type="hidden" name="handling" value=".10"/>
+      <!-- tax (flat amount, NOT percentage)-->
+          <input type="hidden" name="tax" value=".50"/>
+      <!-- item name -->
+          <input type="hidden" name="item_name" value="WTF#1"/>
+      <!-- item number (should be different for each product)-->
+          <input type="hidden" name="item_number" value="1"/>
+      <!-- item price -->
+          <input type="hidden" name="amount" value="2.00"/>
+      <!-- initial quantity -->
+          <input type="hidden" name="quantity" value="1"/>
+      <!-- item options (can be removed if not required) -->
+          <input type="image" src="https://www.e-junkie.com/ej/ej_add_to_cart.gif" border="0" onClick="javascript:return EJEJC_frm(this.parentNode);">
+        </form>
+      </td>
+    </tr>  
+  </table>
+          <!-- VIEW CART button code. -->
+        <a href="https://www.e-junkie.com/ecom/fgb.php?c=cart&cl=1&ejc=2&merchant_id=420379979568748&business=RdWd@paypal.com" target="ej_ejc" class="ec_ejc_thkbx" onClick="javascript:return EJEJC_lc(this);">
+          <img src="https://www.e-junkie.com/ej/ej_view_cart.gif" border="0" />
+        </a>
+  
+    <script language="javascript" type="text/javascript">
+  <!--
+  function EJEJC_lc(th) { return false; }
+  // -->
+  </script>
+  <script type="text/javascript" src="https://www.e-junkie.com/ecom/box.js"></script>
+    
+  <!-- End FatFreeCart.com AddToCart Snippet v0.1 -->
+  
+</body>
+</html>

@@ -1,0 +1,53 @@
+List of changes made before initial GitHub checkin of the legacy MGS website code:
+
+Remove old PHP4 &= and =& references (PHP5 passes by object handles)
+./pnuke/includes/classes/adodb/adodb.inc.php - Get rid of &= references - it's an old deprecated PHP thing no longer necessary
+./pnuke/config.php - change DB params (tricky one was encoded, from 1 on Startlogic to 0 on dev't)
+./pnuke/includes/pnApi.php - Get rid of &= references
+./pnuke/includes/pnAntiCracker.php - Fix deprecated eregi w/ preg_match (requires add of slashes "/ ... /i" @ beginning & end of regex
+C:\Applications\Meangreensoftware\public_html\pnuke\modules\Xanthia\pnuserapi.php  - Get rid of &= references 
+C:\Applications\Meangreensoftware\public_html\pnuke\modules\Xanthia\pnclasses\Xanthia.php - Fix deprecated eregi w/ preg_match , split => preg_split, replace => preg_replace
+C:\Applications\Meangreensoftware\public_html\pnuke\includes\classes\safehtml\HTMLSax3.php - Get rid of &= references 
+C:\Applications\Meangreensoftware\public_html\pnuke\includes\classes\safehtml\safehtml.php - Get rid of &= references 
+C:\Applications\Meangreensoftware\public_html\pnuke\includes\pnLang.php - split => preg_split
+C:\Applications\Meangreensoftware\public_html\pnuke\includes\pnLang.php - replace ereg_replace => preg_replace
+C:\Applications\Meangreensoftware\public_html\pnuke\includes\legacy\counter.php - split => preg_split (ref: https://stackoverflow.com/questions/3453915/deprecated-function-split-is-deprecated-how-to-rewrite-this-statement )
+C:\Applications\Meangreensoftware\public_html\pnuke\includes\v4blib\log4php\LoggerBsicConfiguration.php  - Get rid of =& references
+C:\Applications\Meangreensoftware\public_html\pnuke\modules\User\tools.php - Fix deprecated ereg & eregi w/ preg_match 
+C:\Applications\Meangreensoftware\public_html\pnuke\modules\Your_Account\user\links\links.changehome.php - Fix deprecated eregi w/ preg_match 
+C:\Applications\Meangreensoftware\public_html\pnuke\modules\Your_Account\user\links\links.changeinfo.php - Fix deprecated eregi w/ preg_match 
+C:\Applications\Meangreensoftware\public_html\pnuke\modules\Your_Account\user\links\links.changetheme.php - Fix deprecated eregi w/ preg_match 
+C:\Applications\Meangreensoftware\public_html\pnuke\modules\Comments\user\links\links.modifycomments.php - Fix deprecated eregi w/ preg_match 
+C:\Applications\Meangreensoftware\public_html\pnuke\modules\DonateReg\user\links\links.modifydonatereg.php - Fix deprecated eregi w/ preg_match 
+C:\Applications\Meangreensoftware\public_html\pnuke\modules\EventReg\user\links\links.modifyeventreg.php - Fix deprecated eregi w/ preg_match 
+C:\Applications\Meangreensoftware\public_html\pnuke\header.php - split => preg_split
+C:\Applications\Meangreensoftware\public_html\pnuke\footer.php - Fix deprecated eregi w/ preg_match
+C:\Applications\Meangreensoftware\public_html\pnuke\modules\Admin\pnadmin.php - Get rid of &= references
+
+Added functionality:
+C:\Applications\Meangreensoftware\public_html\pnuke\includes\pnAntiCracker.php - add throttled email reporting (to make ISP happy)
+
+Misc - debugging using MyEclipse 2013 Pro:
+
+This IDE is old but is set up with all PHP plugins AND the right version debugger (very import.)
+For this MGS project, after configuring a 
+run & debug configs I was getting a "Failed to launch on PHP server" popup error. The following video
+simply does a Run Web appication that magically fixes this problem:
+Failed to launch on PHP server:
+https://www.youtube.com/watch?v=IJWTESKVaXo
+However, there's a few hard rules to follow:
+a) Apache assumed to be running with XDebug config'd on port matching Eclipse's debug config
+b) Stop any running threads thru the debug view
+c) You hafta go into Debug Config's rather than Debug As and hit the Debug button
+d) If Apache crashes, or restarts, hafta go thru the same process again
+ That, and the configured 
+Server "File" is /MeanGreen/index.php but the  the default project name (/index.php).
+What happens next is the default FFox browser pops up the home page and is able to stop on debug points.
+
+
+### Cause a pnHack attempt:
+http://localhost/pnuke/index.php?module=htmlpages&func=display&pid=4&menu_title=%22%3Cobject%3Eblah%3C/object%3E%22
+
+
+Solutions1111111111111" UNION SELECT CHAR(45,120,49,45,81,45),CHAR(45,120,50,45,81,45),CHAR(45,120,51,45,81,45),CHAR(45,120,52,45,81,45),CHAR(45,120,53,45,81,45),CHAR(45,120,54,45,81,45),CHAR(45,120,55,45,81,45),CHAR(45,120,56,45,81,45),CHAR(45,120,57,45,81,45),CHAR(45,120,49,48,45,81,45),CHAR(45,120,49,49,45,81,45),CHAR(45,120,49,50,45,81,45),CHAR(45,120,49,51,45,81,45),CHAR(45,120,49,52,45,81,45),CHAR(45,120,49,53,45,81,45),CHAR(45,120,49,54,45,81,45),CHAR(45,120,49,55,45,81,45),CHAR(45,120,49,56,45,81,45),CHAR(45,120,49,57,45,81,45) -- /* order by "asc
+	

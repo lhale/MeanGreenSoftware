@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>PostNuke Swiss Army Knife</title>
+</head>
+<body>
+<h2>PostNuke Swiss Army Knife</h2>  
+<h3>VERSION 1.02 - Feb 09, 2005</h3>
+<p>Author: Christopher S. Bradford, Frank Schummertz (landseer)</p>
+<h2><strong>What's New</strong></h2>  
+<p>Version 1.01 has some minor fixes and clean-ups. The biggest change is that it 
+will now work properly with new versions of PHP with register_globals turned off. Thanks to contributor 
+Martin Andersen for submitting changes.</p>
+<p>Version 1.02 also supports PN .760 RC2 or later (changed include path to Adodb, added option to switch a PN site on after switching it off
+in the settings and logging out)</p>
+<h2><strong>What is it?</strong></h2>
+<p>This is a tool for system administrators of sites running the PostNuke content management system. &nbsp;
+This tool contains a set of extremely powerful tools for helping administrators get out of some crappy situations, 
+like when they lock themselves out of their own site and can no longer administer it.</p>
+<h2>Why?</h2>  
+<p>I spend a lot of time in the PostNuke support forums, answering questions for people.
+&nbsp;Mostly, the people that frequent the support forums are administrators new to PostNuke, or administrators 
+that were handed a PostNuke based site and have little technical knowledge. &nbsp;In either case, there are a 
+few major pitfalls that a new PostNuke administrator can encounter. &nbsp;    These pitfalls occur 
+frequently enough, that these same problems are encountered by different users several time each week. &nbsp;
+Rather than continue to lead the users through technical details of fixing the problem, which they may not 
+understand, I decided to do something about it. &nbsp;Thus, I carved out the beginnings of a 
+support tool to aid postnuke administrators in fixing their broken sites.</p>
+<h2>The Tool</h2>  
+<p>The PostNuke Swiss Army Knife is contained within a single PHP script. &nbsp;To use this script, copy it to 
+your web root, and point your browser to the URL. &nbsp;You'll begin at the main menu.    
+The interface is extremely simple. &nbsp;Anything fancier would be completely not necessary to get the 
+job done. Here are the available functions in version 1.00, and the problem scenarios they 
+are designed to fix:</p>
+<ul>
+<li><strong>New DB Username/password encoding</strong>: When database information changes,
+such as after a server upgrade, or after moving to a new server, it becomes necessary to update the config.php
+file with the new database info. &nbsp;Unfortunately, the username and password are normally encoded. &nbsp;
+One solution is to disable the encoded username/password, and store them in plain text. &nbsp;But, thats not
+desireable. &nbsp;This function will take a username and password as input, and output the lines needed for
+your new config.php.</li>
+<li><strong>Enable/disable 'intranet' config option</strong>  Occasionally a new
+administrator will incorrectly configure the 'intranet' option when installing a new system, which 
+can result in the administrator being unable to log in. &nbsp;This may also occur when moving to a 
+new server with a new configuration. &nbsp;This function gives an easy way to fix the 'intranet' 
+option without hacking the site apart.</li>
+<li><strong>Theme Reset</strong>  It happens to all of us.
+&nbsp;Switch to a new theme... the theme is broken, and now the site is dead. &nbsp;This function has 2 
+taks:&nbsp; #1, allow an administrator to change the site's default theme... and #2, reset all users to the 
+default theme.</li>
+<li><strong>Permissions Reset:</strong>  Permissions can be confusing to new administrators. 
+&nbsp;Occasionally, things get screwy and the administrator inadvertently denies him/herself permission to 
+administer the site. &nbsp;This function has 2 tasks: &nbsp;#1, clear all user permissions... #2, reset group 
+permissions to installation defaults.</li>
+<li><strong>Site On:</strong> Lets the user switch the PostNuke site on again after switching it off and logging out.</li>
+<li><strong>Show PHPInfo()</strong>  Shows the PHPInfo debugging information.&nbsp;May be useful for debugging purposes.</li>
+</ul>
+<hr />
+<h2 style="color:#ff0000">*** IMPORTANT SECURITY WARNING ***</h2>  
+<p>The PostNuke Swiss Army Knife provides very low level, raw access to critical components within the 
+PostNuke system. &nbsp;This script has no passwords, or other such front-end security.    
+There are 2 recommended things with handling this tool to keep your site safe.1. &nbsp;This script is 
+designed to be renamed. &nbsp;I HIGHLY RECOMMEND that you rename the script to something other than its default name. 
+2. &nbsp;When not in use, move the script out of your web directory and keep in a safe location.</p>
+
+<p>
+<strong>DOWNLOAD</strong>: <a href="http://downloads.postnuke.com">psak_1.02.zip</a> -- Version 1.02 
+archive 
+</p>
+<hr />
+<p>
+<strong>Design notes</strong>  The PSAK is designed to coincide with postnuke,
+but work independently of system resources. &nbsp;It does require the config.php, pntables.php, and the pnadodb database 
+interface. &nbsp;Otherwise, it doesn't use PostNuke system components, such as the API. &nbsp;The nature of the tool is 
+such that it should be as independant from PostNuke as possible.
+</p>
+</body>
+</html>

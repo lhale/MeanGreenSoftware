@@ -1,0 +1,12 @@
+<!--[*  $Id: htmlpages_block_pageslist.htm 4 2005-08-25 20:51:04Z markwest $  *]-->
+<ul style="list-style:disc;margin-left:1em;padding-left:1em;text-indent:0em;">
+	<!--[section name="items" loop=$items]-->
+		<li>
+			<!--[if $items[items].url neq '']-->
+			<a href="<!--[$items[items].url|pnvarprepfordisplay|pnvarcensor]-->"><!--[$items[items].title|pnmodcallhooks|pnvarprephtmldisplay|pnvarcensor]--></a>
+			<!--[else]-->
+			<!--[$items[items].title|pnmodcallhooks|pnvarprephtmldisplay|pnvarcensor]-->
+			<!--[/if]-->
+		</li>
+	<!--[/section]-->
+</ul>

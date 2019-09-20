@@ -1,0 +1,28 @@
+<?php /* Smarty version 2.6.14, created on 2007-09-03 08:38:33
+         compiled from groups_admin_new.htm */ ?>
+<?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
+smarty_core_load_plugins(array('plugins' => array(array('function', 'pnml', 'groups_admin_new.htm', 3, false),array('function', 'pnmodurl', 'groups_admin_new.htm', 4, false),array('function', 'pnsecgenauthkey', 'groups_admin_new.htm', 6, false),array('function', 'pnmodcallhooks', 'groups_admin_new.htm', 11, false),)), $this); ?>
+<?php $_smarty_tpl_vars = $this->_tpl_vars;
+$this->_smarty_include(array('smarty_include_tpl_file' => "groups_admin_menu.htm", 'smarty_include_vars' => array()));
+$this->_tpl_vars = $_smarty_tpl_vars;
+unset($_smarty_tpl_vars);
+ ?>
+<h2><?php echo smarty_function_pnml(array('name' => '_GROUPSADD'), $this);?>
+</h2>
+<form class="pn-adminform" action="<?php echo smarty_function_pnmodurl(array('modname' => 'Groups','type' => 'admin','func' => 'create'), $this);?>
+" method="post" enctype="application/x-www-form-urlencoded">
+<div>
+	<input type="hidden" name="authid" value="<?php echo smarty_function_pnsecgenauthkey(array('module' => 'Groups'), $this);?>
+" />
+	<div class="pn-adminformrow">
+		<label for="groups_name"><?php echo smarty_function_pnml(array('name' => '_GROUPSNAME'), $this);?>
+</label>
+		<input id="groups_name" name="name" type="text" size="30" maxlength="30" />
+	</div>
+	<div class="pn-adminformrow"><?php echo smarty_function_pnmodcallhooks(array('hookobject' => 'item','hookaction' => 'new','module' => 'Groups'), $this);?>
+</div>
+	<div class="pn-adminformrow"><input name="submit" type="submit" value="<?php echo smarty_function_pnml(array('name' => '_GROUPSNEW'), $this);?>
+" /></div>
+	<div style="clear:both"></div>
+</div>
+</form>
